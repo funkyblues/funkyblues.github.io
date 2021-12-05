@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://funkyblues.github.io/tag/c/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://funkyblues.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-12-05T17:57:44+09:00</updated>
+  <updated>2021-12-05T19:16:03+09:00</updated>
   <id>https://funkyblues.github.io/tag/c/feed.xml</id>
 
   
@@ -60,7 +60,7 @@
       
 
       
-        <category term="C" />
+        <category term="c" />
       
 
       
@@ -83,7 +83,16 @@
     &lt;li&gt;&lt;a href=&quot;./c-basic-grammar&quot;&gt;C언어 정리(2) - 기본 문법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;이 글은 C언어에 대한 기초 정리 노트입니다.&lt;/p&gt;</content>
+&lt;p&gt;이 글은 C언어에 대한 기초 정리 노트입니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
 
       
       
@@ -100,7 +109,7 @@
       
 
       
-        <category term="C" />
+        <category term="c" />
       
 
       
