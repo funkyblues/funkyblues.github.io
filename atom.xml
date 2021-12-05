@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>공부 정리용 블로그</description>
+    <link>
+    https://funkyblues.github.io</link>
+    
+      
+      <item>
+        <title>C언어 정리(2) - 기본 문법</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;C언어 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./c-beginning&quot;&gt;C언어 정리(1) - 튜토리얼&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./c-basic-grammar&quot;&gt;C언어 정리(2) - 기본 문법&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sun, 05 Dec 2021 01:00:00 +0900</pubDate>
+        <link>
+        https://funkyblues.github.io/c-basic-grammar</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/c-basic-grammar</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>C언어 정리(1) - 튜토리얼</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;C언어 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./c-beginning&quot;&gt;C언어 정리(1) - 튜토리얼&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./c-basic-grammar&quot;&gt;C언어 정리(2) - 기본 문법&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sat, 04 Dec 2021 21:00:00 +0900</pubDate>
+        <link>
+        https://funkyblues.github.io/c-beginning</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/c-beginning</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>C# 정리(1) - 튜토리얼</title>
+        
+          <description>&lt;p&gt;이 글은 C#에 대한 기초 정리 노트입니다.&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 02 Dec 2021 21:00:00 +0900</pubDate>
+        <link>
+        https://funkyblues.github.io/cs-beginning</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/cs-beginning</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>nodejs 정리(1) - 튜토리얼</title>
+        
+          <description>&lt;p&gt;이 글은 nodejs에 대한 기초 정리 노트입니다.&lt;/p&gt;
+</description>
+        
+        <pubDate>Wed, 01 Dec 2021 21:00:00 +0900</pubDate>
+        <link>
+        https://funkyblues.github.io/nodejs-beginning</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/nodejs-beginning</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>모두의 네트워크 - (1)</title>
+        
+          <description>&lt;p&gt;이 글은 [모두의 네트워크] 책을 보고 난 후 정리한 내용입니다.&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 30 Nov 2021 21:00:00 +0900</pubDate>
+        <link>
+        https://funkyblues.github.io/network-for-everyone1</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/network-for-everyone1</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Java 정리(1) - 튜토리얼</title>
+        
+          <description>&lt;p&gt;이 글은 Java에 대한 기초 정리 노트입니다.&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 30 Nov 2021 21:00:00 +0900</pubDate>
+        <link>
+        https://funkyblues.github.io/java-beginning</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/java-beginning</guid>
+      </item>
+      
+    
+  </channel>
+</rss>
