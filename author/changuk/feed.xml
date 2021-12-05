@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://funkyblues.github.io/author/changuk/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://funkyblues.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-12-05T22:30:36+09:00</updated>
+  <updated>2021-12-06T00:10:50+09:00</updated>
   <id>https://funkyblues.github.io/author/changuk/feed.xml</id>
 
   
@@ -194,7 +194,20 @@
       <published>2021-11-30T21:00:00+09:00</published>
       <updated>2021-11-30T21:00:00+09:00</updated>
       <id>https://funkyblues.github.io/network-for-everyone1</id>
-      <content type="html" xml:base="https://funkyblues.github.io/network-for-everyone1">&lt;p&gt;이 글은 [모두의 네트워크] 책을 보고 난 후 정리한 내용입니다.&lt;/p&gt;</content>
+      <content type="html" xml:base="https://funkyblues.github.io/network-for-everyone1">&lt;h1 id=&quot;제목&quot;&gt;제목&lt;/h1&gt;
+&lt;h2 id=&quot;두-번째-제목&quot;&gt;두 번째 제목&lt;/h2&gt;
+&lt;h3 id=&quot;세-번째-제목&quot;&gt;세 번째 제목&lt;/h3&gt;
+&lt;h4 id=&quot;네-번째-제목&quot;&gt;네 번째 제목&lt;/h4&gt;
+&lt;h5 id=&quot;다섯-번째-제목&quot;&gt;다섯 번째 제목&lt;/h5&gt;
+&lt;h6 id=&quot;여섯-번째-제목&quot;&gt;여섯 번째 제목&lt;/h6&gt;
+&lt;p&gt;이 글은 [모두의 네트워크] 책을 읽고 난 후 정리한 내용입니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;저는 지금 글을 써볼려고 합니다. 근데 마크다운 언어를 잘 몰라서 헤메는 중입니다.
+    &lt;ul&gt;
+      &lt;li&gt;반갑습니다&lt;strong&gt;안녕하세요&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       
@@ -215,7 +228,7 @@
       
 
       
-        <summary type="html">이 글은 [모두의 네트워크] 책을 보고 난 후 정리한 내용입니다.</summary>
+        <summary type="html">제목 두 번째 제목 세 번째 제목 네 번째 제목 다섯 번째 제목 여섯 번째 제목 이 글은 [모두의 네트워크] 책을 읽고 난 후 정리한 내용입니다. 저는 지금 글을 써볼려고 합니다. 근데 마크다운 언어를 잘 몰라서 헤메는 중입니다. 반갑습니다안녕하세요</summary>
       
 
       

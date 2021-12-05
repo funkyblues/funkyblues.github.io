@@ -11,7 +11,7 @@
 
 
 
-    <title>Java - Collection of studies</title>
+    <title>Search Result</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -49,19 +49,19 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="공부 정리용 블로그" />
     <link rel="shortcut icon" href="https://funkyblues.github.io/assets/built/images/favicon-1.png" type="image/png" />
-    <link rel="canonical" href="https://funkyblues.github.io/tag/java/" />
+    <link rel="canonical" href="https://funkyblues.github.io/search" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Collection of studies" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Java - Collection of studies" />
+    <meta property="og:title" content="Search Result" />
     <meta property="og:description" content="공부 정리용 블로그" />
-    <meta property="og:url" content="https://funkyblues.github.io/tag/java/" />
+    <meta property="og:url" content="https://funkyblues.github.io/search" />
     <meta property="og:image" content="https://funkyblues.github.io/assets/images/waves.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Java - Collection of studies" />
+    <meta name="twitter:title" content="Search Result" />
     <meta name="twitter:description" content="공부 정리용 블로그" />
     <meta name="twitter:url" content="https://funkyblues.github.io/" />
     <meta name="twitter:image" content="https://funkyblues.github.io/assets/images/waves.jpg" />
@@ -81,7 +81,7 @@
         "name": "Collection of studies",
         "logo": "https://funkyblues.github.io/"
     },
-    "url": "https://funkyblues.github.io/tag/java/",
+    "url": "https://funkyblues.github.io/search",
     "image": {
         "@type": "ImageObject",
         "url": "https://funkyblues.github.io/assets/images/waves.jpg",
@@ -90,7 +90,7 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://funkyblues.github.io/tag/java/"
+        "@id": "https://funkyblues.github.io/search"
     },
     "description": "공부 정리용 블로그"
 }
@@ -105,24 +105,20 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Tag Page" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Search Result" href="/feed.xml" />
 
 
 </head>
-<body class="tag-template">
+<body class="page-template">
 
     <div class="site-wrapper">
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- default -->
-<!-- The tag above means - insert everything in this file into the {body} of the default.hbs template -->
+        <!-- < default -->
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
 
 <!-- The big featured header, it uses blog cover image as a BG if available -->
-<!-- #tag -->
-<!-- dynamically loading backgrounds for tags,  descriptions and page titles -->
-
-
-
-<header class="site-header outer no-cover">
+<header class="site-header outer">
     <div class="inner">
         <nav class="site-nav">
     <div class="site-nav-left">
@@ -160,78 +156,109 @@
     </div>
 </nav>
 
-        <div class="site-header-content">
-            <h1 class="site-title">Java</h1>
-            <h2 class="site-description">
-                
-    			    A collection of 1 posts
-                
-            </h2>
-        </div>
     </div>
 </header>
-<!-- tag -->
 
-<!-- The main content area -->
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
-        <div class="post-feed">
-            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+
+        <article class="post-full  post page no-image">
+
+            <header class="post-full-header">
+                <h1 class="post-full-title">Search Result</h1>
+            </header>
+
             
 
+            <section class="post-full-content">
+                <form action="/search" method="get" hidden="hidden">
+    <label for="search-box"></label>
+    <input type="text" id="search-box" name="query">
+</form>
 
-    <article class="post-card tag-template">
-        
-            <a class="post-card-image-link" href="/java-beginning">
-                <div class="post-card-image" style="background-image: url(/assets/built/images/Java.png)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/java-beginning">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Java</span>
-                            
-                        
-                    
+<ul class="mylist" id="search-results"></ul>
 
-                    <h2 class="post-card-title">Java 정리(1) - 튜토리얼</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>이 글은 Java에 대한 기초 정리 노트입니다.
+<script>
+    window.store = {
+    
+    "c-basic-grammar": {
+        "title": "C언어 정리(2) - 기본 문법",
+            "author": "changuk",
+            "category": "",
+            "content": "C언어 공부는 여러 절로 구성되어 있습니다.     C언어 정리(1) - 튜토리얼    C언어 정리(2) - 기본 문법이 글은 C언어의 기본 문법에 관한 내용을 담고 있습니다.",
+        "url": "/c-basic-grammar"
+    }
+    ,
+    
+    "c-beginning": {
+        "title": "C언어 정리(1) - 튜토리얼",
+            "author": "changuk",
+            "category": "",
+            "content": "C언어 공부는 여러 절로 구성되어 있습니다.     C언어 정리(1) - 튜토리얼    C언어 정리(2) - 기본 문법이 글은 C언어에 대한 기초 정리 노트입니다.#include &lt;stdio.h&gt;int main(void){    printf(\"Hello World!\");    return 0;}",
+        "url": "/c-beginning"
+    }
+    ,
+    
+    "cs-beginning": {
+        "title": "C# 정리(1) - 튜토리얼",
+            "author": "changuk",
+            "category": "",
+            "content": "이 글은 C#에 대한 기초 정리 노트입니다.",
+        "url": "/cs-beginning"
+    }
+    ,
+    
+    "nodejs-beginning": {
+        "title": "nodejs 정리(1) - 튜토리얼",
+            "author": "changuk",
+            "category": "",
+            "content": "이 글은 nodejs에 대한 기초 정리 노트입니다.",
+        "url": "/nodejs-beginning"
+    }
+    ,
+    
+    "network-for-everyone1": {
+        "title": "모두의 네트워크 - (1)",
+            "author": "changuk",
+            "category": "",
+            "content": "제목두 번째 제목세 번째 제목네 번째 제목다섯 번째 제목여섯 번째 제목이 글은 [모두의 네트워크] 책을 읽고 난 후 정리한 내용입니다.  저는 지금 글을 써볼려고 합니다. 근데 마크다운 언어를 잘 몰라서 헤메는 중입니다.          반갑습니다안녕하세요      ",
+        "url": "/network-for-everyone1"
+    }
+    ,
+    
+    "java-beginning": {
+        "title": "Java 정리(1) - 튜토리얼",
+            "author": "changuk",
+            "category": "",
+            "content": "이 글은 Java에 대한 기초 정리 노트입니다.package hello;    public class HelloJava {        public static void main(String[] args) {            System.out.println(\"Hello, Java\");        }    }",
+        "url": "/java-beginning"
+    }
+    
+    
+    };
+</script>
+<script src="assets/js/lunr.js"></script>
+<script src="assets/js/search.js"></script>
+            </section>
 
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/built/images/author-logo-1.jpg" alt="Woo Chang Uk" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/changuk/">Woo Chang Uk</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
+        </article>
 
-
-        </div>
     </div>
 </main>
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+<script>
+$(function() {
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+});
+</script>
+
 
 
         <!-- Previous/next page links - displayed on every page -->
@@ -308,7 +335,7 @@
     <!-- Paginator increased to "infinit" in _config.yml -->
     <!-- if paginator.posts  -->
     <!-- <script>
-        var maxPages = parseInt('1');
+        var maxPages = parseInt('');
     </script>
     <script src="/assets/js/infinitescroll.js"></script> -->
     <!-- /endif -->
@@ -331,6 +358,14 @@
 
 
     <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+$(function() {
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+});
+</script>
+
     
 
     <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
