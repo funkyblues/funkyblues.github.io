@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://funkyblues.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://funkyblues.github.io/" rel="alternate" type="text/html" /><updated>2021-12-07T01:41:15+09:00</updated><id>https://funkyblues.github.io/feed.xml</id><title type="html">Collection of studies</title><subtitle>공부 정리용 블로그</subtitle><entry><title type="html">C언어 정리(2) - 기본 문법</title><link href="https://funkyblues.github.io/c-basic-grammar" rel="alternate" type="text/html" title="C언어 정리(2) - 기본 문법" /><published>2021-12-05T01:00:00+09:00</published><updated>2021-12-05T01:00:00+09:00</updated><id>https://funkyblues.github.io/c-basic-grammar</id><content type="html" xml:base="https://funkyblues.github.io/c-basic-grammar">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;C언어 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://funkyblues.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://funkyblues.github.io/" rel="alternate" type="text/html" /><updated>2021-12-08T00:22:35+09:00</updated><id>https://funkyblues.github.io/feed.xml</id><title type="html">Collection of studies</title><subtitle>공부 정리용 블로그</subtitle><entry><title type="html">Svm</title><link href="https://funkyblues.github.io/SVM" rel="alternate" type="text/html" title="Svm" /><published>2021-12-07T00:00:00+09:00</published><updated>2021-12-07T00:00:00+09:00</updated><id>https://funkyblues.github.io/SVM</id><content type="html" xml:base="https://funkyblues.github.io/SVM"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">C언어 정리(2) - 기본 문법</title><link href="https://funkyblues.github.io/c-basic-grammar" rel="alternate" type="text/html" title="C언어 정리(2) - 기본 문법" /><published>2021-12-05T01:00:00+09:00</published><updated>2021-12-05T01:00:00+09:00</updated><id>https://funkyblues.github.io/c-basic-grammar</id><content type="html" xml:base="https://funkyblues.github.io/c-basic-grammar">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;C언어 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./c-beginning&quot;&gt;C언어 정리(1) - 튜토리얼&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./c-basic-grammar&quot;&gt;C언어 정리(2) - 기본 문법&lt;/a&gt;&lt;/li&gt;
@@ -27,8 +27,7 @@
 &lt;/ul&gt;
 
 &lt;hr /&gt;
-&lt;h4 id=&quot;java를-쓰면-왜-좋을까&quot;&gt;Java를 쓰면 왜 좋을까?&lt;/h4&gt;
-
+&lt;h4 id=&quot;---java를-쓰면-왜-좋을까&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;Java를 쓰면 왜 좋을까?&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
 &lt;h6 id=&quot;플랫폼에-영향을-받지-않으므로-다양한-환경에서-사용될-수-있음&quot;&gt;플랫폼에 영향을 받지 않으므로 다양한 환경에서 사용될 수 있음.&lt;/h6&gt;
 
 &lt;blockquote&gt;
@@ -36,13 +35,9 @@
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;플랫폼에 종속되지 않는 프로그램을 개발하여 여러 플랫폼(Windows, Mac, Linux, etc.)에서 실행할 수 있다는 의미&lt;/li&gt;
-&lt;/ul&gt;
-&lt;details&gt;
-&lt;summary&gt;ex&lt;/summary&gt;
-&lt;div&gt;
+  &lt;li&gt;플랫폼에 종속되지 않는 프로그램을 개발하여 여러 플랫폼(Windows, Mac, Linux, etc.)에서 실행할 수 있다는 의미
     &lt;ul&gt;
-      &lt;li&gt;윈도우 운영체제에서 C 언어로 개발한 프로그램 : Test
+      &lt;li&gt;Ex) 윈도우 운영체제에서 C 언어로 개발한 프로그램 : Test
         &lt;ul&gt;
           &lt;li&gt;이 프로그램을 컴파일 -&amp;gt; Test.exe 생성&lt;/li&gt;
           &lt;li&gt;Test.exe는 윈도우에서 실행되는 ‘실행 파일’
@@ -65,10 +60,14 @@
       &lt;li&gt;이러한 특성으로 인해 처음 자바는 프로그램 실행 속도가 느렸음&lt;/li&gt;
       &lt;li&gt;그러나 하드웨어 발전으로 인해 자바 컴파일러가 &lt;strong&gt;JIT(Just In Time)&lt;/strong&gt; 컴파일 방식으로 변화하면서 자바 프로그램의 실행 속도는 더 이상 문제가 없음&lt;/li&gt;
     &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/details&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h6 id=&quot;객체-지향-언어이므로-유지보수가-쉽고-확장성이-좋음&quot;&gt;객체 지향 언어이므로 유지보수가 쉽고 확장성이 좋음&lt;/h6&gt;
-&lt;p&gt;객체 지향 프로그래밍&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;객체 지향 프로그래밍&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;ul&gt;
   &lt;li&gt;여러 객체의 협력을 통해 프로그램을 구현&lt;/li&gt;
   &lt;li&gt;(계속 작성중…)&lt;/li&gt;
