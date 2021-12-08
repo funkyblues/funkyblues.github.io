@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://funkyblues.github.io/tag/paper/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://funkyblues.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-12-08T22:49:56+09:00</updated>
+  <id>https://funkyblues.github.io/tag/paper/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Collection of studies | </title>
+  
+
+  
+    <subtitle>공부 정리용 블로그</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">석사 논문 공부 - 머신러닝(SVM)</title>
+      <link href="https://funkyblues.github.io/SVM" rel="alternate" type="text/html" title="석사 논문 공부 - 머신러닝(SVM)" />
+      <published>2021-12-08T21:00:00+09:00</published>
+      <updated>2021-12-08T21:00:00+09:00</updated>
+      <id>https://funkyblues.github.io/SVM</id>
+      <content type="html" xml:base="https://funkyblues.github.io/SVM"></content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="paper" />
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

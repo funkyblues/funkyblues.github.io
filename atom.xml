@@ -8,12 +8,12 @@
     
       
       <item>
-        <title>Svm</title>
+        <title>석사 논문 공부 - 머신러닝(SVM)</title>
         
           <description>
 </description>
         
-        <pubDate>Tue, 07 Dec 2021 00:00:00 +0900</pubDate>
+        <pubDate>Wed, 08 Dec 2021 21:00:00 +0900</pubDate>
         <link>
         https://funkyblues.github.io/SVM</link>
         <guid isPermaLink="true">https://funkyblues.github.io/SVM</guid>
@@ -119,7 +119,7 @@
         
           <description>&lt;p&gt;이 글은 &lt;strong&gt;Java&lt;/strong&gt;에 대한 기초 정리 노트입니다.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;자바는 &lt;strong&gt;1991&lt;/strong&gt;년 제임스 고슬링을 비롯한 선 마이크로시스템스 연구원들이 처음 개발&lt;/li&gt;
+  &lt;li&gt;자바는 &lt;strong&gt;1991&lt;/strong&gt;년 제임스 고슬링을 비롯한 선 마이크로시스템스 연구원들이 처음 개발함&lt;/li&gt;
   &lt;li&gt;당시 가장 많이 사용되던 프로그래밍 언어 : &lt;strong&gt;&lt;em&gt;C&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;C++&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;가전제품이나 휴대용 장치 등에 사용하는 소프트웨어를 만들기 위해 독립적으로 작동되는 더 안정된 프로그래밍 언어가 필요하여 개발&lt;/li&gt;
 &lt;/ul&gt;

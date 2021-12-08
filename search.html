@@ -130,12 +130,12 @@ into the {body} of the default.hbs template -->
         
             <ul class="nav" role="menu">
     <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
     <li class="nav-C" role="menuitem"><a href="/tag/c/">C</a></li>
     <li class="nav-java" role="menuitem"><a href="/tag/java/">java</a></li>
     <li class="nav-Csharp" role="menuitem"><a href="/tag/c-sharp/">C#</a></li>
     <li class="nav-nodejs" role="menuitem"><a href="/tag/nodejs/">nodejs</a></li>
     <li class="nav-Network" role="menuitem"><a href="/tag/network/">Network</a></li>
+    <li class="nav-paper" role="menuitem"><a href="/tag/paper/">Paper</a></li>
     <li class="nav-archive" role="menuitem">
         <a href="/archive.html">All Posts</a>
     </li>
@@ -185,8 +185,8 @@ into the {body} of the default.hbs template -->
     window.store = {
     
     "svm": {
-        "title": "Svm",
-            "author": "",
+        "title": "석사 논문 공부 - 머신러닝(SVM)",
+            "author": "changuk",
             "category": "",
             "content": "",
         "url": "/SVM"
@@ -242,7 +242,7 @@ into the {body} of the default.hbs template -->
         "title": "Java 정리(1) - 튜토리얼",
             "author": "changuk",
             "category": "",
-            "content": "이 글은 Java에 대한 기초 정리 노트입니다.  자바는 1991년 제임스 고슬링을 비롯한 선 마이크로시스템스 연구원들이 처음 개발  당시 가장 많이 사용되던 프로그래밍 언어 : C, C++  가전제품이나 휴대용 장치 등에 사용하는 소프트웨어를 만들기 위해 독립적으로 작동되는 더 안정된 프로그래밍 언어가 필요하여 개발   Java를 쓰면 왜 좋을까?플랫폼에 영향을 받지 않으므로 다양한 환경에서 사용될 수 있음.  한 번 작성하면, 어디서든 돌아간다 (write once, run anywhere)  플랫폼에 종속되지 않는 프로그램을 개발하여 여러 플랫폼(Windows, Mac, Linux, etc.)에서 실행할 수 있다는 의미          Ex) 윈도우 운영체제에서 C 언어로 개발한 프로그램 : Test                  이 프로그램을 컴파일 -&gt; Test.exe 생성          Test.exe는 윈도우에서 실행되는 ‘실행 파일’                          이 실행 파일은 윈도우 운영체제에 맞게 만들어졌기 때문에 리눅스 운영체제에서 실행할 수 없음.              리눅스 운영체제에서 실행하려면 리눅스 환경에서 Test 프로그램을 다시 컴파일해서 실행 파일 생성                                          자바에서 만든 프로그램 : Example                  이 프로그램을 컴파일 →  Example.class 생성          이 파일을 바이트 코드라고 함 : 완벽한 실행 파일은 아님. 실행하려면 운영체제에 맞는 자바 가상 머신(JVM: Java Virtual Machine)이 필요          운영체제에 맞는 완벽한 기계어가 아닌 중간 기계어          운영체제에서 직접 실행하는 게 아닌 가상 머신에서 먼저 실행 → 가상 머신이 운영체제에 맞는 완벽한 실행 파일로 변경          .class 파일을 생성해두면 운영체제에 맞는 가상 머신을 어느 환경에서나 실행 가능.                    이러한 특성으로 인해 처음 자바는 프로그램 실행 속도가 느렸음      그러나 하드웨어 발전으로 인해 자바 컴파일러가 JIT(Just In Time) 컴파일 방식으로 변화하면서 자바 프로그램의 실행 속도는 더 이상 문제가 없음      객체 지향 언어이므로 유지보수가 쉽고 확장성이 좋음  객체 지향 프로그래밍  여러 객체의 협력을 통해 프로그램을 구현  (계속 작성중…)package hello;    public class HelloJava {        public static void main(String[] args) {            System.out.println(\"Hello, Java\");        }    }",
+            "content": "이 글은 Java에 대한 기초 정리 노트입니다.  자바는 1991년 제임스 고슬링을 비롯한 선 마이크로시스템스 연구원들이 처음 개발함  당시 가장 많이 사용되던 프로그래밍 언어 : C, C++  가전제품이나 휴대용 장치 등에 사용하는 소프트웨어를 만들기 위해 독립적으로 작동되는 더 안정된 프로그래밍 언어가 필요하여 개발   Java를 쓰면 왜 좋을까?플랫폼에 영향을 받지 않으므로 다양한 환경에서 사용될 수 있음.  한 번 작성하면, 어디서든 돌아간다 (write once, run anywhere)  플랫폼에 종속되지 않는 프로그램을 개발하여 여러 플랫폼(Windows, Mac, Linux, etc.)에서 실행할 수 있다는 의미          Ex) 윈도우 운영체제에서 C 언어로 개발한 프로그램 : Test                  이 프로그램을 컴파일 -&gt; Test.exe 생성          Test.exe는 윈도우에서 실행되는 ‘실행 파일’                          이 실행 파일은 윈도우 운영체제에 맞게 만들어졌기 때문에 리눅스 운영체제에서 실행할 수 없음              리눅스 운영체제에서 실행하려면 리눅스 환경에서 Test 프로그램을 다시 컴파일해서 실행 파일 생성                                          자바에서 만든 프로그램 : Example                  이 프로그램을 컴파일 →  Example.class 생성          이 파일을 바이트 코드라고 함 : 완벽한 실행 파일은 아님. 실행하려면 운영체제에 맞는 자바 가상 머신(JVM: Java Virtual Machine)이 필요          운영체제에 맞는 완벽한 기계어가 아닌 중간 기계어          운영체제에서 직접 실행하는 게 아닌 가상 머신에서 먼저 실행 → 가상 머신이 운영체제에 맞는 완벽한 실행 파일로 변경          .class 파일을 생성해두면 운영체제에 맞는 가상 머신을 어느 환경에서나 실행 가능.                    이러한 특성으로 인해 처음 자바는 프로그램 실행 속도가 느렸음      그러나 하드웨어 발전으로 인해 자바 컴파일러가 JIT(Just In Time) 컴파일 방식으로 변화하면서 자바 프로그램의 실행 속도는 더 이상 문제가 없음      객체 지향 언어이므로 유지보수가 쉽고 확장성이 좋음  객체 지향 프로그래밍  여러 객체의 협력을 통해 프로그램을 구현  (계속 작성중…)package hello;    public class HelloJava {        public static void main(String[] args) {            System.out.println(\"Hello, Java\");        }    }",
         "url": "/java-beginning"
     }
     
