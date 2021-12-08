@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://funkyblues.github.io/tag/network/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://funkyblues.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-12-08T00:49:35+09:00</updated>
-  <id>https://funkyblues.github.io/tag/network/feed.xml</id>
+  <link href="http://localhost:4000/tag/network/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-12-08T15:45:01+09:00</updated>
+  <id>http://localhost:4000/tag/network/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">모두의 네트워크 - (1)</title>
-      <link href="https://funkyblues.github.io/network-for-everyone1" rel="alternate" type="text/html" title="모두의 네트워크 - (1)" />
+      <link href="http://localhost:4000/network-for-everyone1" rel="alternate" type="text/html" title="모두의 네트워크 - (1)" />
       <published>2021-11-30T21:00:00+09:00</published>
       <updated>2021-11-30T21:00:00+09:00</updated>
-      <id>https://funkyblues.github.io/network-for-everyone1</id>
-      <content type="html" xml:base="https://funkyblues.github.io/network-for-everyone1">&lt;h1 id=&quot;제목&quot;&gt;제목&lt;/h1&gt;
+      <id>http://localhost:4000/network-for-everyone1</id>
+      <content type="html" xml:base="http://localhost:4000/network-for-everyone1">&lt;h1 id=&quot;제목&quot;&gt;제목&lt;/h1&gt;
 &lt;h2 id=&quot;두-번째-제목&quot;&gt;두 번째 제목&lt;/h2&gt;
 &lt;h3 id=&quot;세-번째-제목&quot;&gt;세 번째 제목&lt;/h3&gt;
 &lt;h4 id=&quot;네-번째-제목&quot;&gt;네 번째 제목&lt;/h4&gt;
