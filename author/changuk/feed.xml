@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://funkyblues.github.io/author/changuk/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://funkyblues.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-12-09T00:28:38+09:00</updated>
+  <updated>2021-12-10T00:21:27+09:00</updated>
   <id>https://funkyblues.github.io/author/changuk/feed.xml</id>
 
   
@@ -30,6 +30,170 @@
   
   
 
+  
+    <entry>
+      <title type="html">서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet</title>
+      <link href="https://funkyblues.github.io/sublet-java-03" rel="alternate" type="text/html" title="서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet" />
+      <published>2021-12-09T20:00:00+09:00</published>
+      <updated>2021-12-09T20:00:00+09:00</updated>
+      <id>https://funkyblues.github.io/sublet-java-03</id>
+      <content type="html" xml:base="https://funkyblues.github.io/sublet-java-03">&lt;h4 id=&quot;---웹-서버-프로그램과-servlet&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 서버 프로그램과 Servlet&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;클라이언트에서 회원에 대한 목록을 달라고 하면,&lt;/li&gt;
+  &lt;li&gt;웹 서버는 요청을 따라 코드를 찾아보게 됨&lt;/li&gt;
+  &lt;li&gt;그런 코드는 미리 문서로 만들어져 있지 않기 때문에 웹 서버는 DB에서 코드를 문서화 한 후 클라이언트로 돌려주어야 함&lt;/li&gt;
+  &lt;li&gt;사용자의 요구가 동적인 문서를 요구하는 것이라면, DB의 코드를 실행하여 돌려줄 수 있는 무언가가 필요
+    &lt;ul&gt;
+      &lt;li&gt;그런 무언가를 WAS라고 함&lt;/li&gt;
+      &lt;li&gt;Web Application Server (ex. tomcat!!)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;(그림 추가)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&quot;왜-웹-서버-응용-프로그램을-servlet이라-명칭할까&quot;&gt;왜 웹 서버 응용 프로그램을 Servlet이라 명칭할까?&lt;/h6&gt;
+&lt;ul&gt;
+  &lt;li&gt;(그림 추가)&lt;/li&gt;
+  &lt;li&gt;서버 어플리케이션 조각? 이라는 의미라고 이해해도 좋을 듯&lt;/li&gt;
+  &lt;li&gt;서블릿 단위로 만들기 위한 환경?&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">웹 서버 프로그램과 Servlet 클라이언트에서 회원에 대한 목록을 달라고 하면, 웹 서버는 요청을 따라 코드를 찾아보게 됨 그런 코드는 미리 문서로 만들어져 있지 않기 때문에 웹 서버는 DB에서 코드를 문서화 한 후 클라이언트로 돌려주어야 함 사용자의 요구가 동적인 문서를 요구하는 것이라면, DB의 코드를 실행하여 돌려줄 수 있는 무언가가 필요 그런 무언가를 WAS라고 함 Web Application Server (ex. tomcat!!) (그림 추가)</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">서블릿/JSP 강의 05 - 웹 문서 추가하기</title>
+      <link href="https://funkyblues.github.io/sublet-java-05" rel="alternate" type="text/html" title="서블릿/JSP 강의 05 - 웹 문서 추가하기" />
+      <published>2021-12-09T20:00:00+09:00</published>
+      <updated>2021-12-09T20:00:00+09:00</updated>
+      <id>https://funkyblues.github.io/sublet-java-05</id>
+      <content type="html" xml:base="https://funkyblues.github.io/sublet-java-05">&lt;h4 id=&quot;---웹-문서-추가하기&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 문서 추가하기&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;이전시간에 tomcat 설치함
+    &lt;h6 id=&quot;tomcat이-뭔가&quot;&gt;tomcat이 뭔가?&lt;/h6&gt;
+  &lt;/li&gt;
+  &lt;li&gt;WAS.&lt;/li&gt;
+  &lt;li&gt;WAS + Java web service 기능 =&amp;gt; 웹 서버!&lt;/li&gt;
+  &lt;li&gt;웹 서버라면 웹 문서를 제공해주는 서비스를 수행할 수 있음&lt;/li&gt;
+  &lt;li&gt;어떻게 웹 문서를 제공해주는지를 알아보자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&quot;테스트-문서-만들고-서비스하기&quot;&gt;테스트 문서 만들고 서비스하기&lt;/h6&gt;
+&lt;ol&gt;
+  &lt;li&gt;tomcat의 홈 디렉토리에 문서 저장&lt;/li&gt;
+  &lt;li&gt;http://localhost:8080/changuk.txt&lt;/li&gt;
+  &lt;li&gt;문서 확인 가능!&lt;/li&gt;
+&lt;/ol&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">웹 문서 추가하기 이전시간에 tomcat 설치함 tomcat이 뭔가? WAS. WAS + Java web service 기능 =&amp;gt; 웹 서버! 웹 서버라면 웹 문서를 제공해주는 서비스를 수행할 수 있음 어떻게 웹 문서를 제공해주는지를 알아보자</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">서블릿/JSP 강의 02 - 웹 서버 프로그램이란</title>
+      <link href="https://funkyblues.github.io/sublet-java-02" rel="alternate" type="text/html" title="서블릿/JSP 강의 02 - 웹 서버 프로그램이란" />
+      <published>2021-12-09T19:00:00+09:00</published>
+      <updated>2021-12-09T19:00:00+09:00</updated>
+      <id>https://funkyblues.github.io/sublet-java-02</id>
+      <content type="html" xml:base="https://funkyblues.github.io/sublet-java-02">&lt;h4 id=&quot;---웹-서버-프로그램이란&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 서버 프로그램이란?&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글)&lt;/li&gt;
+  &lt;li&gt;시간이 지나면서(기술이 발전) &lt;strong&gt;네트워크&lt;/strong&gt;를 통해 &lt;strong&gt;클라이언트 프로그램&lt;/strong&gt;과 &lt;strong&gt;서버 프로그램&lt;/strong&gt;으로 구분되기 시작&lt;/li&gt;
+  &lt;li&gt;불편한 점이 생기기 시작
+    &lt;ul&gt;
+      &lt;li&gt;클라이언트, 서버 둘 다 업데이트가 되어야 하는 문제가 발생.&lt;/li&gt;
+      &lt;li&gt;두 프로그램이 동시에 변경되어야 함&lt;/li&gt;
+      &lt;li&gt;소켓이나 RPC 등등 데이터 전송을 원활하게 하는 방법을 찾다 보니, 네트워크를 이용하려고 함
+        &lt;ul&gt;
+          &lt;li&gt;데이터 전송 구현의 어려움&lt;/li&gt;
+          &lt;li&gt;클라이언트 프로그램 업데이터의 어려움&lt;/li&gt;
+          &lt;li&gt;문제점을 해소하기 위해 웹(HTTP)을 사용!&lt;/li&gt;
+          &lt;li&gt;(그림 추가)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;서버 프로그램이 동적으로 만든 문서(ex. 프로그램 사용자 목록)를 클라이언트로 전달&lt;/li&gt;
+  &lt;li&gt;문서로 전달되기 때문에 클라이언트 프로그램을 만들 필요가 없음 (브라우저만 있으면 되기 때문에)&lt;/li&gt;
+  &lt;li&gt;웹에는 이미 브라우저가 있으므로, 웹 개발을 이용한 서버 프로그램을 만들기 시작&lt;/li&gt;
+  &lt;li&gt;자바스크립트의 등장으로, 페이지의 요청이 아닌, 데이터의 요청으로 변경
+    &lt;ul&gt;
+      &lt;li&gt;웹 페이지에서 과거 윈도우 프로그램을 개발하는 것 같은 시대가 도래&lt;/li&gt;
+      &lt;li&gt;프론트엔드, 백엔드의 개념 정립&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="java" />
+      
+
+      
+        <summary type="html">웹 서버 프로그램이란? 일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글) 시간이 지나면서(기술이 발전) 네트워크를 통해 클라이언트 프로그램과 서버 프로그램으로 구분되기 시작 불편한 점이 생기기 시작 클라이언트, 서버 둘 다 업데이트가 되어야 하는 문제가 발생. 두 프로그램이 동시에 변경되어야 함 소켓이나 RPC 등등 데이터 전송을 원활하게 하는 방법을 찾다 보니, 네트워크를 이용하려고 함 데이터 전송 구현의 어려움 클라이언트 프로그램 업데이터의 어려움 문제점을 해소하기 위해 웹(HTTP)을 사용! (그림 추가) 서버 프로그램이 동적으로 만든 문서(ex. 프로그램 사용자 목록)를 클라이언트로 전달 문서로 전달되기 때문에 클라이언트 프로그램을 만들 필요가 없음 (브라우저만 있으면 되기 때문에) 웹에는 이미 브라우저가 있으므로, 웹 개발을 이용한 서버 프로그램을 만들기 시작 자바스크립트의 등장으로, 페이지의 요청이 아닌, 데이터의 요청으로 변경 웹 페이지에서 과거 윈도우 프로그램을 개발하는 것 같은 시대가 도래 프론트엔드, 백엔드의 개념 정립</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">석사 논문 공부 - 머신러닝(SVM)</title>
@@ -223,53 +387,6 @@
     </entry>
   
     <entry>
-      <title type="html">모두의 네트워크 - (1)</title>
-      <link href="https://funkyblues.github.io/network-for-everyone1" rel="alternate" type="text/html" title="모두의 네트워크 - (1)" />
-      <published>2021-11-30T21:00:00+09:00</published>
-      <updated>2021-11-30T21:00:00+09:00</updated>
-      <id>https://funkyblues.github.io/network-for-everyone1</id>
-      <content type="html" xml:base="https://funkyblues.github.io/network-for-everyone1">&lt;h1 id=&quot;제목&quot;&gt;제목&lt;/h1&gt;
-&lt;h2 id=&quot;두-번째-제목&quot;&gt;두 번째 제목&lt;/h2&gt;
-&lt;h3 id=&quot;세-번째-제목&quot;&gt;세 번째 제목&lt;/h3&gt;
-&lt;h4 id=&quot;네-번째-제목&quot;&gt;네 번째 제목&lt;/h4&gt;
-&lt;h5 id=&quot;다섯-번째-제목&quot;&gt;다섯 번째 제목&lt;/h5&gt;
-&lt;h6 id=&quot;여섯-번째-제목&quot;&gt;여섯 번째 제목&lt;/h6&gt;
-&lt;p&gt;이 글은 [모두의 네트워크] 책을 읽고 난 후 정리한 내용입니다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;저는 지금 글을 써볼려고 합니다. 근데 마크다운 언어를 잘 몰라서 헤메는 중입니다.
-    &lt;ul&gt;
-      &lt;li&gt;반갑습니다&lt;strong&gt;안녕하세요&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Woo Chang Uk</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="network" />
-      
-
-      
-        <summary type="html">제목 두 번째 제목 세 번째 제목 네 번째 제목 다섯 번째 제목 여섯 번째 제목 이 글은 [모두의 네트워크] 책을 읽고 난 후 정리한 내용입니다. 저는 지금 글을 써볼려고 합니다. 근데 마크다운 언어를 잘 몰라서 헤메는 중입니다. 반갑습니다안녕하세요</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
       <title type="html">Java 정리(1) - 튜토리얼</title>
       <link href="https://funkyblues.github.io/java-beginning" rel="alternate" type="text/html" title="Java 정리(1) - 튜토리얼" />
       <published>2021-11-30T21:00:00+09:00</published>
@@ -358,6 +475,53 @@
 
       
         <summary type="html">이 글은 Java에 대한 기초 정리 노트입니다. 자바는 1991년 제임스 고슬링을 비롯한 선 마이크로시스템스 연구원들이 처음 개발함 당시 가장 많이 사용되던 프로그래밍 언어 : C, C++ 가전제품이나 휴대용 장치 등에 사용하는 소프트웨어를 만들기 위해 독립적으로 작동되는 더 안정된 프로그래밍 언어가 필요하여 개발</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">모두의 네트워크 - (1)</title>
+      <link href="https://funkyblues.github.io/network-for-everyone1" rel="alternate" type="text/html" title="모두의 네트워크 - (1)" />
+      <published>2021-11-30T21:00:00+09:00</published>
+      <updated>2021-11-30T21:00:00+09:00</updated>
+      <id>https://funkyblues.github.io/network-for-everyone1</id>
+      <content type="html" xml:base="https://funkyblues.github.io/network-for-everyone1">&lt;h1 id=&quot;제목&quot;&gt;제목&lt;/h1&gt;
+&lt;h2 id=&quot;두-번째-제목&quot;&gt;두 번째 제목&lt;/h2&gt;
+&lt;h3 id=&quot;세-번째-제목&quot;&gt;세 번째 제목&lt;/h3&gt;
+&lt;h4 id=&quot;네-번째-제목&quot;&gt;네 번째 제목&lt;/h4&gt;
+&lt;h5 id=&quot;다섯-번째-제목&quot;&gt;다섯 번째 제목&lt;/h5&gt;
+&lt;h6 id=&quot;여섯-번째-제목&quot;&gt;여섯 번째 제목&lt;/h6&gt;
+&lt;p&gt;이 글은 [모두의 네트워크] 책을 읽고 난 후 정리한 내용입니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;저는 지금 글을 써볼려고 합니다. 근데 마크다운 언어를 잘 몰라서 헤메는 중입니다.
+    &lt;ul&gt;
+      &lt;li&gt;반갑습니다&lt;strong&gt;안녕하세요&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="network" />
+      
+
+      
+        <summary type="html">제목 두 번째 제목 세 번째 제목 네 번째 제목 다섯 번째 제목 여섯 번째 제목 이 글은 [모두의 네트워크] 책을 읽고 난 후 정리한 내용입니다. 저는 지금 글을 써볼려고 합니다. 근데 마크다운 언어를 잘 몰라서 헤메는 중입니다. 반갑습니다안녕하세요</summary>
       
 
       
