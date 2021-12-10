@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/nodejs/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-12-10T18:38:11+09:00</updated>
-  <id>http://localhost:4000/tag/nodejs/feed.xml</id>
+  <link href="https://funkyblues.github.io/tag/nodejs/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://funkyblues.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-12-10T23:59:36+09:00</updated>
+  <id>https://funkyblues.github.io/tag/nodejs/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">nodejs 정리(1) - 튜토리얼</title>
-      <link href="http://localhost:4000/nodejs-beginning" rel="alternate" type="text/html" title="nodejs 정리(1) - 튜토리얼" />
+      <link href="https://funkyblues.github.io/nodejs-beginning" rel="alternate" type="text/html" title="nodejs 정리(1) - 튜토리얼" />
       <published>2021-12-01T21:00:00+09:00</published>
       <updated>2021-12-01T21:00:00+09:00</updated>
-      <id>http://localhost:4000/nodejs-beginning</id>
-      <content type="html" xml:base="http://localhost:4000/nodejs-beginning">&lt;p&gt;nodejs를 사용하여 TO-DO 어플리케이션 만들기&lt;/p&gt;</content>
+      <id>https://funkyblues.github.io/nodejs-beginning</id>
+      <content type="html" xml:base="https://funkyblues.github.io/nodejs-beginning">&lt;p&gt;nodejs를 사용하여 TO-DO 어플리케이션 만들기&lt;/p&gt;</content>
 
       
       

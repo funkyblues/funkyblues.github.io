@@ -4,13 +4,13 @@
     <title> - Articles</title>
     <description>공부 정리용 블로그</description>
     <link>
-    http://localhost:4000</link>
+    https://funkyblues.github.io</link>
     
       
       <item>
         <title>서블릿/JSP 강의 05 - 웹 문서 추가하기</title>
         
-          <description>&lt;h4 id=&quot;---웹-문서-추가하기&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 문서 추가하기&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
+          <description>&lt;h4 id=&quot;---웹-문서-추가하기&quot;&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;   &lt;strong&gt;웹 문서 추가하기&lt;/strong&gt;&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;이전시간에 tomcat 설치함&lt;/li&gt;
 &lt;/ul&gt;
@@ -19,8 +19,8 @@
         
         <pubDate>Thu, 09 Dec 2021 20:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/sublet-java-05</link>
-        <guid isPermaLink="true">http://localhost:4000/sublet-java-05</guid>
+        https://funkyblues.github.io/sublet-java-05</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/sublet-java-05</guid>
       </item>
       
     
@@ -28,7 +28,7 @@
       <item>
         <title>서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet</title>
         
-          <description>&lt;h4 id=&quot;---웹-서버-프로그램과-servlet&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 서버 프로그램과 Servlet&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
+          <description>&lt;h4 id=&quot;---웹-서버-프로그램과-servlet&quot;&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;   &lt;strong&gt;웹 서버 프로그램과 Servlet&lt;/strong&gt;&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;클라이언트에서 회원에 대한 목록을 달라고 하면,&lt;/li&gt;
   &lt;li&gt;웹 서버는 요청을 따라 코드를 찾아보게 됨&lt;/li&gt;
@@ -46,8 +46,8 @@
         
         <pubDate>Thu, 09 Dec 2021 20:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/sublet-java-03</link>
-        <guid isPermaLink="true">http://localhost:4000/sublet-java-03</guid>
+        https://funkyblues.github.io/sublet-java-03</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/sublet-java-03</guid>
       </item>
       
     
@@ -55,7 +55,8 @@
       <item>
         <title>서블릿/JSP 강의 02 - 웹 서버 프로그램이란</title>
         
-          <description>&lt;h4 id=&quot;---웹-서버-프로그램이란&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 서버 프로그램이란?&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
+          <description>&lt;p&gt;&lt;strong class=&quot;post_introduction&quot;&gt;Hello &lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;---웹-서버-프로그램이란&quot;&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;   &lt;strong&gt;웹 서버 프로그램이란?&lt;/strong&gt;&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글)&lt;/li&gt;
   &lt;li&gt;시간이 지나면서(기술이 발전) &lt;strong&gt;네트워크&lt;/strong&gt;를 통해 &lt;strong&gt;클라이언트 프로그램&lt;/strong&gt;과 &lt;strong&gt;서버 프로그램&lt;/strong&gt;으로 구분되기 시작&lt;/li&gt;
@@ -68,7 +69,7 @@
           &lt;li&gt;데이터 전송 구현의 어려움&lt;/li&gt;
           &lt;li&gt;클라이언트 프로그램 업데이터의 어려움&lt;/li&gt;
           &lt;li&gt;문제점을 해소하기 위해 웹(HTTP)을 사용!
-  &lt;img src=&quot;https://user-images.githubusercontent.com/43228743/145552070-0d60bd1c-af80-4e8a-905e-a0849a0b9791.png&quot; alt=&quot;02&quot; /&gt;&lt;/li&gt;
+  &lt;img src=&quot;https://user-images.githubusercontent.com/43228743/145552070-0d60bd1c-af80-4e8a-905e-a0849a0b9791.png&quot; alt=&quot;02&quot; height=&quot;500px&quot; width=&quot;700px&quot; /&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -87,8 +88,8 @@
         
         <pubDate>Thu, 09 Dec 2021 19:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/sublet-java-02</link>
-        <guid isPermaLink="true">http://localhost:4000/sublet-java-02</guid>
+        https://funkyblues.github.io/sublet-java-02</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/sublet-java-02</guid>
       </item>
       
     
@@ -102,8 +103,8 @@
         
         <pubDate>Wed, 08 Dec 2021 21:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/SVM-jupyter</link>
-        <guid isPermaLink="true">http://localhost:4000/SVM-jupyter</guid>
+        https://funkyblues.github.io/SVM-jupyter</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/SVM-jupyter</guid>
       </item>
       
     
@@ -121,8 +122,8 @@
         
         <pubDate>Wed, 08 Dec 2021 21:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/SVM</link>
-        <guid isPermaLink="true">http://localhost:4000/SVM</guid>
+        https://funkyblues.github.io/SVM</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/SVM</guid>
       </item>
       
     
@@ -140,8 +141,8 @@
         
         <pubDate>Sun, 05 Dec 2021 01:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/c-basic-grammar</link>
-        <guid isPermaLink="true">http://localhost:4000/c-basic-grammar</guid>
+        https://funkyblues.github.io/c-basic-grammar</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/c-basic-grammar</guid>
       </item>
       
     
@@ -159,8 +160,8 @@
         
         <pubDate>Sat, 04 Dec 2021 21:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/c-beginning</link>
-        <guid isPermaLink="true">http://localhost:4000/c-beginning</guid>
+        https://funkyblues.github.io/c-beginning</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/c-beginning</guid>
       </item>
       
     
@@ -173,8 +174,8 @@
         
         <pubDate>Thu, 02 Dec 2021 21:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/cs-beginning</link>
-        <guid isPermaLink="true">http://localhost:4000/cs-beginning</guid>
+        https://funkyblues.github.io/cs-beginning</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/cs-beginning</guid>
       </item>
       
     
@@ -187,8 +188,8 @@
         
         <pubDate>Wed, 01 Dec 2021 21:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/nodejs-beginning</link>
-        <guid isPermaLink="true">http://localhost:4000/nodejs-beginning</guid>
+        https://funkyblues.github.io/nodejs-beginning</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/nodejs-beginning</guid>
       </item>
       
     
@@ -214,8 +215,8 @@
         
         <pubDate>Tue, 30 Nov 2021 21:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/network-for-everyone1</link>
-        <guid isPermaLink="true">http://localhost:4000/network-for-everyone1</guid>
+        https://funkyblues.github.io/network-for-everyone1</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/network-for-everyone1</guid>
       </item>
       
     
@@ -234,8 +235,8 @@
         
         <pubDate>Tue, 30 Nov 2021 21:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/java-beginning</link>
-        <guid isPermaLink="true">http://localhost:4000/java-beginning</guid>
+        https://funkyblues.github.io/java-beginning</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/java-beginning</guid>
       </item>
       
     

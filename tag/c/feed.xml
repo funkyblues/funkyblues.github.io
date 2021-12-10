@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/c/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-12-10T18:38:11+09:00</updated>
-  <id>http://localhost:4000/tag/c/feed.xml</id>
+  <link href="https://funkyblues.github.io/tag/c/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://funkyblues.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-12-10T23:59:36+09:00</updated>
+  <id>https://funkyblues.github.io/tag/c/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">C언어 정리(2) - 기본 문법</title>
-      <link href="http://localhost:4000/c-basic-grammar" rel="alternate" type="text/html" title="C언어 정리(2) - 기본 문법" />
+      <link href="https://funkyblues.github.io/c-basic-grammar" rel="alternate" type="text/html" title="C언어 정리(2) - 기본 문법" />
       <published>2021-12-05T01:00:00+09:00</published>
       <updated>2021-12-05T01:00:00+09:00</updated>
-      <id>http://localhost:4000/c-basic-grammar</id>
-      <content type="html" xml:base="http://localhost:4000/c-basic-grammar">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;C언어 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>https://funkyblues.github.io/c-basic-grammar</id>
+      <content type="html" xml:base="https://funkyblues.github.io/c-basic-grammar">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;C언어 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./c-beginning&quot;&gt;C언어 정리(1) - 튜토리얼&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./c-basic-grammar&quot;&gt;C언어 정리(2) - 기본 문법&lt;/a&gt;&lt;/li&gt;
@@ -73,11 +73,11 @@
   
     <entry>
       <title type="html">C언어 정리(1) - 튜토리얼</title>
-      <link href="http://localhost:4000/c-beginning" rel="alternate" type="text/html" title="C언어 정리(1) - 튜토리얼" />
+      <link href="https://funkyblues.github.io/c-beginning" rel="alternate" type="text/html" title="C언어 정리(1) - 튜토리얼" />
       <published>2021-12-04T21:00:00+09:00</published>
       <updated>2021-12-04T21:00:00+09:00</updated>
-      <id>http://localhost:4000/c-beginning</id>
-      <content type="html" xml:base="http://localhost:4000/c-beginning">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;C언어 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+      <id>https://funkyblues.github.io/c-beginning</id>
+      <content type="html" xml:base="https://funkyblues.github.io/c-beginning">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;C언어 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
     &lt;li&gt;&lt;a href=&quot;./c-beginning&quot;&gt;C언어 정리(1) - 튜토리얼&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./c-basic-grammar&quot;&gt;C언어 정리(2) - 기본 문법&lt;/a&gt;&lt;/li&gt;
