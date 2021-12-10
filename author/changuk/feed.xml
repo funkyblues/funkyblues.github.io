@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/author/changuk/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2021-12-10T18:35:44+09:00</updated>
+  <updated>2021-12-10T18:38:11+09:00</updated>
   <id>http://localhost:4000/author/changuk/feed.xml</id>
 
   
@@ -154,8 +154,8 @@
         &lt;ul&gt;
           &lt;li&gt;데이터 전송 구현의 어려움&lt;/li&gt;
           &lt;li&gt;클라이언트 프로그램 업데이터의 어려움&lt;/li&gt;
-          &lt;li&gt;문제점을 해소하기 위해 웹(HTTP)을 사용!&lt;/li&gt;
-          &lt;li&gt;&lt;/li&gt;
+          &lt;li&gt;문제점을 해소하기 위해 웹(HTTP)을 사용!
+  &lt;img src=&quot;https://user-images.githubusercontent.com/43228743/145552070-0d60bd1c-af80-4e8a-905e-a0849a0b9791.png&quot; alt=&quot;02&quot; /&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;

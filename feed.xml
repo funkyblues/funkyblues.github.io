@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-10T18:35:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Collection of studies</title><subtitle>공부 정리용 블로그</subtitle><entry><title type="html">서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet</title><link href="http://localhost:4000/sublet-java-03" rel="alternate" type="text/html" title="서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet" /><published>2021-12-09T20:00:00+09:00</published><updated>2021-12-09T20:00:00+09:00</updated><id>http://localhost:4000/sublet-java-03</id><content type="html" xml:base="http://localhost:4000/sublet-java-03">&lt;h4 id=&quot;---웹-서버-프로그램과-servlet&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 서버 프로그램과 Servlet&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-10T18:38:11+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Collection of studies</title><subtitle>공부 정리용 블로그</subtitle><entry><title type="html">서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet</title><link href="http://localhost:4000/sublet-java-03" rel="alternate" type="text/html" title="서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet" /><published>2021-12-09T20:00:00+09:00</published><updated>2021-12-09T20:00:00+09:00</updated><id>http://localhost:4000/sublet-java-03</id><content type="html" xml:base="http://localhost:4000/sublet-java-03">&lt;h4 id=&quot;---웹-서버-프로그램과-servlet&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 서버 프로그램과 Servlet&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;클라이언트에서 회원에 대한 목록을 달라고 하면,&lt;/li&gt;
   &lt;li&gt;웹 서버는 요청을 따라 코드를 찾아보게 됨&lt;/li&gt;
@@ -47,8 +47,8 @@
         &lt;ul&gt;
           &lt;li&gt;데이터 전송 구현의 어려움&lt;/li&gt;
           &lt;li&gt;클라이언트 프로그램 업데이터의 어려움&lt;/li&gt;
-          &lt;li&gt;문제점을 해소하기 위해 웹(HTTP)을 사용!&lt;/li&gt;
-          &lt;li&gt;&lt;/li&gt;
+          &lt;li&gt;문제점을 해소하기 위해 웹(HTTP)을 사용!
+  &lt;img src=&quot;https://user-images.githubusercontent.com/43228743/145552070-0d60bd1c-af80-4e8a-905e-a0849a0b9791.png&quot; alt=&quot;02&quot; /&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
