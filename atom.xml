@@ -4,7 +4,7 @@
     <title> - Articles</title>
     <description>공부 정리용 블로그</description>
     <link>
-    https://funkyblues.github.io</link>
+    http://localhost:4000</link>
     
       
       <item>
@@ -12,21 +12,15 @@
         
           <description>&lt;h4 id=&quot;---웹-문서-추가하기&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 문서 추가하기&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;이전시간에 tomcat 설치함
-    &lt;h6 id=&quot;tomcat이-뭔가&quot;&gt;tomcat이 뭔가?&lt;/h6&gt;
-  &lt;/li&gt;
-  &lt;li&gt;WAS.&lt;/li&gt;
-  &lt;li&gt;WAS + Java web service 기능 =&amp;gt; 웹 서버!&lt;/li&gt;
-  &lt;li&gt;웹 서버라면 웹 문서를 제공해주는 서비스를 수행할 수 있음&lt;/li&gt;
-  &lt;li&gt;어떻게 웹 문서를 제공해주는지를 알아보자&lt;/li&gt;
+  &lt;li&gt;이전시간에 tomcat 설치함&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
         
         <pubDate>Thu, 09 Dec 2021 20:00:00 +0900</pubDate>
         <link>
-        https://funkyblues.github.io/sublet-java-05</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/sublet-java-05</guid>
+        http://localhost:4000/sublet-java-05</link>
+        <guid isPermaLink="true">http://localhost:4000/sublet-java-05</guid>
       </item>
       
     
@@ -52,8 +46,8 @@
         
         <pubDate>Thu, 09 Dec 2021 20:00:00 +0900</pubDate>
         <link>
-        https://funkyblues.github.io/sublet-java-03</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/sublet-java-03</guid>
+        http://localhost:4000/sublet-java-03</link>
+        <guid isPermaLink="true">http://localhost:4000/sublet-java-03</guid>
       </item>
       
     
@@ -74,7 +68,7 @@
           &lt;li&gt;데이터 전송 구현의 어려움&lt;/li&gt;
           &lt;li&gt;클라이언트 프로그램 업데이터의 어려움&lt;/li&gt;
           &lt;li&gt;문제점을 해소하기 위해 웹(HTTP)을 사용!&lt;/li&gt;
-          &lt;li&gt;(그림 추가)&lt;/li&gt;
+          &lt;li&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -93,8 +87,23 @@
         
         <pubDate>Thu, 09 Dec 2021 19:00:00 +0900</pubDate>
         <link>
-        https://funkyblues.github.io/sublet-java-02</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/sublet-java-02</guid>
+        http://localhost:4000/sublet-java-02</link>
+        <guid isPermaLink="true">http://localhost:4000/sublet-java-02</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>석사 논문 공부 - SVM 회귀모델 연구지역 적용</title>
+        
+          <description>&lt;p&gt;&lt;strong&gt;5장 – 서포트 벡터 머신&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 08 Dec 2021 21:00:00 +0900</pubDate>
+        <link>
+        http://localhost:4000/SVM-jupyter</link>
+        <guid isPermaLink="true">http://localhost:4000/SVM-jupyter</guid>
       </item>
       
     
@@ -102,13 +111,18 @@
       <item>
         <title>석사 논문 공부 - 머신러닝(SVM)</title>
         
-          <description>&lt;p&gt;석사 논문에 서포트 벡터 머신을 적용하기 위한 방법들을 블로그에 정리해 보기로 했다.&lt;/p&gt;
+          <description>&lt;p&gt;연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;데이터는 전국 5m DEM 및 전국 암석밀도분포표를 SVR의 Input으로 사용하였다.&lt;/li&gt;
+  &lt;li&gt;파이썬 코드를 사용하였다&lt;/li&gt;
+&lt;/ul&gt;
+
 </description>
         
         <pubDate>Wed, 08 Dec 2021 21:00:00 +0900</pubDate>
         <link>
-        https://funkyblues.github.io/SVM</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/SVM</guid>
+        http://localhost:4000/SVM</link>
+        <guid isPermaLink="true">http://localhost:4000/SVM</guid>
       </item>
       
     
@@ -126,8 +140,8 @@
         
         <pubDate>Sun, 05 Dec 2021 01:00:00 +0900</pubDate>
         <link>
-        https://funkyblues.github.io/c-basic-grammar</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/c-basic-grammar</guid>
+        http://localhost:4000/c-basic-grammar</link>
+        <guid isPermaLink="true">http://localhost:4000/c-basic-grammar</guid>
       </item>
       
     
@@ -145,8 +159,8 @@
         
         <pubDate>Sat, 04 Dec 2021 21:00:00 +0900</pubDate>
         <link>
-        https://funkyblues.github.io/c-beginning</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/c-beginning</guid>
+        http://localhost:4000/c-beginning</link>
+        <guid isPermaLink="true">http://localhost:4000/c-beginning</guid>
       </item>
       
     
@@ -159,8 +173,8 @@
         
         <pubDate>Thu, 02 Dec 2021 21:00:00 +0900</pubDate>
         <link>
-        https://funkyblues.github.io/cs-beginning</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/cs-beginning</guid>
+        http://localhost:4000/cs-beginning</link>
+        <guid isPermaLink="true">http://localhost:4000/cs-beginning</guid>
       </item>
       
     
@@ -173,8 +187,8 @@
         
         <pubDate>Wed, 01 Dec 2021 21:00:00 +0900</pubDate>
         <link>
-        https://funkyblues.github.io/nodejs-beginning</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/nodejs-beginning</guid>
+        http://localhost:4000/nodejs-beginning</link>
+        <guid isPermaLink="true">http://localhost:4000/nodejs-beginning</guid>
       </item>
       
     
@@ -200,8 +214,8 @@
         
         <pubDate>Tue, 30 Nov 2021 21:00:00 +0900</pubDate>
         <link>
-        https://funkyblues.github.io/network-for-everyone1</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/network-for-everyone1</guid>
+        http://localhost:4000/network-for-everyone1</link>
+        <guid isPermaLink="true">http://localhost:4000/network-for-everyone1</guid>
       </item>
       
     
@@ -220,8 +234,8 @@
         
         <pubDate>Tue, 30 Nov 2021 21:00:00 +0900</pubDate>
         <link>
-        https://funkyblues.github.io/java-beginning</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/java-beginning</guid>
+        http://localhost:4000/java-beginning</link>
+        <guid isPermaLink="true">http://localhost:4000/java-beginning</guid>
       </item>
       
     

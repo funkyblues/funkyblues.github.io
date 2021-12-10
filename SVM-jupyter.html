@@ -1,90 +1,221 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-10T18:35:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Collection of studies</title><subtitle>공부 정리용 블로그</subtitle><entry><title type="html">서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet</title><link href="http://localhost:4000/sublet-java-03" rel="alternate" type="text/html" title="서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet" /><published>2021-12-09T20:00:00+09:00</published><updated>2021-12-09T20:00:00+09:00</updated><id>http://localhost:4000/sublet-java-03</id><content type="html" xml:base="http://localhost:4000/sublet-java-03">&lt;h4 id=&quot;---웹-서버-프로그램과-servlet&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 서버 프로그램과 Servlet&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;클라이언트에서 회원에 대한 목록을 달라고 하면,&lt;/li&gt;
-  &lt;li&gt;웹 서버는 요청을 따라 코드를 찾아보게 됨&lt;/li&gt;
-  &lt;li&gt;그런 코드는 미리 문서로 만들어져 있지 않기 때문에 웹 서버는 DB에서 코드를 문서화 한 후 클라이언트로 돌려주어야 함&lt;/li&gt;
-  &lt;li&gt;사용자의 요구가 동적인 문서를 요구하는 것이라면, DB의 코드를 실행하여 돌려줄 수 있는 무언가가 필요
-    &lt;ul&gt;
-      &lt;li&gt;그런 무언가를 WAS라고 함&lt;/li&gt;
-      &lt;li&gt;Web Application Server (ex. tomcat!!)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;(그림 추가)&lt;/li&gt;
-&lt;/ul&gt;
+<!DOCTYPE html>
+<html>
+<head>
 
-&lt;h6 id=&quot;왜-웹-서버-응용-프로그램을-servlet이라-명칭할까&quot;&gt;왜 웹 서버 응용 프로그램을 Servlet이라 명칭할까?&lt;/h6&gt;
-&lt;ul&gt;
-  &lt;li&gt;(그림 추가)&lt;/li&gt;
-  &lt;li&gt;서버 어플리케이션 조각? 이라는 의미라고 이해해도 좋을 듯&lt;/li&gt;
-  &lt;li&gt;서블릿 단위로 만들기 위한 환경?&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Woo Chang Uk</name></author><category term="java" /><summary type="html">웹 서버 프로그램과 Servlet 클라이언트에서 회원에 대한 목록을 달라고 하면, 웹 서버는 요청을 따라 코드를 찾아보게 됨 그런 코드는 미리 문서로 만들어져 있지 않기 때문에 웹 서버는 DB에서 코드를 문서화 한 후 클라이언트로 돌려주어야 함 사용자의 요구가 동적인 문서를 요구하는 것이라면, DB의 코드를 실행하여 돌려줄 수 있는 무언가가 필요 그런 무언가를 WAS라고 함 Web Application Server (ex. tomcat!!) (그림 추가)</summary></entry><entry><title type="html">서블릿/JSP 강의 05 - 웹 문서 추가하기</title><link href="http://localhost:4000/sublet-java-05" rel="alternate" type="text/html" title="서블릿/JSP 강의 05 - 웹 문서 추가하기" /><published>2021-12-09T20:00:00+09:00</published><updated>2021-12-09T20:00:00+09:00</updated><id>http://localhost:4000/sublet-java-05</id><content type="html" xml:base="http://localhost:4000/sublet-java-05">&lt;h4 id=&quot;---웹-문서-추가하기&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 문서 추가하기&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;이전시간에 tomcat 설치함&lt;/li&gt;
-&lt;/ul&gt;
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-&lt;h6 id=&quot;tomcat이-뭔가&quot;&gt;tomcat이 뭔가?&lt;/h6&gt;
-&lt;ul&gt;
-  &lt;li&gt;WAS.&lt;/li&gt;
-  &lt;li&gt;WAS + Java web service 기능 =&amp;gt; 웹 서버!&lt;/li&gt;
-  &lt;li&gt;웹 서버라면 웹 문서를 제공해주는 서비스를 수행할 수 있음&lt;/li&gt;
-  &lt;li&gt;어떻게 웹 문서를 제공해주는지를 알아보자&lt;/li&gt;
-&lt;/ul&gt;
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
 
-&lt;h6 id=&quot;테스트-문서-만들고-서비스하기&quot;&gt;테스트 문서 만들고 서비스하기&lt;/h6&gt;
-&lt;ol&gt;
-  &lt;li&gt;tomcat의 홈 디렉토리에 문서 저장&lt;/li&gt;
-  &lt;li&gt;http://localhost:8080/changuk.txt&lt;/li&gt;
-  &lt;li&gt;문서 확인 가능!&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Woo Chang Uk</name></author><category term="java" /><summary type="html">웹 문서 추가하기 이전시간에 tomcat 설치함</summary></entry><entry><title type="html">서블릿/JSP 강의 02 - 웹 서버 프로그램이란</title><link href="http://localhost:4000/sublet-java-02" rel="alternate" type="text/html" title="서블릿/JSP 강의 02 - 웹 서버 프로그램이란" /><published>2021-12-09T19:00:00+09:00</published><updated>2021-12-09T19:00:00+09:00</updated><id>http://localhost:4000/sublet-java-02</id><content type="html" xml:base="http://localhost:4000/sublet-java-02">&lt;h4 id=&quot;---웹-서버-프로그램이란&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 서버 프로그램이란?&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글)&lt;/li&gt;
-  &lt;li&gt;시간이 지나면서(기술이 발전) &lt;strong&gt;네트워크&lt;/strong&gt;를 통해 &lt;strong&gt;클라이언트 프로그램&lt;/strong&gt;과 &lt;strong&gt;서버 프로그램&lt;/strong&gt;으로 구분되기 시작&lt;/li&gt;
-  &lt;li&gt;불편한 점이 생기기 시작
-    &lt;ul&gt;
-      &lt;li&gt;클라이언트, 서버 둘 다 업데이트가 되어야 하는 문제가 발생.&lt;/li&gt;
-      &lt;li&gt;두 프로그램이 동시에 변경되어야 함&lt;/li&gt;
-      &lt;li&gt;소켓이나 RPC 등등 데이터 전송을 원활하게 하는 방법을 찾다 보니, 네트워크를 이용하려고 함
-        &lt;ul&gt;
-          &lt;li&gt;데이터 전송 구현의 어려움&lt;/li&gt;
-          &lt;li&gt;클라이언트 프로그램 업데이터의 어려움&lt;/li&gt;
-          &lt;li&gt;문제점을 해소하기 위해 웹(HTTP)을 사용!&lt;/li&gt;
-          &lt;li&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;서버 프로그램이 동적으로 만든 문서(ex. 프로그램 사용자 목록)를 클라이언트로 전달&lt;/li&gt;
-  &lt;li&gt;문서로 전달되기 때문에 클라이언트 프로그램을 만들 필요가 없음 (브라우저만 있으면 되기 때문에)&lt;/li&gt;
-  &lt;li&gt;웹에는 이미 브라우저가 있으므로, 웹 개발을 이용한 서버 프로그램을 만들기 시작&lt;/li&gt;
-  &lt;li&gt;자바스크립트의 등장으로, 페이지의 요청이 아닌, 데이터의 요청으로 변경
-    &lt;ul&gt;
-      &lt;li&gt;웹 페이지에서 과거 윈도우 프로그램을 개발하는 것 같은 시대가 도래&lt;/li&gt;
-      &lt;li&gt;프론트엔드, 백엔드의 개념 정립&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Woo Chang Uk</name></author><category term="java" /><summary type="html">웹 서버 프로그램이란? 일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글) 시간이 지나면서(기술이 발전) 네트워크를 통해 클라이언트 프로그램과 서버 프로그램으로 구분되기 시작 불편한 점이 생기기 시작 클라이언트, 서버 둘 다 업데이트가 되어야 하는 문제가 발생. 두 프로그램이 동시에 변경되어야 함 소켓이나 RPC 등등 데이터 전송을 원활하게 하는 방법을 찾다 보니, 네트워크를 이용하려고 함 데이터 전송 구현의 어려움 클라이언트 프로그램 업데이터의 어려움 문제점을 해소하기 위해 웹(HTTP)을 사용! 서버 프로그램이 동적으로 만든 문서(ex. 프로그램 사용자 목록)를 클라이언트로 전달 문서로 전달되기 때문에 클라이언트 프로그램을 만들 필요가 없음 (브라우저만 있으면 되기 때문에) 웹에는 이미 브라우저가 있으므로, 웹 개발을 이용한 서버 프로그램을 만들기 시작 자바스크립트의 등장으로, 페이지의 요청이 아닌, 데이터의 요청으로 변경 웹 페이지에서 과거 윈도우 프로그램을 개발하는 것 같은 시대가 도래 프론트엔드, 백엔드의 개념 정립</summary></entry><entry><title type="html">석사 논문 공부 - 머신러닝(SVM)</title><link href="http://localhost:4000/SVM" rel="alternate" type="text/html" title="석사 논문 공부 - 머신러닝(SVM)" /><published>2021-12-08T21:00:00+09:00</published><updated>2021-12-08T21:00:00+09:00</updated><id>http://localhost:4000/SVM</id><content type="html" xml:base="http://localhost:4000/SVM">&lt;p&gt;연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;데이터는 전국 5m DEM 및 전국 암석밀도분포표를 SVR의 Input으로 사용하였다.&lt;/li&gt;
-  &lt;li&gt;파이썬 코드를 사용하였다&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Woo Chang Uk</name></author><category term="paper" /><summary type="html">연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다. 데이터는 전국 5m DEM 및 전국 암석밀도분포표를 SVR의 Input으로 사용하였다. 파이썬 코드를 사용하였다</summary></entry><entry><title type="html">석사 논문 공부 - SVM 회귀모델 연구지역 적용</title><link href="http://localhost:4000/SVM-jupyter" rel="alternate" type="text/html" title="석사 논문 공부 - SVM 회귀모델 연구지역 적용" /><published>2021-12-08T21:00:00+09:00</published><updated>2021-12-08T21:00:00+09:00</updated><id>http://localhost:4000/SVM-jupyter</id><content type="html" xml:base="http://localhost:4000/SVM-jupyter">&lt;p&gt;&lt;strong&gt;5장 – 서포트 벡터 머신&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;10&quot;&gt;10.&lt;/h2&gt;
 
-&lt;p&gt;&lt;em&gt;문제: SVM회귀를 사용하여 중력값을 예측해봅시다.&lt;/em&gt;&lt;/p&gt;
+    <title>석사 논문 공부 - SVM 회귀모델 연구지역 적용</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;data_1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'study_area_g1_KR_DEM_5sec.dat'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delim_whitespace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;data_2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'study_area_g1.dat'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delim_whitespace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;data_3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'study_area_g2.dat'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delim_whitespace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'height'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;df_2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'gravity'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data_1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'height'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;df_2&lt;/span&gt;
+    <!-- custom.css -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <!-- 웹 폰트 추가 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
 
-&lt;div&gt;
-&lt;style scoped=&quot;&quot;&gt;
+    <!-- syntax.css 추가 -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="공부 정리용 블로그" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/built/images/favicon-1.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/SVM-jupyter" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Collection of studies" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="석사 논문 공부 - SVM 회귀모델 연구지역 적용" />
+    <meta property="og:description" content="5장 – 서포트 벡터 머신 10. 문제: SVM회귀를 사용하여 중력값을 예측해봅시다. import pandas as pd import matplotlib.pyplot as plt data_1 = pd.read_csv('study_area_g1_KR_DEM_5sec.dat', delim_whitespace=True) data_2 = pd.read_csv('study_area_g1.dat', delim_whitespace=True) data_3 = pd.read_csv('study_area_g2.dat', delim_whitespace=True) df = pd.concat([data_2, data_1['height']], axis=1) df_2 = pd.concat([data_3, df['gravity'], data_1['height']], axis=1) df_2 longitude latitude gravity_simple gravity height 0 127.944250" />
+    <meta property="og:url" content="http://localhost:4000/SVM-jupyter" />
+    <meta property="og:image" content="http://localhost:4000/assets/built/images/SVM.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2021-12-08T21:00:00+09:00" />
+    <meta property="article:modified_time" content="2021-12-08T21:00:00+09:00" />
+    <meta property="article:tag" content="Paper" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="석사 논문 공부 - SVM 회귀모델 연구지역 적용" />
+    <meta name="twitter:description" content="5장 – 서포트 벡터 머신 10. 문제: SVM회귀를 사용하여 중력값을 예측해봅시다. import pandas as pd import matplotlib.pyplot as plt data_1 = pd.read_csv('study_area_g1_KR_DEM_5sec.dat', delim_whitespace=True) data_2 = pd.read_csv('study_area_g1.dat', delim_whitespace=True) data_3 = pd.read_csv('study_area_g2.dat', delim_whitespace=True) df = pd.concat([data_2, data_1['height']], axis=1) df_2 = pd.concat([data_3, df['gravity'], data_1['height']], axis=1) df_2 longitude latitude gravity_simple gravity height 0 127.944250" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/built/images/SVM.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Collection of studies" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Paper" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Collection of studies",
+        "logo": "http://localhost:4000/"
+    },
+    "url": "http://localhost:4000/SVM-jupyter",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:4000/assets/built/images/SVM.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/SVM-jupyter"
+    },
+    "description": "5장 – 서포트 벡터 머신 10. 문제: SVM회귀를 사용하여 중력값을 예측해봅시다. import pandas as pd import matplotlib.pyplot as plt data_1 = pd.read_csv('study_area_g1_KR_DEM_5sec.dat', delim_whitespace=True) data_2 = pd.read_csv('study_area_g1.dat', delim_whitespace=True) data_3 = pd.read_csv('study_area_g2.dat', delim_whitespace=True) df = pd.concat([data_2, data_1['height']], axis=1) df_2 = pd.concat([data_3, df['gravity'], data_1['height']], axis=1) df_2 longitude latitude gravity_simple gravity height 0 127.944250"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="석사 논문 공부 - SVM 회귀모델 연구지역 적용" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="http://localhost:4000/">Collection of studies</a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <!-- <li class="nav-C" role="menuitem"><a href="/tag/c/">C</a></li> -->
+    <li class="nav-java" role="menuitem"><a href="/tag/java/">java</a></li>
+    <!-- <li class="nav-Csharp" role="menuitem"><a href="/tag/c-sharp/">C#</a></li> -->
+    <!-- <li class="nav-nodejs" role="menuitem"><a href="/tag/nodejs/">nodejs</a></li> -->
+    <!-- <li class="nav-Network" role="menuitem"><a href="/tag/network/">Network</a></li> -->
+    
+    <li class="nav-paper" role="menuitem"><a href="/tag/paper/">Paper</a></li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/archive.html">All Posts</a>
+    </li>
+    <li class="nav-archive" role="menuitem">
+        <a href="/author_archive.html">Tag별 Posts</a>
+    </li>
+</ul>
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+            <a class="subscribe-button" href="#subscribe">Search</a>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-paper post tag-paper ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime=" 8 December 2021"> 8 December 2021</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/paper/'>PAPER</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">석사 논문 공부 - SVM 회귀모델 연구지역 적용</h1>
+            </header>
+
+            <!--
+            
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/SVM.png)">
+            </figure>
+            
+            -->
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p><strong>5장 – 서포트 벡터 머신</strong></p>
+
+<h2 id="10">10.</h2>
+
+<p><em>문제: SVM회귀를 사용하여 중력값을 예측해봅시다.</em></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">data_1</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'study_area_g1_KR_DEM_5sec.dat'</span><span class="p">,</span> <span class="n">delim_whitespace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">data_2</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'study_area_g1.dat'</span><span class="p">,</span> <span class="n">delim_whitespace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">data_3</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'study_area_g2.dat'</span><span class="p">,</span> <span class="n">delim_whitespace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data_2</span><span class="p">,</span> <span class="n">data_1</span><span class="p">[</span><span class="s">'height'</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_2</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data_3</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s">'gravity'</span><span class="p">],</span> <span class="n">data_1</span><span class="p">[</span><span class="s">'height'</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_2</span>
+
+</code></pre></div></div>
+
+<div>
+<style scoped="">
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
@@ -96,139 +227,139 @@
     .dataframe thead th {
         text-align: right;
     }
-&lt;/style&gt;
-&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr style=&quot;text-align: right;&quot;&gt;
-      &lt;th&gt;&lt;/th&gt;
-      &lt;th&gt;longitude&lt;/th&gt;
-      &lt;th&gt;latitude&lt;/th&gt;
-      &lt;th&gt;gravity_simple&lt;/th&gt;
-      &lt;th&gt;gravity&lt;/th&gt;
-      &lt;th&gt;height&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th&gt;0&lt;/th&gt;
-      &lt;td&gt;127.944250&lt;/td&gt;
-      &lt;td&gt;37.356528&lt;/td&gt;
-      &lt;td&gt;979933.760699&lt;/td&gt;
-      &lt;td&gt;979892.100&lt;/td&gt;
-      &lt;td&gt;122.931&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;1&lt;/th&gt;
-      &lt;td&gt;127.951000&lt;/td&gt;
-      &lt;td&gt;37.341361&lt;/td&gt;
-      &lt;td&gt;979928.996994&lt;/td&gt;
-      &lt;td&gt;979888.123&lt;/td&gt;
-      &lt;td&gt;144.442&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;2&lt;/th&gt;
-      &lt;td&gt;127.936194&lt;/td&gt;
-      &lt;td&gt;37.317194&lt;/td&gt;
-      &lt;td&gt;979928.545670&lt;/td&gt;
-      &lt;td&gt;979886.130&lt;/td&gt;
-      &lt;td&gt;146.480&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;3&lt;/th&gt;
-      &lt;td&gt;127.922167&lt;/td&gt;
-      &lt;td&gt;37.305722&lt;/td&gt;
-      &lt;td&gt;979927.297775&lt;/td&gt;
-      &lt;td&gt;979883.778&lt;/td&gt;
-      &lt;td&gt;152.115&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;4&lt;/th&gt;
-      &lt;td&gt;127.903944&lt;/td&gt;
-      &lt;td&gt;37.276833&lt;/td&gt;
-      &lt;td&gt;979920.701757&lt;/td&gt;
-      &lt;td&gt;979873.191&lt;/td&gt;
-      &lt;td&gt;181.900&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;...&lt;/th&gt;
-      &lt;td&gt;...&lt;/td&gt;
-      &lt;td&gt;...&lt;/td&gt;
-      &lt;td&gt;...&lt;/td&gt;
-      &lt;td&gt;...&lt;/td&gt;
-      &lt;td&gt;...&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;1839&lt;/th&gt;
-      &lt;td&gt;128.537170&lt;/td&gt;
-      &lt;td&gt;38.191250&lt;/td&gt;
-      &lt;td&gt;979955.402990&lt;/td&gt;
-      &lt;td&gt;980012.327&lt;/td&gt;
-      &lt;td&gt;25.203&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;1840&lt;/th&gt;
-      &lt;td&gt;128.590500&lt;/td&gt;
-      &lt;td&gt;38.207560&lt;/td&gt;
-      &lt;td&gt;979957.738669&lt;/td&gt;
-      &lt;td&gt;980027.453&lt;/td&gt;
-      &lt;td&gt;14.656&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;1841&lt;/th&gt;
-      &lt;td&gt;128.509030&lt;/td&gt;
-      &lt;td&gt;38.207810&lt;/td&gt;
-      &lt;td&gt;979941.435642&lt;/td&gt;
-      &lt;td&gt;979997.908&lt;/td&gt;
-      &lt;td&gt;88.274&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;1842&lt;/th&gt;
-      &lt;td&gt;127.971220&lt;/td&gt;
-      &lt;td&gt;38.225060&lt;/td&gt;
-      &lt;td&gt;979832.023459&lt;/td&gt;
-      &lt;td&gt;979941.122&lt;/td&gt;
-      &lt;td&gt;582.336&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;1843&lt;/th&gt;
-      &lt;td&gt;128.550690&lt;/td&gt;
-      &lt;td&gt;38.233610&lt;/td&gt;
-      &lt;td&gt;979958.208153&lt;/td&gt;
-      &lt;td&gt;980025.289&lt;/td&gt;
-      &lt;td&gt;12.536&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;1844 rows × 5 columns&lt;/p&gt;
-&lt;/div&gt;
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>longitude</th>
+      <th>latitude</th>
+      <th>gravity_simple</th>
+      <th>gravity</th>
+      <th>height</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>127.944250</td>
+      <td>37.356528</td>
+      <td>979933.760699</td>
+      <td>979892.100</td>
+      <td>122.931</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>127.951000</td>
+      <td>37.341361</td>
+      <td>979928.996994</td>
+      <td>979888.123</td>
+      <td>144.442</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>127.936194</td>
+      <td>37.317194</td>
+      <td>979928.545670</td>
+      <td>979886.130</td>
+      <td>146.480</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>127.922167</td>
+      <td>37.305722</td>
+      <td>979927.297775</td>
+      <td>979883.778</td>
+      <td>152.115</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>127.903944</td>
+      <td>37.276833</td>
+      <td>979920.701757</td>
+      <td>979873.191</td>
+      <td>181.900</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1839</th>
+      <td>128.537170</td>
+      <td>38.191250</td>
+      <td>979955.402990</td>
+      <td>980012.327</td>
+      <td>25.203</td>
+    </tr>
+    <tr>
+      <th>1840</th>
+      <td>128.590500</td>
+      <td>38.207560</td>
+      <td>979957.738669</td>
+      <td>980027.453</td>
+      <td>14.656</td>
+    </tr>
+    <tr>
+      <th>1841</th>
+      <td>128.509030</td>
+      <td>38.207810</td>
+      <td>979941.435642</td>
+      <td>979997.908</td>
+      <td>88.274</td>
+    </tr>
+    <tr>
+      <th>1842</th>
+      <td>127.971220</td>
+      <td>38.225060</td>
+      <td>979832.023459</td>
+      <td>979941.122</td>
+      <td>582.336</td>
+    </tr>
+    <tr>
+      <th>1843</th>
+      <td>128.550690</td>
+      <td>38.233610</td>
+      <td>979958.208153</td>
+      <td>980025.289</td>
+      <td>12.536</td>
+    </tr>
+  </tbody>
+</table>
+<p>1844 rows × 5 columns</p>
+</div>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'height'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;axis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span> <span class="o">=</span> <span class="n">df_2</span><span class="p">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">df_2</span><span class="p">[</span><span class="s">'height'</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;df_2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">y</span> <span class="o">=</span> <span class="n">df_2</span><span class="p">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]</span>
+</code></pre></div></div>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">values</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">.</span><span class="n">values</span>
+</code></pre></div></div>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_printoptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;threshold&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maxsize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# python array 전부 표시해주도록 하는 라인
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="n">np</span><span class="p">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">threshold</span><span class="o">=</span><span class="n">sys</span><span class="p">.</span><span class="n">maxsize</span><span class="p">)</span> <span class="c1"># python array 전부 표시해주도록 하는 라인
+</span></code></pre></div></div>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</code></pre></div></div>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;20640
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>20640
 20640
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span>
+</code></pre></div></div>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;array([[ 127.94425   ,   37.3565278 ,  122.931     ],
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array([[ 127.94425   ,   37.3565278 ,  122.931     ],
        [ 127.951     ,   37.3413611 ,  144.442     ],
        [ 127.9361944 ,   37.3171944 ,  146.48      ],
        [ 127.9221667 ,   37.3057222 ,  152.115     ],
@@ -2072,12 +2203,12 @@
        [ 128.50903   ,   38.20781   ,   88.274     ],
        [ 127.97122   ,   38.22506   ,  582.336     ],
        [ 128.55069   ,   38.23361   ,   12.536     ]])
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">y</span>
+</code></pre></div></div>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;array([979892.1   , 979888.123 , 979886.13  , 979883.778 , 979873.191 ,
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array([979892.1   , 979888.123 , 979886.13  , 979883.778 , 979873.191 ,
        979862.734 , 979907.033 , 979905.119 , 979907.182 , 979903.921 ,
        979909.771 , 979909.358 , 979909.335 , 979908.192 , 979905.866 ,
        979879.18  , 979885.776 , 979906.885 , 979905.064 , 979904.2026,
@@ -2446,67 +2577,67 @@
        980012.949 , 980026.116 , 980031.921 , 980019.289 , 980008.77  ,
        980026.492 , 980015.857 , 980025.735 , 980024.489 , 980012.327 ,
        980027.453 , 979997.908 , 979941.122 , 980025.289 ])
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;훈련 세트와 테스트 세트로 나눕니다:&lt;/p&gt;
+<p>훈련 세트와 테스트 세트로 나눕니다:</p>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.model_selection&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_test_split&lt;/span&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 
-&lt;span class=&quot;n&quot;&gt;X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_test&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_test_split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;test_size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</code></pre></div></div>
 
-&lt;p&gt;데이터의 스케일을 조정하는 것을 잊지 마세요:&lt;/p&gt;
+<p>데이터의 스케일을 조정하는 것을 잊지 마세요:</p>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.preprocessing&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StandardScaler&lt;/span&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
 
-&lt;span class=&quot;n&quot;&gt;scaler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StandardScaler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;X_train_scaled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scaler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit_transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;X_test_scaled&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scaler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_train_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</code></pre></div></div>
 
-&lt;p&gt;먼저 간단한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LinearSVR&lt;/code&gt;을 훈련시켜 보죠:&lt;/p&gt;
+<p>먼저 간단한 <code class="language-plaintext highlighter-rouge">LinearSVR</code>을 훈련시켜 보죠:</p>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.svm&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LinearSVR&lt;/span&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">LinearSVR</span>
 
-&lt;span class=&quot;n&quot;&gt;lin_svr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LinearSVR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random_state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;lin_svr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_train_scaled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="n">lin_svr</span> <span class="o">=</span> <span class="n">LinearSVR</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">lin_svr</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</code></pre></div></div>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;LinearSVR(random_state=42)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LinearSVR(random_state=42)
+</code></pre></div></div>
 
-&lt;p&gt;훈련 세트에 대한 성능을 확인해 보겠습니다:&lt;/p&gt;
+<p>훈련 세트에 대한 성능을 확인해 보겠습니다:</p>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.metrics&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean_squared_error&lt;/span&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
 
-&lt;span class=&quot;n&quot;&gt;y_pred&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lin_svr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_train_scaled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean_squared_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_pred&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mse&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">lin_svr</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">)</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">mse</span>
+</code></pre></div></div>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;957237057368.6133
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>957237057368.6133
+</code></pre></div></div>
 
-&lt;p&gt;RMSE를 확인해 보겠습니다:&lt;/p&gt;
+<p>RMSE를 확인해 보겠습니다:</p>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
+</code></pre></div></div>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;978384.922905404
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>978384.922905404
+</code></pre></div></div>
 
-&lt;p&gt;훈련 세트에서 타깃은 만달러 단위입니다. RMSE는 기대할 수 있는 에러의 정도를 대략 가늠하게 도와줍니다(에러가 클수록 큰 폭으로 증가합니다). 이 모델의 에러가 대략 $10,000 정도로 예상할 수 있습니다. 썩 훌륭하지 않네요. RBF 커널이 더 나을지 확인해 보겠습니다. 하이퍼파라미터 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt;와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gamma&lt;/code&gt;의 적절한 값을 찾기 위해 교차 검증을 사용한 랜덤 서치를 적용하겠습니다:&lt;/p&gt;
+<p>훈련 세트에서 타깃은 만달러 단위입니다. RMSE는 기대할 수 있는 에러의 정도를 대략 가늠하게 도와줍니다(에러가 클수록 큰 폭으로 증가합니다). 이 모델의 에러가 대략 $10,000 정도로 예상할 수 있습니다. 썩 훌륭하지 않네요. RBF 커널이 더 나을지 확인해 보겠습니다. 하이퍼파라미터 <code class="language-plaintext highlighter-rouge">C</code>와 <code class="language-plaintext highlighter-rouge">gamma</code>의 적절한 값을 찾기 위해 교차 검증을 사용한 랜덤 서치를 적용하겠습니다:</p>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.svm&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SVR&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.model_selection&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RandomizedSearchCV&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy.stats&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reciprocal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uniform&lt;/span&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVR</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RandomizedSearchCV</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">reciprocal</span><span class="p">,</span> <span class="n">uniform</span>
 
-&lt;span class=&quot;n&quot;&gt;param_distributions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;gamma&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reciprocal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;C&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uniform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;rnd_search_cv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RandomizedSearchCV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SVR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param_distributions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n_iter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verbose&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random_state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;rnd_search_cv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_train_scaled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="n">param_distributions</span> <span class="o">=</span> <span class="p">{</span><span class="s">"gamma"</span><span class="p">:</span> <span class="n">reciprocal</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="s">"C"</span><span class="p">:</span> <span class="n">uniform</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)}</span>
+<span class="n">rnd_search_cv</span> <span class="o">=</span> <span class="n">RandomizedSearchCV</span><span class="p">(</span><span class="n">SVR</span><span class="p">(),</span> <span class="n">param_distributions</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">rnd_search_cv</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+</code></pre></div></div>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Fitting 3 folds for each of 10 candidates, totalling 30 fits
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Fitting 3 folds for each of 10 candidates, totalling 30 fits
 [CV] C=4.745401188473625, gamma=0.07969454818643928 ..................
 [CV] ... C=4.745401188473625, gamma=0.07969454818643928, total=   0.0s
 [CV] C=4.745401188473625, gamma=0.07969454818643928 ..................
@@ -2582,112 +2713,508 @@
 
 
 RandomizedSearchCV(cv=3, estimator=SVR(),
-                   param_distributions={'C': &amp;lt;scipy.stats._distn_infrastructure.rv_frozen object at 0x000002219FB83130&amp;gt;,
-                                        'gamma': &amp;lt;scipy.stats._distn_infrastructure.rv_frozen object at 0x000002219FB3AD00&amp;gt;},
+                   param_distributions={'C': &lt;scipy.stats._distn_infrastructure.rv_frozen object at 0x000002219FB83130&gt;,
+                                        'gamma': &lt;scipy.stats._distn_infrastructure.rv_frozen object at 0x000002219FB3AD00&gt;},
                    random_state=42, verbose=2)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;rnd_search_cv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;best_estimator_&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">rnd_search_cv</span><span class="p">.</span><span class="n">best_estimator_</span>
+</code></pre></div></div>
 
-&lt;p&gt;이제 훈련 세트에서 RMSE를 측정해 보겠습니다:&lt;/p&gt;
+<p>이제 훈련 세트에서 RMSE를 측정해 보겠습니다:</p>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;y_pred&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rnd_search_cv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;best_estimator_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_train_scaled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean_squared_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_pred&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">y_pred</span> <span class="o">=</span> <span class="n">rnd_search_cv</span><span class="p">.</span><span class="n">best_estimator_</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train_scaled</span><span class="p">)</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
+</code></pre></div></div>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;15.380621136044047
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>15.380621136044047
+</code></pre></div></div>
 
-&lt;p&gt;선형 모델보다 훨씬 나아졌네요. 이 모델을 선택하고 테스트 세트에서 평가해 보겠습니다:&lt;/p&gt;
+<p>선형 모델보다 훨씬 나아졌네요. 이 모델을 선택하고 테스트 세트에서 평가해 보겠습니다:</p>
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;y_pred&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rnd_search_cv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;best_estimator_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_test_scaled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mse&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mean_squared_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_pred&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sqrt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">y_pred</span> <span class="o">=</span> <span class="n">rnd_search_cv</span><span class="p">.</span><span class="n">best_estimator_</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
+</code></pre></div></div>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;17.942993412209514
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Woo Chang Uk</name></author><category term="paper" /><summary type="html">5장 – 서포트 벡터 머신</summary></entry><entry><title type="html">C언어 정리(2) - 기본 문법</title><link href="http://localhost:4000/c-basic-grammar" rel="alternate" type="text/html" title="C언어 정리(2) - 기본 문법" /><published>2021-12-05T01:00:00+09:00</published><updated>2021-12-05T01:00:00+09:00</updated><id>http://localhost:4000/c-basic-grammar</id><content type="html" xml:base="http://localhost:4000/c-basic-grammar">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;C언어 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./c-beginning&quot;&gt;C언어 정리(1) - 튜토리얼&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./c-basic-grammar&quot;&gt;C언어 정리(2) - 기본 문법&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>17.942993412209514
+</code></pre></div></div>
 
-&lt;p&gt;이 글은 C언어의 기본 문법에 관한 내용을 담고 있습니다.&lt;/p&gt;</content><author><name>Woo Chang Uk</name></author><category term="c" /><summary type="html">C언어 공부는 여러 절로 구성되어 있습니다. C언어 정리(1) - 튜토리얼 C언어 정리(2) - 기본 문법</summary></entry><entry><title type="html">C언어 정리(1) - 튜토리얼</title><link href="http://localhost:4000/c-beginning" rel="alternate" type="text/html" title="C언어 정리(1) - 튜토리얼" /><published>2021-12-04T21:00:00+09:00</published><updated>2021-12-04T21:00:00+09:00</updated><id>http://localhost:4000/c-beginning</id><content type="html" xml:base="http://localhost:4000/c-beginning">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;C언어 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./c-beginning&quot;&gt;C언어 정리(1) - 튜토리얼&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./c-basic-grammar&quot;&gt;C언어 정리(2) - 기본 문법&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;p&gt;이 글은 C언어에 대한 기초 정리 노트입니다.&lt;/p&gt;
+                </div>
+            </section>
 
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Woo Chang Uk</name></author><category term="c" /><summary type="html">C언어 공부는 여러 절로 구성되어 있습니다. C언어 정리(1) - 튜토리얼 C언어 정리(2) - 기본 문법</summary></entry><entry><title type="html">C# 정리(1) - 튜토리얼</title><link href="http://localhost:4000/cs-beginning" rel="alternate" type="text/html" title="C# 정리(1) - 튜토리얼" /><published>2021-12-02T21:00:00+09:00</published><updated>2021-12-02T21:00:00+09:00</updated><id>http://localhost:4000/cs-beginning</id><content type="html" xml:base="http://localhost:4000/cs-beginning">&lt;p&gt;이 글은 C#에 대한 기초 정리 노트입니다.&lt;/p&gt;</content><author><name>Woo Chang Uk</name></author><category term="c-sharp" /><summary type="html">이 글은 C#에 대한 기초 정리 노트입니다.</summary></entry><entry><title type="html">nodejs 정리(1) - 튜토리얼</title><link href="http://localhost:4000/nodejs-beginning" rel="alternate" type="text/html" title="nodejs 정리(1) - 튜토리얼" /><published>2021-12-01T21:00:00+09:00</published><updated>2021-12-01T21:00:00+09:00</updated><id>http://localhost:4000/nodejs-beginning</id><content type="html" xml:base="http://localhost:4000/nodejs-beginning">&lt;p&gt;nodejs를 사용하여 TO-DO 어플리케이션 만들기&lt;/p&gt;</content><author><name>Woo Chang Uk</name></author><category term="nodejs" /><summary type="html">nodejs를 사용하여 TO-DO 어플리케이션 만들기</summary></entry><entry><title type="html">Java 정리(1) - 튜토리얼</title><link href="http://localhost:4000/java-beginning" rel="alternate" type="text/html" title="Java 정리(1) - 튜토리얼" /><published>2021-11-30T21:00:00+09:00</published><updated>2021-11-30T21:00:00+09:00</updated><id>http://localhost:4000/java-beginning</id><content type="html" xml:base="http://localhost:4000/java-beginning">&lt;p&gt;이 글은 &lt;strong&gt;Java&lt;/strong&gt;에 대한 기초 정리 노트입니다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;자바는 &lt;strong&gt;1991&lt;/strong&gt;년 제임스 고슬링을 비롯한 선 마이크로시스템스 연구원들이 처음 개발함&lt;/li&gt;
-  &lt;li&gt;당시 가장 많이 사용되던 프로그래밍 언어 : &lt;strong&gt;&lt;em&gt;C&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;C++&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;가전제품이나 휴대용 장치 등에 사용하는 소프트웨어를 만들기 위해 독립적으로 작동되는 더 안정된 프로그래밍 언어가 필요하여 개발&lt;/li&gt;
-&lt;/ul&gt;
+            <!-- Email subscribe form at the bottom of the page -->
 
-&lt;hr /&gt;
-&lt;h4 id=&quot;---java를-쓰면-왜-좋을까&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;Java를 쓰면 왜 좋을까?&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
-&lt;h6 id=&quot;플랫폼에-영향을-받지-않으므로-다양한-환경에서-사용될-수-있음&quot;&gt;플랫폼에 영향을 받지 않으므로 다양한 환경에서 사용될 수 있음.&lt;/h6&gt;
+            <!--
+            
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to Collection of studies</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
 
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;한 번 작성하면, 어디서든 돌아간다 (write once, run anywhere)&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+                </section>
+            
+            -->
+            
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/built/images/author-logo-1.jpg" alt="changuk" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/changuk">Woo Chang Uk</a></h4>
+                                
+                                    <p>IT에 관심많은 대학원생</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/changuk">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
 
-&lt;ul&gt;
-  &lt;li&gt;플랫폼에 종속되지 않는 프로그램을 개발하여 여러 플랫폼(Windows, Mac, Linux, etc.)에서 실행할 수 있다는 의미
-    &lt;ul&gt;
-      &lt;li&gt;Ex) 윈도우 운영체제에서 C 언어로 개발한 프로그램 : Test
-        &lt;ul&gt;
-          &lt;li&gt;이 프로그램을 컴파일 -&amp;gt; Test.exe 생성&lt;/li&gt;
-          &lt;li&gt;Test.exe는 윈도우에서 실행되는 ‘실행 파일’
-            &lt;ul&gt;
-              &lt;li&gt;이 실행 파일은 윈도우 운영체제에 맞게 만들어졌기 때문에 리눅스 운영체제에서 실행할 수 없음&lt;/li&gt;
-              &lt;li&gt;리눅스 운영체제에서 실행하려면 리눅스 환경에서 Test 프로그램을 다시 컴파일해서 실행 파일 생성&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;자바에서 만든 프로그램 : Example
-        &lt;ul&gt;
-          &lt;li&gt;이 프로그램을 컴파일 &lt;strong&gt;→&lt;/strong&gt;  Example.class 생성&lt;/li&gt;
-          &lt;li&gt;이 파일을 &lt;strong&gt;바이트 코드&lt;/strong&gt;라고 함 : 완벽한 실행 파일은 아님. 실행하려면 운영체제에 맞는 &lt;strong&gt;자바 가상 머신(JVM: Java Virtual Machine)&lt;/strong&gt;이 필요&lt;/li&gt;
-          &lt;li&gt;운영체제에 맞는 완벽한 기계어가 아닌 &lt;strong&gt;중간 기계어&lt;/strong&gt;&lt;/li&gt;
-          &lt;li&gt;운영체제에서 직접 실행하는 게 아닌 가상 머신에서 먼저 실행 &lt;strong&gt;→&lt;/strong&gt; 가상 머신이 운영체제에 맞는 완벽한 실행 파일로 변경&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;.class&lt;/strong&gt; 파일을 생성해두면 운영체제에 맞는 가상 머신을 어느 환경에서나 실행 가능.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;이러한 특성으로 인해 처음 자바는 프로그램 실행 속도가 느렸음&lt;/li&gt;
-      &lt;li&gt;그러나 하드웨어 발전으로 인해 자바 컴파일러가 &lt;strong&gt;JIT(Just In Time)&lt;/strong&gt; 컴파일 방식으로 변화하면서 자바 프로그램의 실행 속도는 더 이상 문제가 없음&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            var this_page_url = 'http://localhost:4000/SVM-jupyter';
+                            var this_page_identifier = '/SVM-jupyter';
+                            var this_page_title = '석사 논문 공부 - SVM 회귀모델 연구지역 적용';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://Changuk.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
 
-&lt;h6 id=&quot;객체-지향-언어이므로-유지보수가-쉽고-확장성이-좋음&quot;&gt;객체 지향 언어이므로 유지보수가 쉽고 확장성이 좋음&lt;/h6&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;객체 지향 프로그래밍&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+        </article>
 
-&lt;ul&gt;
-  &lt;li&gt;여러 객체의 협력을 통해 프로그램을 구현&lt;/li&gt;
-  &lt;li&gt;(계속 작성중…)&lt;/li&gt;
-&lt;/ul&gt;
+    </div>
+</main>
 
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/background-1.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Collection of studies &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/paper/">Paper</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/SVM">석사 논문 공부 - 머신러닝(SVM)</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/paper/">
+                                
+                                    See all 1 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
 
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HelloJava&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, Java&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Woo Chang Uk</name></author><category term="java" /><summary type="html">이 글은 Java에 대한 기초 정리 노트입니다. 자바는 1991년 제임스 고슬링을 비롯한 선 마이크로시스템스 연구원들이 처음 개발함 당시 가장 많이 사용되던 프로그래밍 언어 : C, C++ 가전제품이나 휴대용 장치 등에 사용하는 소프트웨어를 만들기 위해 독립적으로 작동되는 더 안정된 프로그래밍 언어가 필요하여 개발</summary></entry></feed>
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/sublet-java-02">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/Java.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/sublet-java-02">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Java</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">서블릿/JSP 강의 02 - 웹 서버 프로그램이란</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>웹 서버 프로그램이란? 일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글) 시간이 지나면서(기술이 발전) 네트워크를 통해 클라이언트 프로그램과 서버 프로그램으로 구분되기 시작 불편한 점이 생기기 시작 클라이언트, 서버 둘 다 업데이트가</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo-1.jpg" alt="Woo Chang Uk" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/changuk/">Woo Chang Uk</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/SVM">
+                <div class="post-card-image" style="background-image: url(/assets/built/images/SVM.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/SVM">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Paper</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">석사 논문 공부 - 머신러닝(SVM)</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다.
+
+  데이터는 전국 5m DEM 및 전국 암석밀도분포표를 SVR의 Input으로 사용하였다.
+  파이썬 코드를 사용하였다
+
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/built/images/author-logo-1.jpg" alt="Woo Chang Uk" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/changuk/">Woo Chang Uk</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="http://localhost:4000/">
+            
+            <span>Collection of studies</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">석사 논문 공부 - SVM 회귀모델 연구지역 적용</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EC%84%9D%EC%82%AC+%EB%85%BC%EB%AC%B8+%EA%B3%B5%EB%B6%80+-+SVM+%ED%9A%8C%EA%B7%80%EB%AA%A8%EB%8D%B8+%EC%97%B0%EA%B5%AC%EC%A7%80%EC%97%AD+%EC%A0%81%EC%9A%A9&amp;url=https://funkyblues.github.io/SVM-jupyter"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://funkyblues.github.io/SVM-jupyter"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="http://localhost:4000/">Collection of studies</a> &copy; 2021</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="#"></a>
+        <div class="subscribe-overlay-content">
+            
+            <h1 class="subscribe-overlay-title">Search Collection of studies</h1>
+            <p class="subscribe-overlay-description">
+            lunr.js를 이용한 posts 검색 </p>
+            <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+        </div>
+    </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-xxxxxxxx-x', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

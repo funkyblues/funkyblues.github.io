@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://funkyblues.github.io/tag/java/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://funkyblues.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-12-10T00:21:27+09:00</updated>
-  <id>https://funkyblues.github.io/tag/java/feed.xml</id>
+  <link href="http://localhost:4000/tag/java/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-12-10T18:35:44+09:00</updated>
+  <id>http://localhost:4000/tag/java/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet</title>
-      <link href="https://funkyblues.github.io/sublet-java-03" rel="alternate" type="text/html" title="서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet" />
+      <link href="http://localhost:4000/sublet-java-03" rel="alternate" type="text/html" title="서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet" />
       <published>2021-12-09T20:00:00+09:00</published>
       <updated>2021-12-09T20:00:00+09:00</updated>
-      <id>https://funkyblues.github.io/sublet-java-03</id>
-      <content type="html" xml:base="https://funkyblues.github.io/sublet-java-03">&lt;h4 id=&quot;---웹-서버-프로그램과-servlet&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 서버 프로그램과 Servlet&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
+      <id>http://localhost:4000/sublet-java-03</id>
+      <content type="html" xml:base="http://localhost:4000/sublet-java-03">&lt;h4 id=&quot;---웹-서버-프로그램과-servlet&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 서버 프로그램과 Servlet&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;클라이언트에서 회원에 대한 목록을 달라고 하면,&lt;/li&gt;
   &lt;li&gt;웹 서버는 요청을 따라 코드를 찾아보게 됨&lt;/li&gt;
@@ -86,15 +86,17 @@
   
     <entry>
       <title type="html">서블릿/JSP 강의 05 - 웹 문서 추가하기</title>
-      <link href="https://funkyblues.github.io/sublet-java-05" rel="alternate" type="text/html" title="서블릿/JSP 강의 05 - 웹 문서 추가하기" />
+      <link href="http://localhost:4000/sublet-java-05" rel="alternate" type="text/html" title="서블릿/JSP 강의 05 - 웹 문서 추가하기" />
       <published>2021-12-09T20:00:00+09:00</published>
       <updated>2021-12-09T20:00:00+09:00</updated>
-      <id>https://funkyblues.github.io/sublet-java-05</id>
-      <content type="html" xml:base="https://funkyblues.github.io/sublet-java-05">&lt;h4 id=&quot;---웹-문서-추가하기&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 문서 추가하기&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
+      <id>http://localhost:4000/sublet-java-05</id>
+      <content type="html" xml:base="http://localhost:4000/sublet-java-05">&lt;h4 id=&quot;---웹-문서-추가하기&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 문서 추가하기&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;이전시간에 tomcat 설치함
-    &lt;h6 id=&quot;tomcat이-뭔가&quot;&gt;tomcat이 뭔가?&lt;/h6&gt;
-  &lt;/li&gt;
+  &lt;li&gt;이전시간에 tomcat 설치함&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&quot;tomcat이-뭔가&quot;&gt;tomcat이 뭔가?&lt;/h6&gt;
+&lt;ul&gt;
   &lt;li&gt;WAS.&lt;/li&gt;
   &lt;li&gt;WAS + Java web service 기능 =&amp;gt; 웹 서버!&lt;/li&gt;
   &lt;li&gt;웹 서버라면 웹 문서를 제공해주는 서비스를 수행할 수 있음&lt;/li&gt;
@@ -127,7 +129,7 @@
       
 
       
-        <summary type="html">웹 문서 추가하기 이전시간에 tomcat 설치함 tomcat이 뭔가? WAS. WAS + Java web service 기능 =&amp;gt; 웹 서버! 웹 서버라면 웹 문서를 제공해주는 서비스를 수행할 수 있음 어떻게 웹 문서를 제공해주는지를 알아보자</summary>
+        <summary type="html">웹 문서 추가하기 이전시간에 tomcat 설치함</summary>
       
 
       
@@ -136,11 +138,11 @@
   
     <entry>
       <title type="html">서블릿/JSP 강의 02 - 웹 서버 프로그램이란</title>
-      <link href="https://funkyblues.github.io/sublet-java-02" rel="alternate" type="text/html" title="서블릿/JSP 강의 02 - 웹 서버 프로그램이란" />
+      <link href="http://localhost:4000/sublet-java-02" rel="alternate" type="text/html" title="서블릿/JSP 강의 02 - 웹 서버 프로그램이란" />
       <published>2021-12-09T19:00:00+09:00</published>
       <updated>2021-12-09T19:00:00+09:00</updated>
-      <id>https://funkyblues.github.io/sublet-java-02</id>
-      <content type="html" xml:base="https://funkyblues.github.io/sublet-java-02">&lt;h4 id=&quot;---웹-서버-프로그램이란&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 서버 프로그램이란?&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
+      <id>http://localhost:4000/sublet-java-02</id>
+      <content type="html" xml:base="http://localhost:4000/sublet-java-02">&lt;h4 id=&quot;---웹-서버-프로그램이란&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;웹 서버 프로그램이란?&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글)&lt;/li&gt;
   &lt;li&gt;시간이 지나면서(기술이 발전) &lt;strong&gt;네트워크&lt;/strong&gt;를 통해 &lt;strong&gt;클라이언트 프로그램&lt;/strong&gt;과 &lt;strong&gt;서버 프로그램&lt;/strong&gt;으로 구분되기 시작&lt;/li&gt;
@@ -153,7 +155,7 @@
           &lt;li&gt;데이터 전송 구현의 어려움&lt;/li&gt;
           &lt;li&gt;클라이언트 프로그램 업데이터의 어려움&lt;/li&gt;
           &lt;li&gt;문제점을 해소하기 위해 웹(HTTP)을 사용!&lt;/li&gt;
-          &lt;li&gt;(그림 추가)&lt;/li&gt;
+          &lt;li&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -188,7 +190,7 @@
       
 
       
-        <summary type="html">웹 서버 프로그램이란? 일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글) 시간이 지나면서(기술이 발전) 네트워크를 통해 클라이언트 프로그램과 서버 프로그램으로 구분되기 시작 불편한 점이 생기기 시작 클라이언트, 서버 둘 다 업데이트가 되어야 하는 문제가 발생. 두 프로그램이 동시에 변경되어야 함 소켓이나 RPC 등등 데이터 전송을 원활하게 하는 방법을 찾다 보니, 네트워크를 이용하려고 함 데이터 전송 구현의 어려움 클라이언트 프로그램 업데이터의 어려움 문제점을 해소하기 위해 웹(HTTP)을 사용! (그림 추가) 서버 프로그램이 동적으로 만든 문서(ex. 프로그램 사용자 목록)를 클라이언트로 전달 문서로 전달되기 때문에 클라이언트 프로그램을 만들 필요가 없음 (브라우저만 있으면 되기 때문에) 웹에는 이미 브라우저가 있으므로, 웹 개발을 이용한 서버 프로그램을 만들기 시작 자바스크립트의 등장으로, 페이지의 요청이 아닌, 데이터의 요청으로 변경 웹 페이지에서 과거 윈도우 프로그램을 개발하는 것 같은 시대가 도래 프론트엔드, 백엔드의 개념 정립</summary>
+        <summary type="html">웹 서버 프로그램이란? 일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글) 시간이 지나면서(기술이 발전) 네트워크를 통해 클라이언트 프로그램과 서버 프로그램으로 구분되기 시작 불편한 점이 생기기 시작 클라이언트, 서버 둘 다 업데이트가 되어야 하는 문제가 발생. 두 프로그램이 동시에 변경되어야 함 소켓이나 RPC 등등 데이터 전송을 원활하게 하는 방법을 찾다 보니, 네트워크를 이용하려고 함 데이터 전송 구현의 어려움 클라이언트 프로그램 업데이터의 어려움 문제점을 해소하기 위해 웹(HTTP)을 사용! 서버 프로그램이 동적으로 만든 문서(ex. 프로그램 사용자 목록)를 클라이언트로 전달 문서로 전달되기 때문에 클라이언트 프로그램을 만들 필요가 없음 (브라우저만 있으면 되기 때문에) 웹에는 이미 브라우저가 있으므로, 웹 개발을 이용한 서버 프로그램을 만들기 시작 자바스크립트의 등장으로, 페이지의 요청이 아닌, 데이터의 요청으로 변경 웹 페이지에서 과거 윈도우 프로그램을 개발하는 것 같은 시대가 도래 프론트엔드, 백엔드의 개념 정립</summary>
       
 
       
@@ -197,11 +199,11 @@
   
     <entry>
       <title type="html">Java 정리(1) - 튜토리얼</title>
-      <link href="https://funkyblues.github.io/java-beginning" rel="alternate" type="text/html" title="Java 정리(1) - 튜토리얼" />
+      <link href="http://localhost:4000/java-beginning" rel="alternate" type="text/html" title="Java 정리(1) - 튜토리얼" />
       <published>2021-11-30T21:00:00+09:00</published>
       <updated>2021-11-30T21:00:00+09:00</updated>
-      <id>https://funkyblues.github.io/java-beginning</id>
-      <content type="html" xml:base="https://funkyblues.github.io/java-beginning">&lt;p&gt;이 글은 &lt;strong&gt;Java&lt;/strong&gt;에 대한 기초 정리 노트입니다.&lt;/p&gt;
+      <id>http://localhost:4000/java-beginning</id>
+      <content type="html" xml:base="http://localhost:4000/java-beginning">&lt;p&gt;이 글은 &lt;strong&gt;Java&lt;/strong&gt;에 대한 기초 정리 노트입니다.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;자바는 &lt;strong&gt;1991&lt;/strong&gt;년 제임스 고슬링을 비롯한 선 마이크로시스템스 연구원들이 처음 개발함&lt;/li&gt;
   &lt;li&gt;당시 가장 많이 사용되던 프로그래밍 언어 : &lt;strong&gt;&lt;em&gt;C&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;C++&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
