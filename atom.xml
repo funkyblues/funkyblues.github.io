@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>To-Do 웹앱 만들기 - 1</title>
+        
+          <description>&lt;h2 id=&quot;웹앱-css-작업-시작&quot;&gt;웹앱 CSS 작업 시작&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Thu, 30 Dec 2021 21:00:00 +0900</pubDate>
+        <link>
+        https://funkyblues.github.io/Todo-app-programming-1</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/Todo-app-programming-1</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>서블릿/JSP 강의 05 - 웹 문서 추가하기</title>
         
           <description>&lt;h4 id=&quot;---웹-문서-추가하기&quot;&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;   &lt;strong&gt;웹 문서 추가하기&lt;/strong&gt;&lt;/strong&gt;&lt;/h4&gt;
@@ -56,34 +71,7 @@
         <title>서블릿/JSP 강의 02 - 웹 서버 프로그램이란</title>
         
           <description>&lt;p&gt;&lt;strong class=&quot;post_introduction&quot;&gt;Hello &lt;/strong&gt;&lt;/p&gt;
-&lt;h4 id=&quot;---웹-서버-프로그램이란&quot;&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;   &lt;strong&gt;웹 서버 프로그램이란?&lt;/strong&gt;&lt;/strong&gt;&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글)&lt;/li&gt;
-  &lt;li&gt;시간이 지나면서(기술이 발전) &lt;strong&gt;네트워크&lt;/strong&gt;를 통해 &lt;strong&gt;클라이언트 프로그램&lt;/strong&gt;과 &lt;strong&gt;서버 프로그램&lt;/strong&gt;으로 구분되기 시작&lt;/li&gt;
-  &lt;li&gt;불편한 점이 생기기 시작
-    &lt;ul&gt;
-      &lt;li&gt;클라이언트, 서버 둘 다 업데이트가 되어야 하는 문제가 발생.&lt;/li&gt;
-      &lt;li&gt;두 프로그램이 동시에 변경되어야 함&lt;/li&gt;
-      &lt;li&gt;소켓이나 RPC 등등 데이터 전송을 원활하게 하는 방법을 찾다 보니, 네트워크를 이용하려고 함
-        &lt;ul&gt;
-          &lt;li&gt;데이터 전송 구현의 어려움&lt;/li&gt;
-          &lt;li&gt;클라이언트 프로그램 업데이터의 어려움&lt;/li&gt;
-          &lt;li&gt;문제점을 해소하기 위해 웹(HTTP)을 사용!
-  &lt;img src=&quot;https://user-images.githubusercontent.com/43228743/145552070-0d60bd1c-af80-4e8a-905e-a0849a0b9791.png&quot; alt=&quot;02&quot; height=&quot;500px&quot; width=&quot;700px&quot; /&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;서버 프로그램이 동적으로 만든 문서(ex. 프로그램 사용자 목록)를 클라이언트로 전달&lt;/li&gt;
-  &lt;li&gt;문서로 전달되기 때문에 클라이언트 프로그램을 만들 필요가 없음 (브라우저만 있으면 되기 때문에)&lt;/li&gt;
-  &lt;li&gt;웹에는 이미 브라우저가 있으므로, 웹 개발을 이용한 서버 프로그램을 만들기 시작&lt;/li&gt;
-  &lt;li&gt;자바스크립트의 등장으로, 페이지의 요청이 아닌, 데이터의 요청으로 변경
-    &lt;ul&gt;
-      &lt;li&gt;웹 페이지에서 과거 윈도우 프로그램을 개발하는 것 같은 시대가 도래&lt;/li&gt;
-      &lt;li&gt;프론트엔드, 백엔드의 개념 정립&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+
 </description>
         
         <pubDate>Thu, 09 Dec 2021 19:00:00 +0900</pubDate>
@@ -114,8 +102,13 @@
         
           <description>&lt;p&gt;연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;데이터는 전국 5m DEM 및 전국 암석밀도분포표를 SVR의 Input으로 사용하였다.&lt;/li&gt;
-  &lt;li&gt;파이썬 코드를 사용하였다&lt;/li&gt;
+  &lt;li&gt;전국 5m 격자 DEM ·국가기준점 위도·암석 밀도 래스터 데이터를 SVR의 Input으로 사용&lt;/li&gt;
+  &lt;li&gt;파이썬 라이브러리를 이용
+    &lt;ol&gt;
+      &lt;li&gt;SVM library, pandas, numpy, matplotlib, etc…&lt;/li&gt;
+      &lt;li&gt;일단 테스트중!&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 </description>

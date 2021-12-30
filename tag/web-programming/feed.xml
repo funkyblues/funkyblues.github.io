@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://funkyblues.github.io/tag/web-programming/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://funkyblues.github.io/" rel="alternate" type="text/html" />
+  <updated>2021-12-30T23:35:14+09:00</updated>
+  <id>https://funkyblues.github.io/tag/web-programming/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Collection of studies | </title>
+  
+
+  
+    <subtitle>공부 정리용 블로그</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">To-Do 웹앱 만들기 - 1</title>
+      <link href="https://funkyblues.github.io/Todo-app-programming-1" rel="alternate" type="text/html" title="To-Do 웹앱 만들기 - 1" />
+      <published>2021-12-30T21:00:00+09:00</published>
+      <updated>2021-12-30T21:00:00+09:00</updated>
+      <id>https://funkyblues.github.io/Todo-app-programming-1</id>
+      <content type="html" xml:base="https://funkyblues.github.io/Todo-app-programming-1">&lt;h2 id=&quot;웹앱-css-작업-시작&quot;&gt;웹앱 CSS 작업 시작&lt;/h2&gt;
+
+&lt;p&gt;노마드코더 &lt;strong&gt;[바닐라 JS로 크롬 앱 만들기]&lt;/strong&gt;를 완강하고, 앱을 좀 더 심미성을 향상시키기 위해… CSS작업을 진행해야 한다. 작업을 하면서 CSS스킬이 점차 향상될 것이다. CSS를 완료한 후 앱의 기능들을 복기해보도록 하겠다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;github을-활용한-웹사이트-퍼블리싱&quot;&gt;GitHub을 활용한 웹사이트 퍼블리싱&lt;/h3&gt;
+
+&lt;p&gt;GitHub에서는 아주 좋은 기능을 지원하고 있다. GitHub에선 repository에서 &lt;strong&gt;gh-pages&lt;/strong&gt;라는 특별한 이름을 가진 branch를 가지고 있으면, 공짜로 Static 호스팅을 할 수 있도록 해준다. 참고로 Static Website는 프론트엔드의 필수요소라고 할 수 있는, &lt;strong&gt;HTML/CSS/JavaScript&lt;/strong&gt;로만 이루어진 사이트를 의미한다.
+To-Do 웹앱 폴더는 GitHub repository로 존재하고 있고, gh-pages로 branch를 만들어, localhost로서가 아닌, GitHub로 이 어플리케이션을 실행할 수 있도록 만들어야 한다. 다음 순서로 진행해주면 된다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;gh-pages로 branch 생성&lt;/li&gt;
+  &lt;li&gt;업데이트 사항이 존재하면, gh-pages branch로 commit&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Web-programming" />
+      
+
+      
+        <summary type="html">웹앱 CSS 작업 시작</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

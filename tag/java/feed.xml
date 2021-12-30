@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://funkyblues.github.io/tag/java/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://funkyblues.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-12-10T23:59:36+09:00</updated>
+  <updated>2021-12-30T23:35:14+09:00</updated>
   <id>https://funkyblues.github.io/tag/java/feed.xml</id>
 
   
@@ -143,7 +143,9 @@
       <updated>2021-12-09T19:00:00+09:00</updated>
       <id>https://funkyblues.github.io/sublet-java-02</id>
       <content type="html" xml:base="https://funkyblues.github.io/sublet-java-02">&lt;p&gt;&lt;strong class=&quot;post_introduction&quot;&gt;Hello &lt;/strong&gt;&lt;/p&gt;
-&lt;h4 id=&quot;---웹-서버-프로그램이란&quot;&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;   &lt;strong&gt;웹 서버 프로그램이란?&lt;/strong&gt;&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;-웹-서버-프로그램이란&quot;&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; &lt;strong&gt;웹 서버 프로그램이란?&lt;/strong&gt;&lt;/strong&gt;&lt;/h4&gt;
+
 &lt;ul&gt;
   &lt;li&gt;일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글)&lt;/li&gt;
   &lt;li&gt;시간이 지나면서(기술이 발전) &lt;strong&gt;네트워크&lt;/strong&gt;를 통해 &lt;strong&gt;클라이언트 프로그램&lt;/strong&gt;과 &lt;strong&gt;서버 프로그램&lt;/strong&gt;으로 구분되기 시작&lt;/li&gt;
@@ -156,7 +158,7 @@
           &lt;li&gt;데이터 전송 구현의 어려움&lt;/li&gt;
           &lt;li&gt;클라이언트 프로그램 업데이터의 어려움&lt;/li&gt;
           &lt;li&gt;문제점을 해소하기 위해 웹(HTTP)을 사용!
-  &lt;img src=&quot;https://user-images.githubusercontent.com/43228743/145552070-0d60bd1c-af80-4e8a-905e-a0849a0b9791.png&quot; alt=&quot;02&quot; height=&quot;500px&quot; width=&quot;700px&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/43228743/145552070-0d60bd1c-af80-4e8a-905e-a0849a0b9791.png&quot; alt=&quot;02&quot; height=&quot;500px&quot; width=&quot;700px&quot; /&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -191,7 +193,7 @@
       
 
       
-        <summary type="html">Hello 웹 서버 프로그램이란? 일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글) 시간이 지나면서(기술이 발전) 네트워크를 통해 클라이언트 프로그램과 서버 프로그램으로 구분되기 시작 불편한 점이 생기기 시작 클라이언트, 서버 둘 다 업데이트가 되어야 하는 문제가 발생. 두 프로그램이 동시에 변경되어야 함 소켓이나 RPC 등등 데이터 전송을 원활하게 하는 방법을 찾다 보니, 네트워크를 이용하려고 함 데이터 전송 구현의 어려움 클라이언트 프로그램 업데이터의 어려움 문제점을 해소하기 위해 웹(HTTP)을 사용! 서버 프로그램이 동적으로 만든 문서(ex. 프로그램 사용자 목록)를 클라이언트로 전달 문서로 전달되기 때문에 클라이언트 프로그램을 만들 필요가 없음 (브라우저만 있으면 되기 때문에) 웹에는 이미 브라우저가 있으므로, 웹 개발을 이용한 서버 프로그램을 만들기 시작 자바스크립트의 등장으로, 페이지의 요청이 아닌, 데이터의 요청으로 변경 웹 페이지에서 과거 윈도우 프로그램을 개발하는 것 같은 시대가 도래 프론트엔드, 백엔드의 개념 정립</summary>
+        <summary type="html">Hello</summary>
       
 
       

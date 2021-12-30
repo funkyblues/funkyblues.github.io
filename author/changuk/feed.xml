@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://funkyblues.github.io/author/changuk/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://funkyblues.github.io/" rel="alternate" type="text/html" />
-  <updated>2021-12-10T23:59:36+09:00</updated>
+  <updated>2021-12-30T23:35:14+09:00</updated>
   <id>https://funkyblues.github.io/author/changuk/feed.xml</id>
 
   
@@ -30,6 +30,56 @@
   
   
 
+  
+    <entry>
+      <title type="html">To-Do 웹앱 만들기 - 1</title>
+      <link href="https://funkyblues.github.io/Todo-app-programming-1" rel="alternate" type="text/html" title="To-Do 웹앱 만들기 - 1" />
+      <published>2021-12-30T21:00:00+09:00</published>
+      <updated>2021-12-30T21:00:00+09:00</updated>
+      <id>https://funkyblues.github.io/Todo-app-programming-1</id>
+      <content type="html" xml:base="https://funkyblues.github.io/Todo-app-programming-1">&lt;h2 id=&quot;웹앱-css-작업-시작&quot;&gt;웹앱 CSS 작업 시작&lt;/h2&gt;
+
+&lt;p&gt;노마드코더 &lt;strong&gt;[바닐라 JS로 크롬 앱 만들기]&lt;/strong&gt;를 완강하고, 앱을 좀 더 심미성을 향상시키기 위해… CSS작업을 진행해야 한다. 작업을 하면서 CSS스킬이 점차 향상될 것이다. CSS를 완료한 후 앱의 기능들을 복기해보도록 하겠다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;github을-활용한-웹사이트-퍼블리싱&quot;&gt;GitHub을 활용한 웹사이트 퍼블리싱&lt;/h3&gt;
+
+&lt;p&gt;GitHub에서는 아주 좋은 기능을 지원하고 있다. GitHub에선 repository에서 &lt;strong&gt;gh-pages&lt;/strong&gt;라는 특별한 이름을 가진 branch를 가지고 있으면, 공짜로 Static 호스팅을 할 수 있도록 해준다. 참고로 Static Website는 프론트엔드의 필수요소라고 할 수 있는, &lt;strong&gt;HTML/CSS/JavaScript&lt;/strong&gt;로만 이루어진 사이트를 의미한다.
+To-Do 웹앱 폴더는 GitHub repository로 존재하고 있고, gh-pages로 branch를 만들어, localhost로서가 아닌, GitHub로 이 어플리케이션을 실행할 수 있도록 만들어야 한다. 다음 순서로 진행해주면 된다.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;gh-pages로 branch 생성&lt;/li&gt;
+  &lt;li&gt;업데이트 사항이 존재하면, gh-pages branch로 commit&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Web-programming" />
+      
+
+      
+        <summary type="html">웹앱 CSS 작업 시작</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet</title>
@@ -143,7 +193,9 @@
       <updated>2021-12-09T19:00:00+09:00</updated>
       <id>https://funkyblues.github.io/sublet-java-02</id>
       <content type="html" xml:base="https://funkyblues.github.io/sublet-java-02">&lt;p&gt;&lt;strong class=&quot;post_introduction&quot;&gt;Hello &lt;/strong&gt;&lt;/p&gt;
-&lt;h4 id=&quot;---웹-서버-프로그램이란&quot;&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;   &lt;strong&gt;웹 서버 프로그램이란?&lt;/strong&gt;&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;h4 id=&quot;-웹-서버-프로그램이란&quot;&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt; &lt;strong&gt;웹 서버 프로그램이란?&lt;/strong&gt;&lt;/strong&gt;&lt;/h4&gt;
+
 &lt;ul&gt;
   &lt;li&gt;일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글)&lt;/li&gt;
   &lt;li&gt;시간이 지나면서(기술이 발전) &lt;strong&gt;네트워크&lt;/strong&gt;를 통해 &lt;strong&gt;클라이언트 프로그램&lt;/strong&gt;과 &lt;strong&gt;서버 프로그램&lt;/strong&gt;으로 구분되기 시작&lt;/li&gt;
@@ -156,7 +208,7 @@
           &lt;li&gt;데이터 전송 구현의 어려움&lt;/li&gt;
           &lt;li&gt;클라이언트 프로그램 업데이터의 어려움&lt;/li&gt;
           &lt;li&gt;문제점을 해소하기 위해 웹(HTTP)을 사용!
-  &lt;img src=&quot;https://user-images.githubusercontent.com/43228743/145552070-0d60bd1c-af80-4e8a-905e-a0849a0b9791.png&quot; alt=&quot;02&quot; height=&quot;500px&quot; width=&quot;700px&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/43228743/145552070-0d60bd1c-af80-4e8a-905e-a0849a0b9791.png&quot; alt=&quot;02&quot; height=&quot;500px&quot; width=&quot;700px&quot; /&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -191,45 +243,7 @@
       
 
       
-        <summary type="html">Hello 웹 서버 프로그램이란? 일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글) 시간이 지나면서(기술이 발전) 네트워크를 통해 클라이언트 프로그램과 서버 프로그램으로 구분되기 시작 불편한 점이 생기기 시작 클라이언트, 서버 둘 다 업데이트가 되어야 하는 문제가 발생. 두 프로그램이 동시에 변경되어야 함 소켓이나 RPC 등등 데이터 전송을 원활하게 하는 방법을 찾다 보니, 네트워크를 이용하려고 함 데이터 전송 구현의 어려움 클라이언트 프로그램 업데이터의 어려움 문제점을 해소하기 위해 웹(HTTP)을 사용! 서버 프로그램이 동적으로 만든 문서(ex. 프로그램 사용자 목록)를 클라이언트로 전달 문서로 전달되기 때문에 클라이언트 프로그램을 만들 필요가 없음 (브라우저만 있으면 되기 때문에) 웹에는 이미 브라우저가 있으므로, 웹 개발을 이용한 서버 프로그램을 만들기 시작 자바스크립트의 등장으로, 페이지의 요청이 아닌, 데이터의 요청으로 변경 웹 페이지에서 과거 윈도우 프로그램을 개발하는 것 같은 시대가 도래 프론트엔드, 백엔드의 개념 정립</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">석사 논문 공부 - 머신러닝(SVM)</title>
-      <link href="https://funkyblues.github.io/SVM" rel="alternate" type="text/html" title="석사 논문 공부 - 머신러닝(SVM)" />
-      <published>2021-12-08T21:00:00+09:00</published>
-      <updated>2021-12-08T21:00:00+09:00</updated>
-      <id>https://funkyblues.github.io/SVM</id>
-      <content type="html" xml:base="https://funkyblues.github.io/SVM">&lt;p&gt;연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;데이터는 전국 5m DEM 및 전국 암석밀도분포표를 SVR의 Input으로 사용하였다.&lt;/li&gt;
-  &lt;li&gt;파이썬 코드를 사용하였다&lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Woo Chang Uk</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="paper" />
-      
-
-      
-        <summary type="html">연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다. 데이터는 전국 5m DEM 및 전국 암석밀도분포표를 SVR의 Input으로 사용하였다. 파이썬 코드를 사용하였다</summary>
+        <summary type="html">Hello</summary>
       
 
       
@@ -2813,6 +2827,49 @@ RandomizedSearchCV(cv=3, estimator=SVR(),
     </entry>
   
     <entry>
+      <title type="html">석사 논문 공부 - 머신러닝(SVM)</title>
+      <link href="https://funkyblues.github.io/SVM" rel="alternate" type="text/html" title="석사 논문 공부 - 머신러닝(SVM)" />
+      <published>2021-12-08T21:00:00+09:00</published>
+      <updated>2021-12-08T21:00:00+09:00</updated>
+      <id>https://funkyblues.github.io/SVM</id>
+      <content type="html" xml:base="https://funkyblues.github.io/SVM">&lt;p&gt;연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;전국 5m 격자 DEM ·국가기준점 위도·암석 밀도 래스터 데이터를 SVR의 Input으로 사용&lt;/li&gt;
+  &lt;li&gt;파이썬 라이브러리를 이용
+    &lt;ol&gt;
+      &lt;li&gt;SVM library, pandas, numpy, matplotlib, etc…&lt;/li&gt;
+      &lt;li&gt;일단 테스트중!&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="paper" />
+      
+
+      
+        <summary type="html">연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다. 전국 5m 격자 DEM ·국가기준점 위도·암석 밀도 래스터 데이터를 SVR의 Input으로 사용 파이썬 라이브러리를 이용 SVM library, pandas, numpy, matplotlib, etc… 일단 테스트중!</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">C언어 정리(2) - 기본 문법</title>
       <link href="https://funkyblues.github.io/c-basic-grammar" rel="alternate" type="text/html" title="C언어 정리(2) - 기본 문법" />
       <published>2021-12-05T01:00:00+09:00</published>
@@ -2963,101 +3020,6 @@ RandomizedSearchCV(cv=3, estimator=SVR(),
 
       
         <summary type="html">nodejs를 사용하여 TO-DO 어플리케이션 만들기</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Java 정리(1) - 튜토리얼</title>
-      <link href="https://funkyblues.github.io/java-beginning" rel="alternate" type="text/html" title="Java 정리(1) - 튜토리얼" />
-      <published>2021-11-30T21:00:00+09:00</published>
-      <updated>2021-11-30T21:00:00+09:00</updated>
-      <id>https://funkyblues.github.io/java-beginning</id>
-      <content type="html" xml:base="https://funkyblues.github.io/java-beginning">&lt;p&gt;이 글은 &lt;strong&gt;Java&lt;/strong&gt;에 대한 기초 정리 노트입니다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;자바는 &lt;strong&gt;1991&lt;/strong&gt;년 제임스 고슬링을 비롯한 선 마이크로시스템스 연구원들이 처음 개발함&lt;/li&gt;
-  &lt;li&gt;당시 가장 많이 사용되던 프로그래밍 언어 : &lt;strong&gt;&lt;em&gt;C&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;C++&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;가전제품이나 휴대용 장치 등에 사용하는 소프트웨어를 만들기 위해 독립적으로 작동되는 더 안정된 프로그래밍 언어가 필요하여 개발&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;h4 id=&quot;---java를-쓰면-왜-좋을까&quot;&gt;&lt;i class=&quot;far fa-hand-point-right&quot;&gt;   &lt;strong&gt;Java를 쓰면 왜 좋을까?&lt;/strong&gt;&lt;/i&gt;&lt;/h4&gt;
-&lt;h6 id=&quot;플랫폼에-영향을-받지-않으므로-다양한-환경에서-사용될-수-있음&quot;&gt;플랫폼에 영향을 받지 않으므로 다양한 환경에서 사용될 수 있음.&lt;/h6&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;한 번 작성하면, 어디서든 돌아간다 (write once, run anywhere)&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;플랫폼에 종속되지 않는 프로그램을 개발하여 여러 플랫폼(Windows, Mac, Linux, etc.)에서 실행할 수 있다는 의미
-    &lt;ul&gt;
-      &lt;li&gt;Ex) 윈도우 운영체제에서 C 언어로 개발한 프로그램 : Test
-        &lt;ul&gt;
-          &lt;li&gt;이 프로그램을 컴파일 -&amp;gt; Test.exe 생성&lt;/li&gt;
-          &lt;li&gt;Test.exe는 윈도우에서 실행되는 ‘실행 파일’
-            &lt;ul&gt;
-              &lt;li&gt;이 실행 파일은 윈도우 운영체제에 맞게 만들어졌기 때문에 리눅스 운영체제에서 실행할 수 없음&lt;/li&gt;
-              &lt;li&gt;리눅스 운영체제에서 실행하려면 리눅스 환경에서 Test 프로그램을 다시 컴파일해서 실행 파일 생성&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;자바에서 만든 프로그램 : Example
-        &lt;ul&gt;
-          &lt;li&gt;이 프로그램을 컴파일 &lt;strong&gt;→&lt;/strong&gt;  Example.class 생성&lt;/li&gt;
-          &lt;li&gt;이 파일을 &lt;strong&gt;바이트 코드&lt;/strong&gt;라고 함 : 완벽한 실행 파일은 아님. 실행하려면 운영체제에 맞는 &lt;strong&gt;자바 가상 머신(JVM: Java Virtual Machine)&lt;/strong&gt;이 필요&lt;/li&gt;
-          &lt;li&gt;운영체제에 맞는 완벽한 기계어가 아닌 &lt;strong&gt;중간 기계어&lt;/strong&gt;&lt;/li&gt;
-          &lt;li&gt;운영체제에서 직접 실행하는 게 아닌 가상 머신에서 먼저 실행 &lt;strong&gt;→&lt;/strong&gt; 가상 머신이 운영체제에 맞는 완벽한 실행 파일로 변경&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;.class&lt;/strong&gt; 파일을 생성해두면 운영체제에 맞는 가상 머신을 어느 환경에서나 실행 가능.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;이러한 특성으로 인해 처음 자바는 프로그램 실행 속도가 느렸음&lt;/li&gt;
-      &lt;li&gt;그러나 하드웨어 발전으로 인해 자바 컴파일러가 &lt;strong&gt;JIT(Just In Time)&lt;/strong&gt; 컴파일 방식으로 변화하면서 자바 프로그램의 실행 속도는 더 이상 문제가 없음&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h6 id=&quot;객체-지향-언어이므로-유지보수가-쉽고-확장성이-좋음&quot;&gt;객체 지향 언어이므로 유지보수가 쉽고 확장성이 좋음&lt;/h6&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;객체 지향 프로그래밍&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;여러 객체의 협력을 통해 프로그램을 구현&lt;/li&gt;
-  &lt;li&gt;(계속 작성중…)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HelloJava&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, Java&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Woo Chang Uk</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="java" />
-      
-
-      
-        <summary type="html">이 글은 Java에 대한 기초 정리 노트입니다. 자바는 1991년 제임스 고슬링을 비롯한 선 마이크로시스템스 연구원들이 처음 개발함 당시 가장 많이 사용되던 프로그래밍 언어 : C, C++ 가전제품이나 휴대용 장치 등에 사용하는 소프트웨어를 만들기 위해 독립적으로 작동되는 더 안정된 프로그래밍 언어가 필요하여 개발</summary>
       
 
       

@@ -129,21 +129,29 @@ into the {body} of the default.hbs template -->
         
         
             <ul class="nav" role="menu">
-    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
-    <!-- <li class="nav-C" role="menuitem"><a href="/tag/c/">C</a></li> -->
-    <li class="nav-java" role="menuitem"><a href="/tag/java/">java</a></li>
-    <!-- <li class="nav-Csharp" role="menuitem"><a href="/tag/c-sharp/">C#</a></li> -->
-    <!-- <li class="nav-nodejs" role="menuitem"><a href="/tag/nodejs/">nodejs</a></li> -->
-    <!-- <li class="nav-Network" role="menuitem"><a href="/tag/network/">Network</a></li> -->
-    
-    <li class="nav-paper" role="menuitem"><a href="/tag/paper/">Paper</a></li>
-    <li class="nav-archive" role="menuitem">
-        <a href="/archive.html">All Posts</a>
-    </li>
-    <li class="nav-archive" role="menuitem">
-        <a href="/author_archive.html">Tag별 Posts</a>
-    </li>
+  <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+  <!-- <li class="nav-C" role="menuitem"><a href="/tag/c/">C</a></li> -->
+  <li class="nav-java" role="menuitem">
+    <a href="/tag/java/">java</a>
+  </li>
+  <!-- <li class="nav-Csharp" role="menuitem"><a href="/tag/c-sharp/">C#</a></li> -->
+  <!-- <li class="nav-nodejs" role="menuitem"><a href="/tag/nodejs/">nodejs</a></li> -->
+  <!-- <li class="nav-Network" role="menuitem"><a href="/tag/network/">Network</a></li> -->
+
+  <li class="nav-paper" role="menuitem">
+    <a href="/tag/paper/">Paper</a>
+  </li>
+  <li class="nav-paper" role="menuitem">
+    <a href="/tag/web-programming/">Web Programming</a>
+  </li>
+  <li class="nav-archive" role="menuitem">
+    <a href="/archive.html">All Posts</a>
+  </li>
+  <li class="nav-archive" role="menuitem">
+    <a href="/author_archive.html">Tag별 Posts</a>
+  </li>
 </ul>
+
         
     </div>
     <div class="site-nav-right">
@@ -185,6 +193,15 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
+    "todo-app-programming-1": {
+        "title": "To-Do 웹앱 만들기 - 1",
+            "author": "changuk",
+            "category": "",
+            "content": "웹앱 CSS 작업 시작노마드코더 [바닐라 JS로 크롬 앱 만들기]를 완강하고, 앱을 좀 더 심미성을 향상시키기 위해… CSS작업을 진행해야 한다. 작업을 하면서 CSS스킬이 점차 향상될 것이다. CSS를 완료한 후 앱의 기능들을 복기해보도록 하겠다.GitHub을 활용한 웹사이트 퍼블리싱GitHub에서는 아주 좋은 기능을 지원하고 있다. GitHub에선 repository에서 gh-pages라는 특별한 이름을 가진 branch를 가지고 있으면, 공짜로 Static 호스팅을 할 수 있도록 해준다. 참고로 Static Website는 프론트엔드의 필수요소라고 할 수 있는, HTML/CSS/JavaScript로만 이루어진 사이트를 의미한다.To-Do 웹앱 폴더는 GitHub repository로 존재하고 있고, gh-pages로 branch를 만들어, localhost로서가 아닌, GitHub로 이 어플리케이션을 실행할 수 있도록 만들어야 한다. 다음 순서로 진행해주면 된다.  gh-pages로 branch 생성  업데이트 사항이 존재하면, gh-pages branch로 commit",
+        "url": "/Todo-app-programming-1"
+    }
+    ,
+    
     "sublet-java-05": {
         "title": "서블릿/JSP 강의 05 - 웹 문서 추가하기",
             "author": "changuk",
@@ -207,7 +224,7 @@ into the {body} of the default.hbs template -->
         "title": "서블릿/JSP 강의 02 - 웹 서버 프로그램이란",
             "author": "changuk",
             "category": "",
-            "content": "Hello    웹 서버 프로그램이란?  일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글)  시간이 지나면서(기술이 발전) 네트워크를 통해 클라이언트 프로그램과 서버 프로그램으로 구분되기 시작  불편한 점이 생기기 시작          클라이언트, 서버 둘 다 업데이트가 되어야 하는 문제가 발생.      두 프로그램이 동시에 변경되어야 함      소켓이나 RPC 등등 데이터 전송을 원활하게 하는 방법을 찾다 보니, 네트워크를 이용하려고 함                  데이터 전송 구현의 어려움          클라이언트 프로그램 업데이터의 어려움          문제점을 해소하기 위해 웹(HTTP)을 사용!                        서버 프로그램이 동적으로 만든 문서(ex. 프로그램 사용자 목록)를 클라이언트로 전달  문서로 전달되기 때문에 클라이언트 프로그램을 만들 필요가 없음 (브라우저만 있으면 되기 때문에)  웹에는 이미 브라우저가 있으므로, 웹 개발을 이용한 서버 프로그램을 만들기 시작  자바스크립트의 등장으로, 페이지의 요청이 아닌, 데이터의 요청으로 변경          웹 페이지에서 과거 윈도우 프로그램을 개발하는 것 같은 시대가 도래      프론트엔드, 백엔드의 개념 정립      ",
+            "content": "Hello  웹 서버 프로그램이란?  일반적인 업무용 프로그램은 따로 서버 프로그램이 존재하지 않음 (ex. 한글)  시간이 지나면서(기술이 발전) 네트워크를 통해 클라이언트 프로그램과 서버 프로그램으로 구분되기 시작  불편한 점이 생기기 시작          클라이언트, 서버 둘 다 업데이트가 되어야 하는 문제가 발생.      두 프로그램이 동시에 변경되어야 함      소켓이나 RPC 등등 데이터 전송을 원활하게 하는 방법을 찾다 보니, 네트워크를 이용하려고 함                  데이터 전송 구현의 어려움          클라이언트 프로그램 업데이터의 어려움          문제점을 해소하기 위해 웹(HTTP)을 사용!                      서버 프로그램이 동적으로 만든 문서(ex. 프로그램 사용자 목록)를 클라이언트로 전달  문서로 전달되기 때문에 클라이언트 프로그램을 만들 필요가 없음 (브라우저만 있으면 되기 때문에)  웹에는 이미 브라우저가 있으므로, 웹 개발을 이용한 서버 프로그램을 만들기 시작  자바스크립트의 등장으로, 페이지의 요청이 아닌, 데이터의 요청으로 변경          웹 페이지에서 과거 윈도우 프로그램을 개발하는 것 같은 시대가 도래      프론트엔드, 백엔드의 개념 정립      ",
         "url": "/sublet-java-02"
     }
     ,
@@ -225,7 +242,7 @@ into the {body} of the default.hbs template -->
         "title": "석사 논문 공부 - 머신러닝(SVM)",
             "author": "changuk",
             "category": "",
-            "content": "연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다.  데이터는 전국 5m DEM 및 전국 암석밀도분포표를 SVR의 Input으로 사용하였다.  파이썬 코드를 사용하였다",
+            "content": "연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다.  전국 5m 격자 DEM ·국가기준점 위도·암석 밀도 래스터 데이터를 SVR의 Input으로 사용  파이썬 라이브러리를 이용          SVM library, pandas, numpy, matplotlib, etc…      일단 테스트중!      ",
         "url": "/SVM"
     }
     ,
