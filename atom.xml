@@ -8,9 +8,9 @@
     
       
       <item>
-        <title>To-Do 웹앱 만들기 - 1</title>
+        <title>To-Do 웹 app 만들기 - 1</title>
         
-          <description>&lt;h2 id=&quot;웹앱-css-작업-시작&quot;&gt;웹앱 CSS 작업 시작&lt;/h2&gt;
+          <description>&lt;h2 id=&quot;나만의-웹-app-개발-시작&quot;&gt;나만의 웹 app 개발 시작&lt;/h2&gt;
 
 </description>
         
@@ -18,66 +18,6 @@
         <link>
         https://funkyblues.github.io/Todo-app-programming-1</link>
         <guid isPermaLink="true">https://funkyblues.github.io/Todo-app-programming-1</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>서블릿/JSP 강의 05 - 웹 문서 추가하기</title>
-        
-          <description>&lt;h4 id=&quot;---웹-문서-추가하기&quot;&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;   &lt;strong&gt;웹 문서 추가하기&lt;/strong&gt;&lt;/strong&gt;&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;이전시간에 tomcat 설치함&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        
-        <pubDate>Thu, 09 Dec 2021 20:00:00 +0900</pubDate>
-        <link>
-        https://funkyblues.github.io/sublet-java-05</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/sublet-java-05</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>서블릿/JSP 강의 03 - 웹 서버 프로그램과 Servlet</title>
-        
-          <description>&lt;h4 id=&quot;---웹-서버-프로그램과-servlet&quot;&gt;&lt;strong class=&quot;subtitle_fontAwesome&quot;&gt;   &lt;strong&gt;웹 서버 프로그램과 Servlet&lt;/strong&gt;&lt;/strong&gt;&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;클라이언트에서 회원에 대한 목록을 달라고 하면,&lt;/li&gt;
-  &lt;li&gt;웹 서버는 요청을 따라 코드를 찾아보게 됨&lt;/li&gt;
-  &lt;li&gt;그런 코드는 미리 문서로 만들어져 있지 않기 때문에 웹 서버는 DB에서 코드를 문서화 한 후 클라이언트로 돌려주어야 함&lt;/li&gt;
-  &lt;li&gt;사용자의 요구가 동적인 문서를 요구하는 것이라면, DB의 코드를 실행하여 돌려줄 수 있는 무언가가 필요
-    &lt;ul&gt;
-      &lt;li&gt;그런 무언가를 WAS라고 함&lt;/li&gt;
-      &lt;li&gt;Web Application Server (ex. tomcat!!)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;(그림 추가)&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        
-        <pubDate>Thu, 09 Dec 2021 20:00:00 +0900</pubDate>
-        <link>
-        https://funkyblues.github.io/sublet-java-03</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/sublet-java-03</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>서블릿/JSP 강의 02 - 웹 서버 프로그램이란</title>
-        
-          <description>&lt;p&gt;&lt;strong class=&quot;post_introduction&quot;&gt;Hello &lt;/strong&gt;&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Thu, 09 Dec 2021 19:00:00 +0900</pubDate>
-        <link>
-        https://funkyblues.github.io/sublet-java-02</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/sublet-java-02</guid>
       </item>
       
     
@@ -122,72 +62,6 @@
     
       
       <item>
-        <title>C언어 정리(2) - 기본 문법</title>
-        
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;C언어 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./c-beginning&quot;&gt;C언어 정리(1) - 튜토리얼&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./c-basic-grammar&quot;&gt;C언어 정리(2) - 기본 문법&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        
-        <pubDate>Sun, 05 Dec 2021 01:00:00 +0900</pubDate>
-        <link>
-        https://funkyblues.github.io/c-basic-grammar</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/c-basic-grammar</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>C언어 정리(1) - 튜토리얼</title>
-        
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;C언어 공부는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./c-beginning&quot;&gt;C언어 정리(1) - 튜토리얼&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./c-basic-grammar&quot;&gt;C언어 정리(2) - 기본 문법&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        
-        <pubDate>Sat, 04 Dec 2021 21:00:00 +0900</pubDate>
-        <link>
-        https://funkyblues.github.io/c-beginning</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/c-beginning</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>C# 정리(1) - 튜토리얼</title>
-        
-          <description>&lt;p&gt;이 글은 C#에 대한 기초 정리 노트입니다.&lt;/p&gt;
-</description>
-        
-        <pubDate>Thu, 02 Dec 2021 21:00:00 +0900</pubDate>
-        <link>
-        https://funkyblues.github.io/cs-beginning</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/cs-beginning</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>nodejs 정리(1) - 튜토리얼</title>
-        
-          <description>&lt;p&gt;nodejs를 사용하여 TO-DO 어플리케이션 만들기&lt;/p&gt;
-</description>
-        
-        <pubDate>Wed, 01 Dec 2021 21:00:00 +0900</pubDate>
-        <link>
-        https://funkyblues.github.io/nodejs-beginning</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/nodejs-beginning</guid>
-      </item>
-      
-    
-      
-      <item>
         <title>모두의 네트워크 - (1)</title>
         
           <description>&lt;h1 id=&quot;제목&quot;&gt;제목&lt;/h1&gt;
@@ -210,26 +84,6 @@
         <link>
         https://funkyblues.github.io/network-for-everyone1</link>
         <guid isPermaLink="true">https://funkyblues.github.io/network-for-everyone1</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Java 정리(1) - 튜토리얼</title>
-        
-          <description>&lt;p&gt;이 글은 &lt;strong&gt;Java&lt;/strong&gt;에 대한 기초 정리 노트입니다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;자바는 &lt;strong&gt;1991&lt;/strong&gt;년 제임스 고슬링을 비롯한 선 마이크로시스템스 연구원들이 처음 개발함&lt;/li&gt;
-  &lt;li&gt;당시 가장 많이 사용되던 프로그래밍 언어 : &lt;strong&gt;&lt;em&gt;C&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;C++&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;가전제품이나 휴대용 장치 등에 사용하는 소프트웨어를 만들기 위해 독립적으로 작동되는 더 안정된 프로그래밍 언어가 필요하여 개발&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        
-        <pubDate>Tue, 30 Nov 2021 21:00:00 +0900</pubDate>
-        <link>
-        https://funkyblues.github.io/java-beginning</link>
-        <guid isPermaLink="true">https://funkyblues.github.io/java-beginning</guid>
       </item>
       
     
