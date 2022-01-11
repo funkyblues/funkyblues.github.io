@@ -8,9 +8,32 @@
     
       
       <item>
-        <title>To-Do 웹 app 만들기 - 1</title>
+        <title>To-Do 웹 App 만들기 - 2</title>
         
-          <description>&lt;h2 id=&quot;나만의-웹-app-개발-시작&quot;&gt;나만의 웹 app 개발 시작&lt;/h2&gt;
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;웹 App 개발과정 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;./Todo-app-programming-1&quot;&gt;To-Do 웹 App 만들기 - 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;./Todo-app-programming-2&quot;&gt;To-Do 웹 App 만들기 - 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 11 Jan 2022 21:00:00 +0900</pubDate>
+        <link>
+        https://funkyblues.github.io/Todo-app-programming-2</link>
+        <guid isPermaLink="true">https://funkyblues.github.io/Todo-app-programming-2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>To-Do 웹 App 만들기 - 1</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;웹 App 개발과정 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;./Todo-app-programming-1&quot;&gt;To-Do 웹 App 만들기 - 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;./Todo-app-programming-2&quot;&gt;To-Do 웹 App 만들기 - 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         
