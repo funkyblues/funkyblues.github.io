@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://funkyblues.github.io/tag/web-programming/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://funkyblues.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-01-12T01:54:30+09:00</updated>
+  <updated>2022-01-16T02:19:36+09:00</updated>
   <id>https://funkyblues.github.io/tag/web-programming/feed.xml</id>
 
   
@@ -83,14 +83,14 @@
 
 &lt;h2 id=&quot;나만의-웹-app-개발-시작&quot;&gt;나만의 웹 app 개발 시작&lt;/h2&gt;
 
-&lt;p&gt;노마드코더 &lt;strong&gt;[바닐라 JS로 크롬 앱 만들기]&lt;/strong&gt;를 완강하고, 앱을 좀 더 심미성을 향상시키기 위해… CSS작업을 진행해야 한다. 작업을 하면서 CSS스킬이 점차 향상될 것이다. CSS를 완료한 후 앱의 기능들을 복기해보도록 하겠다. 또한 배경 이미지를 화면의 크기에 상관없이 여백이 없도록, 필요한 기능을 추가하는 것 등등.. 본인의 마음에 맞게 앱을 수정할 것이다.&lt;/p&gt;
+&lt;p&gt;노마드코더 &lt;strong&gt;[Vanilla JS로 크롬 app 만들기]&lt;/strong&gt;를 완강하고, 앱의 심미성을 좀 더 향상시키기 위해… CSS작업을 진행해야 한다. 작업을 하면서 CSS스킬이 점차 향상될 것이다. CSS를 완료한 후 앱의 기능들을 복기해보도록 하겠다. 또한 배경 이미지를 화면의 크기에 상관없이 여백이 없도록, 필요한 기능을 추가하는 것 등등.. 본인의 마음에 맞게 앱을 수정할 것이다.&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;github을-활용한-웹사이트-퍼블리싱&quot;&gt;GitHub을 활용한 웹사이트 퍼블리싱&lt;/h3&gt;
 
-&lt;p&gt;GitHub에서는 아주 좋은 기능을 지원하고 있다. GitHub에선 repository에서 &lt;code class=&quot;post-full-content&quot;&gt;gh-pages&lt;/code&gt;라는 특별한 이름을 가진 branch를 가지고 있으면, 공짜로 Static 호스팅을 할 수 있도록 해준다. 참고로 &lt;br /&gt;&lt;code class=&quot;post-full-content&quot;&gt;Static Website&lt;/code&gt;는 프론트엔드의 필수요소라고 할 수 있는, &lt;code class=&quot;post-full-content&quot;&gt;HTML/CSS/JavaScript&lt;/code&gt;로만 이루어진 사이트를 의미한다.
-To-Do 웹앱 폴더는 GitHub repository로 존재하고 있고, gh-pages로 branch를 만들어, localhost로서가 아닌, GitHub로 이 어플리케이션을 실행할 수 있도록 만들어야 한다. &lt;br /&gt; 다음 순서로 진행해주면 된다.&lt;/p&gt;
+&lt;p&gt;GitHub에서는 아주 좋은 기능을 지원하고 있다. GitHub에선 repository에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt;라는 특별한 이름을 가진 branch를 가지고 있으면, 공짜로 Static 호스팅을 할 수 있도록 해준다. 참고로 &lt;br /&gt;&lt;code class=&quot;post-full-content&quot;&gt;Static Website&lt;/code&gt;는 프론트엔드의 필수요소라고 할 수 있는, &lt;code class=&quot;post-full-content&quot;&gt;HTML/CSS/JavaScript&lt;/code&gt;로만 이루어진 사이트를 의미한다.
+To-Do 웹 app 폴더는 GitHub repository로 존재하고 있고, gh-pages로 branch를 만들어, localhost로서가 아닌, GitHub로 이 어플리케이션을 실행할 수 있도록 만들어야 한다. &lt;br /&gt; 다음 순서로 진행해주면 된다.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;code class=&quot;post-full-content&quot;&gt;gh-pages&lt;/code&gt;로 branch 생성&lt;/li&gt;
@@ -106,7 +106,8 @@ To-Do 웹앱 폴더는 GitHub repository로 존재하고 있고, gh-pages로 bra
 
 &lt;hr /&gt;
 
-&lt;p&gt;먼저 index.html 파일을 생성하고 &amp;lt;body&amp;gt;태그 안에&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/51bf4816a930625fb5b4249443c6a92a.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;(현재 작성 중)
 &lt;br /&gt;
