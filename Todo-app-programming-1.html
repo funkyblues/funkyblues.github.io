@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-
+  <head>
     <!-- Document Settings -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,54 +10,100 @@
 
 
 
-    <title>To-Do 웹 App 만들기 - 1</title>
+    <title>
+      To-Do 웹 App 만들기 - 1
+    </title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/built/screen.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/built/screen.edited.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/built/syntax.css"
+    />
 
     <!-- custom.css -->
-    <link rel="stylesheet" type="text/css" href="/assets/built/custom.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/built/custom.css"
+    />
 
     <!-- Font Awesome-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
     <!-- 웹 폰트 추가 -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/built/gist.css"
+    />
 
     <!-- syntax.css 추가 -->
-    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/built/syntax.css"
+    />
 
     <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <style>.hljs { background: none; }</style>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"
+    />
+    <style>
+      .hljs {
+        background: none;
+      }
+    </style>
 
     <!--[if IE]>
-        <style>
-            p, ol, ul{
-                width: 100%;
-            }
-            blockquote{
-                width: 100%;
-            }
-        </style>
+      <style>
+        p,
+        ol,
+        ul {
+          width: 100%;
+        }
+        blockquote {
+          width: 100%;
+        }
+      </style>
     <![endif]-->
-    
+
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="공부 정리용 블로그" />
-    <link rel="shortcut icon" href="https://funkyblues.github.io/assets/built/images/favicon-1.png" type="image/png" />
-    <link rel="canonical" href="https://funkyblues.github.io/Todo-app-programming-1" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/built/images/favicon-1.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/Todo-app-programming-1" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Collection of studies" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="To-Do 웹 App 만들기 - 1" />
-    <meta property="og:description" content="웹 App 개발과정 To-Do 웹 App 만들기 - 1 To-Do 웹 App 만들기 - 2 나만의 웹 app 개발 시작 노마드코더 [Vanilla JS로 크롬 app 만들기]를 완강하고, 앱의 심미성을 좀 더 향상시키기 위해… CSS작업을 진행해야 한다. 작업을 하면서 CSS스킬이 점차 향상될 것이다. CSS를 완료한 후 앱의 기능들을 복기해보도록 하겠다. 또한" />
-    <meta property="og:url" content="https://funkyblues.github.io/Todo-app-programming-1" />
-    <meta property="og:image" content="https://funkyblues.github.io/assets/built/images/web-app.png" />
+    <meta property="og:description" content="웹 App 개발과정 To-Do 웹 App 만들기 - 1 To-Do 웹 App 만들기 - 2 나만의 웹 app 개발 시작 노마드코더 [Vanilla JS로 크롬 app 만들기]를 완강하였다.. 앱의 심미성을 높이기 위해… CSS작업을 진행해야 한다! 작업을 하면서 CSS스킬이 점차 향상될 것이다. CSS와 같이 개인적으로 또한 배경 이미지를 화면의 크기에 상관없이 여백이" />
+    <meta property="og:url" content="http://localhost:4000/Todo-app-programming-1" />
+    <meta property="og:image" content="http://localhost:4000/assets/built/images/web-app.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2021-12-30T21:00:00+09:00" />
@@ -66,9 +111,9 @@
     <meta property="article:tag" content="Web-programming" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="To-Do 웹 App 만들기 - 1" />
-    <meta name="twitter:description" content="웹 App 개발과정 To-Do 웹 App 만들기 - 1 To-Do 웹 App 만들기 - 2 나만의 웹 app 개발 시작 노마드코더 [Vanilla JS로 크롬 app 만들기]를 완강하고, 앱의 심미성을 좀 더 향상시키기 위해… CSS작업을 진행해야 한다. 작업을 하면서 CSS스킬이 점차 향상될 것이다. CSS를 완료한 후 앱의 기능들을 복기해보도록 하겠다. 또한" />
-    <meta name="twitter:url" content="https://funkyblues.github.io/" />
-    <meta name="twitter:image" content="https://funkyblues.github.io/assets/built/images/web-app.png" />
+    <meta name="twitter:description" content="웹 App 개발과정 To-Do 웹 App 만들기 - 1 To-Do 웹 App 만들기 - 2 나만의 웹 app 개발 시작 노마드코더 [Vanilla JS로 크롬 app 만들기]를 완강하였다.. 앱의 심미성을 높이기 위해… CSS작업을 진행해야 한다! 작업을 하면서 CSS스킬이 점차 향상될 것이다. CSS와 같이 개인적으로 또한 배경 이미지를 화면의 크기에 상관없이 여백이" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/built/images/web-app.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Collection of studies" />
     <meta name="twitter:label2" content="Filed under" />
@@ -85,20 +130,20 @@
     "publisher": {
         "@type": "Organization",
         "name": "Collection of studies",
-        "logo": "https://funkyblues.github.io/"
+        "logo": "http://localhost:4000/"
     },
-    "url": "https://funkyblues.github.io/Todo-app-programming-1",
+    "url": "http://localhost:4000/Todo-app-programming-1",
     "image": {
         "@type": "ImageObject",
-        "url": "https://funkyblues.github.io/assets/built/images/web-app.png",
+        "url": "http://localhost:4000/assets/built/images/web-app.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://funkyblues.github.io/Todo-app-programming-1"
+        "@id": "http://localhost:4000/Todo-app-programming-1"
     },
-    "description": "웹 App 개발과정 To-Do 웹 App 만들기 - 1 To-Do 웹 App 만들기 - 2 나만의 웹 app 개발 시작 노마드코더 [Vanilla JS로 크롬 app 만들기]를 완강하고, 앱의 심미성을 좀 더 향상시키기 위해… CSS작업을 진행해야 한다. 작업을 하면서 CSS스킬이 점차 향상될 것이다. CSS를 완료한 후 앱의 기능들을 복기해보도록 하겠다. 또한"
+    "description": "웹 App 개발과정 To-Do 웹 App 만들기 - 1 To-Do 웹 App 만들기 - 2 나만의 웹 app 개발 시작 노마드코더 [Vanilla JS로 크롬 app 만들기]를 완강하였다.. 앱의 심미성을 높이기 위해… CSS작업을 진행해야 한다! 작업을 하면서 CSS스킬이 점차 향상될 것이다. CSS와 같이 개인적으로 또한 배경 이미지를 화면의 크기에 상관없이 여백이"
 }
     </script>
 
@@ -113,13 +158,13 @@
     <meta name="generator" content="Jekyll 3.6.2" />
     <link rel="alternate" type="application/rss+xml" title="To-Do 웹 App 만들기 - 1" href="/feed.xml" />
 
-
-</head>
-<body class="post-template">
-
+  </head>
+  <body
+    class="post-template"
+  >
     <div class="site-wrapper">
-        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- default -->
+      <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+      <!-- default -->
 
 <!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template -->
@@ -129,7 +174,7 @@ into the {body} of the default.hbs template -->
     <div class="site-nav-left">
         
             
-                <a class="site-nav-logo" href="https://funkyblues.github.io/">Collection of studies</a>
+                <a class="site-nav-logo" href="http://localhost:4000/">Collection of studies</a>
             
         
         
@@ -210,18 +255,18 @@ into the {body} of the default.hbs template -->
 
 <h2 id="나만의-웹-app-개발-시작">나만의 웹 app 개발 시작</h2>
 
-<p>노마드코더 <strong>[Vanilla JS로 크롬 app 만들기]</strong>를 완강하고, 앱의 심미성을 좀 더 향상시키기 위해… CSS작업을 진행해야 한다. 작업을 하면서 CSS스킬이 점차 향상될 것이다. CSS를 완료한 후 앱의 기능들을 복기해보도록 하겠다. 또한 배경 이미지를 화면의 크기에 상관없이 여백이 없도록, 필요한 기능을 추가하는 것 등등.. 본인의 마음에 맞게 앱을 수정할 것이다.</p>
+<p>노마드코더 <strong>[Vanilla JS로 크롬 app 만들기]</strong>를 완강하였다.. 앱의 심미성을 높이기 위해… CSS작업을 진행해야 한다! 작업을 하면서 CSS스킬이 점차 향상될 것이다. CSS와 같이 개인적으로 또한 배경 이미지를 화면의 크기에 상관없이 여백이 없도록, 필요한 기능을 추가하는 것 등등.. 본인의 마음에 맞게 앱을 수정할 것이다.</p>
 
 <hr />
 
 <h3 id="github을-활용한-웹사이트-퍼블리싱">GitHub을 활용한 웹사이트 퍼블리싱</h3>
 
-<p>GitHub에서는 아주 좋은 기능을 지원하고 있다. GitHub에선 repository에서 <code class="language-plaintext highlighter-rouge">gh-pages</code>라는 특별한 이름을 가진 branch를 가지고 있으면, 공짜로 Static 호스팅을 할 수 있도록 해준다. 참고로 <br /><code class="post-full-content">Static Website</code>는 프론트엔드의 필수요소라고 할 수 있는, <code class="post-full-content">HTML/CSS/JavaScript</code>로만 이루어진 사이트를 의미한다.
-To-Do 웹 app 폴더는 GitHub repository로 존재하고 있고, gh-pages로 branch를 만들어, localhost로서가 아닌, GitHub로 이 어플리케이션을 실행할 수 있도록 만들어야 한다. <br /> 다음 순서로 진행해주면 된다.</p>
+<p>GitHub에서는 아주 좋은 기능을 지원하고 있다. GitHub에선 repository에서 <code class="language-plaintext highlighter-rouge">gh-pages</code>라는 특별한 이름을 가진 branch를 가지고 있으면, 공짜로 Static 호스팅을 할 수 있도록 해준다. 참고로 <code class="post-full-content">Static Website</code>는 프론트엔드의 필수요소라고 할 수 있는, <br /><code class="post-full-content">HTML/CSS/JavaScript</code>로만 이루어진 사이트를 의미한다.
+To-Do 웹 app 폴더는 GitHub repository로 존재하고 있고, <code class="language-plaintext highlighter-rouge">gh-pages</code>로 branch를 만들어, localhost로서가 아닌, GitHub로 이 app을 실행할 수 있도록 만들어야 한다. <br /> 다음 순서로 진행해주면 된다.</p>
 
 <ol>
   <li><code class="post-full-content">gh-pages</code>로 branch 생성</li>
-  <li>업데이트 사항이 존재하면, <code class="post-full-content">gh-pages branch</code>로 commit</li>
+  <li>업데이트 사항이 존재하면, <code class="post-full-content">gh-pages branch</code>로 <code class="language-plaintext highlighter-rouge">commit</code></li>
   <li><code class="post-full-content">{사용자 이름}.github.io/{레포지토리 이름}</code> 으로 접속 가능</li>
 </ol>
 
@@ -229,7 +274,7 @@ To-Do 웹 app 폴더는 GitHub repository로 존재하고 있고, gh-pages로 br
 
 <p><del>… 이렇게 진행하려 했는데, 아무래도 진행에 더딘감이 있어 프론트엔드 예제를 더 다루고 돌아와야 할 것 같다…</del></p>
 
-<p><strong>2022년 1월 9일</strong> 현재 어느정도 방향을 잡고 To-Do 어플 작성을 시작하고 있다. 블로그에 어플 개발 과정을 꾸준히 기록하여 복습도 하여, 나중에 발생할 수 있는 삽질을 방지하도록 해야겠다.</p>
+<p><strong>2022년 1월 9일</strong> 현재 어느정도 방향을 잡고 To-Do 어플 작성을 시작하고 있다. 블로그에 어플 개발 과정을 꾸준히 기록하여 복습도 하고, 나중에 발생할 수 있는 삽질도 방지하도록 해야겠다.</p>
 
 <hr />
 
@@ -238,7 +283,7 @@ To-Do 웹 app 폴더는 GitHub repository로 존재하고 있고, gh-pages로 br
 
 <p>(현재 작성 중)
 <br />
-<a href="https://funkyblues.github.io/mymomentum-2022">바닐라 Javascript: To-Do App build</a></p>
+<a href="https://funkyblues.github.io/mymomentum-2022"><strong>바닐라 Javascript: To-Do App build</strong></a></p>
 
                 </div>
             </section>
@@ -305,7 +350,7 @@ To-Do 웹 app 폴더는 GitHub repository로 존재하고 있고, gh-pages로 br
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'https://funkyblues.github.io/Todo-app-programming-1';
+                            var this_page_url = 'http://localhost:4000/Todo-app-programming-1';
                             var this_page_identifier = '/Todo-app-programming-1';
                             var this_page_title = 'To-Do 웹 App 만들기 - 1';
                         };
@@ -501,7 +546,7 @@ To-Do 웹 app 폴더는 GitHub repository로 존재하고 있고, gh-pages로 br
 <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
 <div class="floating-header">
     <div class="floating-header-logo">
-        <a href="https://funkyblues.github.io/">
+        <a href="http://localhost:4000/">
             
             <span>Collection of studies</span>
         </a>
@@ -537,37 +582,47 @@ To-Do 웹 app 폴더는 GitHub repository로 존재하고 있고, gh-pages로 br
 <!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
 
 
-        <!-- Previous/next page links - displayed on every page -->
-        
+      <!-- Previous/next page links - displayed on every page -->
+      
 
-        <!-- The footer at the very bottom of the screen -->
-        <footer class="site-footer outer">
-            <div class="site-footer-content inner">
-                <section class="copyright"><a href="https://funkyblues.github.io/">Collection of studies</a> &copy; 2022</section>
-                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
-                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
-                    <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
-                <nav class="site-footer-nav">
-                    <a href="/">Latest Posts</a>
-                    
-                    
-                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-                </nav>
-            </div>
-        </footer>
-
+      <!-- The footer at the very bottom of the screen -->
+      <footer class="site-footer outer">
+        <div class="site-footer-content inner">
+          <section class="copyright">
+            <a href="http://localhost:4000/">Collection of studies</a>
+            &copy; 2022
+          </section>
+          <section class="poweredby">
+            Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+            <a href="https://pages.github.com/" target="_blank" rel="noopener"
+              >GitHub Pages</a
+            >
+            using
+            <a
+              href="https://github.com/jekyllt/jasper2"
+              target="_blank"
+              rel="noopener"
+              >Jasper2</a
+            >
+          </section>
+          <nav class="site-footer-nav">
+            <a href="/">Latest Posts</a>
+             
+            <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+          </nav>
+        </div>
+      </footer>
     </div>
 
     <!-- The big email subscribe modal content -->
     
     <div id="subscribe" class="subscribe-overlay">
-        <a class="subscribe-overlay-close" href="#"></a>
-        <div class="subscribe-overlay-content">
-            
-            <h1 class="subscribe-overlay-title">Search Collection of studies</h1>
-            <p class="subscribe-overlay-description">
-            lunr.js를 이용한 posts 검색 </p>
-            <span id="searchform" method="post" action="/subscribe/" class="">
+      <a class="subscribe-overlay-close" href="#"></a>
+      <div class="subscribe-overlay-content">
+        
+        <h1 class="subscribe-overlay-title">Search Collection of studies</h1>
+        <p class="subscribe-overlay-description">lunr.js를 이용한 posts 검색</p>
+        <span id="searchform" method="post" action="/subscribe/" class="">
     <input class="confirm" type="hidden" name="confirm"  />
     <input class="location" type="hidden" name="location"  />
     <input class="referrer" type="hidden" name="referrer"  />
@@ -586,27 +641,34 @@ To-Do 웹 app 폴더는 GitHub repository로 존재하고 있고, gh-pages로 br
         }
     </script>
 </span>
-        </div>
+      </div>
     </div>
     
 
     <!-- highlight.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
-    <script>$(document).ready(function() {
-      $('pre code').each(function(i, block) {
-        hljs.highlightBlock(block);
+    <script>
+      $(document).ready(function () {
+        $("pre code").each(function (i, block) {
+          hljs.highlightBlock(block);
+        });
       });
-    });</script>
+    </script>
 
     <!-- jQuery + Fitvids, which makes all video embeds responsive -->
     <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
-
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/jquery.fitvids.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"
+    ></script>
 
     <!-- Paginator increased to "infinit" in _config.yml -->
     <!-- if paginator.posts  -->
@@ -617,7 +679,6 @@ To-Do 웹 app 폴더는 GitHub repository로 존재하고 있고, gh-pages로 br
     <!-- /endif -->
 
     
-
 
     <!-- Add Google Analytics  -->
     <!-- Google Analytics Tracking code -->
@@ -634,8 +695,7 @@ To-Do 웹 app 폴더는 GitHub repository로 존재하고 있고, gh-pages로 br
 
 
     <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
-    
-        <script>
+     <script>
 
 // NOTE: Scroll performance is poor in Safari
 // - this appears to be due to the events firing much more slowly in Safari.
@@ -698,11 +758,9 @@ $(document).ready(function () {
     update();
 });
 </script>
-
-    
+ 
 
     <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
     <!-- ghost_foot -->
-
-</body>
+  </body>
 </html>

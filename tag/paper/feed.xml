@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://funkyblues.github.io/tag/paper/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://funkyblues.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-01-16T02:19:36+09:00</updated>
-  <id>https://funkyblues.github.io/tag/paper/feed.xml</id>
+  <link href="http://localhost:4000/tag/paper/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-01-21T20:53:31+09:00</updated>
+  <id>http://localhost:4000/tag/paper/feed.xml</id>
 
   
   
@@ -32,55 +32,12 @@
 
   
     <entry>
-      <title type="html">석사 논문 공부 - 머신러닝(SVM)</title>
-      <link href="https://funkyblues.github.io/SVM" rel="alternate" type="text/html" title="석사 논문 공부 - 머신러닝(SVM)" />
-      <published>2021-12-08T21:00:00+09:00</published>
-      <updated>2021-12-08T21:00:00+09:00</updated>
-      <id>https://funkyblues.github.io/SVM</id>
-      <content type="html" xml:base="https://funkyblues.github.io/SVM">&lt;p&gt;연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;전국 5m 격자 DEM ·국가기준점 위도·암석 밀도 래스터 데이터를 SVR의 Input으로 사용&lt;/li&gt;
-  &lt;li&gt;파이썬 라이브러리를 이용
-    &lt;ol&gt;
-      &lt;li&gt;SVM library, pandas, numpy, matplotlib, etc…&lt;/li&gt;
-      &lt;li&gt;일단 테스트중!&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Woo Chang Uk</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="paper" />
-      
-
-      
-        <summary type="html">연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다. 전국 5m 격자 DEM ·국가기준점 위도·암석 밀도 래스터 데이터를 SVR의 Input으로 사용 파이썬 라이브러리를 이용 SVM library, pandas, numpy, matplotlib, etc… 일단 테스트중!</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
       <title type="html">석사 논문 공부 - SVM 회귀모델 연구지역 적용</title>
-      <link href="https://funkyblues.github.io/SVM-jupyter" rel="alternate" type="text/html" title="석사 논문 공부 - SVM 회귀모델 연구지역 적용" />
+      <link href="http://localhost:4000/SVM-jupyter" rel="alternate" type="text/html" title="석사 논문 공부 - SVM 회귀모델 연구지역 적용" />
       <published>2021-12-08T21:00:00+09:00</published>
       <updated>2021-12-08T21:00:00+09:00</updated>
-      <id>https://funkyblues.github.io/SVM-jupyter</id>
-      <content type="html" xml:base="https://funkyblues.github.io/SVM-jupyter">&lt;p&gt;&lt;strong&gt;5장 – 서포트 벡터 머신&lt;/strong&gt;&lt;/p&gt;
+      <id>http://localhost:4000/SVM-jupyter</id>
+      <content type="html" xml:base="http://localhost:4000/SVM-jupyter">&lt;p&gt;&lt;strong&gt;5장 – 서포트 벡터 머신&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;10&quot;&gt;10.&lt;/h2&gt;
 
@@ -2644,6 +2601,49 @@ RandomizedSearchCV(cv=3, estimator=SVR(),
 
       
         <summary type="html">5장 – 서포트 벡터 머신</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">석사 논문 공부 - 머신러닝(SVM)</title>
+      <link href="http://localhost:4000/SVM" rel="alternate" type="text/html" title="석사 논문 공부 - 머신러닝(SVM)" />
+      <published>2021-12-08T21:00:00+09:00</published>
+      <updated>2021-12-08T21:00:00+09:00</updated>
+      <id>http://localhost:4000/SVM</id>
+      <content type="html" xml:base="http://localhost:4000/SVM">&lt;p&gt;연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;전국 5m 격자 DEM ·국가기준점 위도·암석 밀도 래스터 데이터를 SVR의 Input으로 사용&lt;/li&gt;
+  &lt;li&gt;파이썬 라이브러리를 이용
+    &lt;ol&gt;
+      &lt;li&gt;SVM library, pandas, numpy, matplotlib, etc…&lt;/li&gt;
+      &lt;li&gt;일단 테스트중!&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="paper" />
+      
+
+      
+        <summary type="html">연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다. 전국 5m 격자 DEM ·국가기준점 위도·암석 밀도 래스터 데이터를 SVR의 Input으로 사용 파이썬 라이브러리를 이용 SVM library, pandas, numpy, matplotlib, etc… 일단 테스트중!</summary>
       
 
       
