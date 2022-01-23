@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/clone/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-01-24T02:05:01+09:00</updated>
+  <id>http://localhost:4000/tag/clone/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Collection of studies | </title>
+  
+
+  
+    <subtitle>공부 정리용 블로그</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Starbucks 웹 App Cloning - (12)</title>
+      <link href="http://localhost:4000/starbucks-cloning3" rel="alternate" type="text/html" title="Starbucks 웹 App Cloning - (12)" />
+      <published>2022-01-23T11:00:00+09:00</published>
+      <updated>2022-01-23T11:00:00+09:00</updated>
+      <id>http://localhost:4000/starbucks-cloning3</id>
+      <content type="html" xml:base="http://localhost:4000/starbucks-cloning3">&lt;h2 id=&quot;다중-요소-슬라이드&quot;&gt;다중 요소 슬라이드&lt;/h2&gt;
+
+&lt;p&gt;main.css&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6b92a546e89d006a2e68f3c318906839.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;index.html&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/309e36767431a85041d6b11143c55b6e.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;main.js&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/c2c1c40ea33e4e400e1ff70b8bfdf5d1.js&quot;&gt; &lt;/script&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Clone" />
+      
+
+      
+        <summary type="html">다중 요소 슬라이드</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Starbucks 웹 App Cloning - (11)</title>
+      <link href="http://localhost:4000/starbucks-cloning2" rel="alternate" type="text/html" title="Starbucks 웹 App Cloning - (11)" />
+      <published>2022-01-23T10:00:00+09:00</published>
+      <updated>2022-01-23T10:00:00+09:00</updated>
+      <id>http://localhost:4000/starbucks-cloning2</id>
+      <content type="html" xml:base="http://localhost:4000/starbucks-cloning2">&lt;h2 id=&quot;스크롤-위치-계산&quot;&gt;스크롤 위치 계산&lt;/h2&gt;
+
+&lt;p&gt;main.css&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/cbc3b5ed8561065e41894f04bfadb328.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;index.html
+true&lt;script src=&quot;https://gist.github.com/a87aedf9d5972b7b6eda8f13bdf28d76.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;main.js&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/76bf05e1db2a3714dc8279ddbc4574a9.js&quot;&gt; &lt;/script&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Clone" />
+      
+
+      
+        <summary type="html">스크롤 위치 계산</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Starbucks 웹 App Cloning - (10)</title>
+      <link href="http://localhost:4000/starbucks-cloning" rel="alternate" type="text/html" title="Starbucks 웹 App Cloning - (10)" />
+      <published>2022-01-23T09:00:00+09:00</published>
+      <updated>2022-01-23T09:00:00+09:00</updated>
+      <id>http://localhost:4000/starbucks-cloning</id>
+      <content type="html" xml:base="http://localhost:4000/starbucks-cloning">&lt;h2 id=&quot;3d-애니메이션&quot;&gt;3D 애니메이션&lt;/h2&gt;
+
+&lt;p&gt;main.css&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/ed42011c080efcdd0dcb95d34688d239.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;index.html&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e2529fda6c7530e088a8b7ddff5c0995.js&quot;&gt; &lt;/script&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Clone" />
+      
+
+      
+        <summary type="html">3D 애니메이션</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
