@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/author/changuk/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-01-24T02:05:01+09:00</updated>
+  <updated>2022-01-24T21:01:33+09:00</updated>
   <id>http://localhost:4000/author/changuk/feed.xml</id>
 
   
@@ -30,6 +30,98 @@
   
   
 
+  
+    <entry>
+      <title type="html">Starbucks 웹 App Cloning - (13)</title>
+      <link href="http://localhost:4000/starbucks-cloning5" rel="alternate" type="text/html" title="Starbucks 웹 App Cloning - (13)" />
+      <published>2022-01-24T09:30:00+09:00</published>
+      <updated>2022-01-24T09:30:00+09:00</updated>
+      <id>http://localhost:4000/starbucks-cloning5</id>
+      <content type="html" xml:base="http://localhost:4000/starbucks-cloning5">&lt;h2 id=&quot;페이지-상단으로-이동scrollto&quot;&gt;페이지 상단으로 이동(ScrollTo)&lt;/h2&gt;
+
+&lt;p&gt;main.css&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/70b4981be99c5786ac0a144b4ffddf19.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;index.html&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/53fd0deba234475a238ce60fb5faba39.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;main.js&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/afb7748c1cf293e90d9b5f633b49158f.js&quot;&gt; &lt;/script&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Clone" />
+      
+
+      
+        <summary type="html">페이지 상단으로 이동(ScrollTo)</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Starbucks 웹 App Cloning - (13)</title>
+      <link href="http://localhost:4000/starbucks-cloning4" rel="alternate" type="text/html" title="Starbucks 웹 App Cloning - (13)" />
+      <published>2022-01-24T09:00:00+09:00</published>
+      <updated>2022-01-24T09:00:00+09:00</updated>
+      <id>http://localhost:4000/starbucks-cloning4</id>
+      <content type="html" xml:base="http://localhost:4000/starbucks-cloning4">&lt;h2 id=&quot;푸터&quot;&gt;푸터&lt;/h2&gt;
+
+&lt;p&gt;main.css&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/c5f8931fd3d196edf75b2bda76c4d15c.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;index.html&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/fa9129c4f813de4ed902cb83cf729633.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;main.js&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f42b0f1b30c27caf04ee64937e749366.js&quot;&gt; &lt;/script&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Clone" />
+      
+
+      
+        <summary type="html">푸터</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Starbucks 웹 App Cloning - (12)</title>
@@ -89,8 +181,9 @@
 &lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
 &lt;script src=&quot;https://gist.github.com/cbc3b5ed8561065e41894f04bfadb328.js&quot;&gt; &lt;/script&gt;
 
-&lt;p&gt;index.html
-true&lt;script src=&quot;https://gist.github.com/a87aedf9d5972b7b6eda8f13bdf28d76.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;index.html&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/a87aedf9d5972b7b6eda8f13bdf28d76.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;main.js&lt;/p&gt;
 &lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
