@@ -238,48 +238,12 @@ into the {body} of the default.hbs template -->
 <script>
     window.store = {
     
-    "starbucks-cloning5": {
-        "title": "Starbucks 웹 App Cloning - (13)",
+    "wetube-cloning1": {
+        "title": "Wetube 클론코딩 - SET UP (1)",
             "author": "changuk",
             "category": "",
-            "content": "페이지 상단으로 이동(ScrollTo)main.css400: Invalid requestindex.html400: Invalid requestmain.js400: Invalid request",
-        "url": "/starbucks-cloning5"
-    }
-    ,
-    
-    "starbucks-cloning4": {
-        "title": "Starbucks 웹 App Cloning - (13)",
-            "author": "changuk",
-            "category": "",
-            "content": "푸터main.css400: Invalid requestindex.html400: Invalid requestmain.js400: Invalid request",
-        "url": "/starbucks-cloning4"
-    }
-    ,
-    
-    "starbucks-cloning3": {
-        "title": "Starbucks 웹 App Cloning - (12)",
-            "author": "changuk",
-            "category": "",
-            "content": "다중 요소 슬라이드main.css400: Invalid requestindex.html400: Invalid requestmain.js400: Invalid request",
-        "url": "/starbucks-cloning3"
-    }
-    ,
-    
-    "starbucks-cloning2": {
-        "title": "Starbucks 웹 App Cloning - (11)",
-            "author": "changuk",
-            "category": "",
-            "content": "스크롤 위치 계산main.css400: Invalid requestindex.html400: Invalid requestmain.js400: Invalid request",
-        "url": "/starbucks-cloning2"
-    }
-    ,
-    
-    "starbucks-cloning": {
-        "title": "Starbucks 웹 App Cloning - (10)",
-            "author": "changuk",
-            "category": "",
-            "content": "3D 애니메이션main.css400: Invalid requestindex.html400: Invalid request",
-        "url": "/starbucks-cloning"
+            "content": "안녕하세요. 성장하는 것을 사랑하는 changuk이라고 합니다. 현재 nomadcoders에서 Wetube 클론코딩을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.NODEJS란?NodeJS 홈페이지에 들어가면 알 수 있듯이, NodeJS란 크롬 V8 자바스크립트 엔진으로 빌드된 자바스크립트 런타임입니다.런타임(Runtime)이란 프로그램이 실행되고 있는 동안의 동작이라고 정의되어 있는데, 일반적으로 프로그래밍 언어가 구동되는 환경이라고 생각하시면 됩니다. 즉, 원래 웸사이트와 간단하게 상호작용하기 위해 만들어졌던 자바스크립트를 이젠 웹사이트에서만이 아닌 다른 환경에서도 실행할 수 있도록 만들어 주었다는 의미로 받아들이시면 됩니다.이런 환경을 만듦으로써, 이젠 자바스크립트 언어만으로도 벡엔드(express)를 구성하고, 심지어는 IOS, 안드로이드 어플도 만들 수 있게 되었다고 합니다(React-native). 아직 핸드폰 앱은 못만들어 봤지만… 차차 공부해가면서 다 해낼 수 있을 것이라 생각합니다.그럼 잘 작동하는 지 확인도 해볼겸, NodeJS에서 실행될 첫 번째 JavaScript 파일을 한번 만들어서 실행해 보겠습니다.console.log(\"Hello NodeJS\");콘솔 창에 Hello NodeJS라는 문자열을 출력하는 index.js파일입니다. 출력결과를 한번 보죠.콘솔 창에 잘 출력되었습니다.NPM이란?이름에서 알 수 있듯, npm(node package manager)은 자바스크립트 언어를 위한 패키지 매니저입니다. 다른 개발자들은 이npm이라는 곳에 자신들이 만든 패키지들을 업로드해주는데 그것들을 활용하면 정말 간단히 말해 개발을 아주 편하게 할 수 있도록 도와줍니다. 추후 모듈들을 소개하며 각각의 기능들을 살펴보면 어떤 의미인지 와닿을 것이라고 생각합니다(공부가 부족하다고는 말 못해 읍읍). 우리는 이 패키지 매니저에서 개발을 편하게 해주는 모듈을 가져다 쓸 수도 있고, 또는 특정 개발(ex. 벡엔드)에 꼭 필요한 모듈을 가져다 쓸 수도 있습니다.그럼 npm을 어떻게 사용하냐? work directory의 콘솔창에 npm init이라 입력하면 package.json파일을 자동으로 생성해줍니다 (약간의 설정을 요구함).모든 값들을 무시하고 엔터만 계속 치면, package.json파일이 생성됩니다.npm을 사용하여 모듈들을 설치한다면 이 package.json파일에 설치된(할) 모듈들의 이름들이 입력됩니다.(package.json은 아주 많은 모듈들의 이름을 받게 될 운명에 처해있죠 후후…)이처럼, npm은 여러 모듈들을 설치하게 도와주는 패키지 매니저로 생각하면 됩니다.NodeJS로 app 개발을 한다는 것은 레고를 만드는걸로 비유할 수 있습니다. 하나씩 하나씩 쌓아 올라가면서 만들어야 하거든요. 보다시피 처음은 굉장히 간단하죠? 하지만 레고를 만들 때 아무 생각없이 하다 보면 뭘 만들고 있는지 잊는 것 처럼, NodeJS로 개발을 할 때에도 마찬가지입니다. 개발자가 어떤 행동을 할 때 스스로 어떤 결과를 발생시키는지 인지하고 있지 않다면 어떤 무시무시한 일이 발생할 지… 무튼 각 세부내용들을 잘 숙지하여 불상사가 없도록 합시다. ㅎㅎ (그래서 블로그 글을 쓰고있다고는 말 못해 읍읍)package.json의 기능 (script)package.json 파일을 보시면 \"script\"라고 하는 부분이 있습니다. 원래 NodeJS환경에서 index.js라는 자바스크립트 파일을 사용하려면, 콘솔창에다가 node index.js라고 입력해주어야 index.js를 실행할 수 있었습니다. 하지만 이제 package.json의 script 기능을 사용하면 npm 명령어로 파일을 실행할 수 있습니다. 나중에 알아볼 수 있겠지만, 서버를 시작하는 script, CSS를 압축하는 script, 웹사이트를 빌드하고 서버에 배포하는 script 등등… 여러 script를 만들어서 사용할 수 있습니다. 와우! script 기능으로 개발 시간을 상당히 아낄 수 있습니다. script안에 다음과 같이 작성해 봅시다.\"scripts\": {  \"win\": \"node index.js\"}그 후, 콘솔 창에 npm run win을 입력하시면, node index.js를 입력하지 않아도, index.js를 실행해주는 것을 볼 수 있습니다! 물론, 한 파일 가지고는 node index.js를 쓰든 npm run win을 쓰든 똑같은거 아니냐고 할 수 있지만 script의 장점은 다른 명령어를 추가해도 npm run win 한번이면 원하는 기능을 다 작동시켜주는 것에 있으니까요. script를 잘 이용하도록 합시다.Express 설치script도 알았겠다, 우리의 첫 module인 express를 설치해 봅시다. 이 모듈이 없으면 서버를 만들 수가 없습니다… 첫 등장으로부터 꽤 시간이 지났지만 여전히 쓰이고 있는 모듈로서, JavaScript로 벡엔드 개발을 한다면 절대 없어서는 안되는 친구입니다. npmjs에서 express가 현재 얼마나 사용되고 있는지 한번 보시죠. EXPRESS서두가 길었습니다. 콘솔 창에 npm install express를 입력합시다. i로 하셔도 되고, install 이라고 하셔도 됩니다. 둘 다 동일하게 작동합니다.설치가 완료되었습니다. 우리의 package.json의 \"dependencies\"를 보면 express가 잘 설치되어 있습니다!왼쪽의 현재 work directory를 한 번 살펴보시죠.node_modules가 생성되었습니다. 이게 뭘까요?? npm으로 설치한 모듈들은 모두 node_modules에 설치가 됩니다. 그런데 우리가 설치한 건 express뿐인데, 처음 보는 모듈들도 많이 있습니다. 이것은 express의 package.json을 보면 확실하게 알 수 있습니다. package.json 안의 \"dependencies\"를 한번 봅시다.상당히 많은 모듈의 이름들이 적혀있습니다. 이것은 바로 express를 사용하기 위해 필요한 모듈들 입니다. node_modules그 모듈들을 사용할 때 필요한 모듈들도 설치가 되어 있습니다. 그러니까 express를 설치하면, express를 사용하기 위해 필요한 모듈들도 같이 설치가 되고, 설치가 된 모듈들을 사용할 때 필요한 모듈들도 설치되는… 것이죠. 뭐, 어떤 모듈들이 설치되어야 하는지 알 필요는 없습니다. npm이 알아서 해주니까요!  또 여기서 아시면 좋을게 \"devDependencies\"라는 것이 있습니다. 이것은 개발자가 필요로 하는 모듈들을 설치해주는 명세서라고 보시면 됩니다. 프로젝트를 배포한 후 작동시킬 때 필요한 것이 아니라, 개발에 편의를 줄 수 있는 모듈을 개발자의 기호에 맞게 설치해달라고 package.json에게 전달해주는 것이죠.",
+        "url": "/wetube-cloning1"
     }
     ,
     
@@ -316,15 +280,6 @@ into the {body} of the default.hbs template -->
             "category": "",
             "content": "연구지역 중력격자모델 개발에 서포트 벡터 머신을 적용하기 위하여 프로세스를 블로그에 정리해 보기로 했다.  전국 5m 격자 DEM ·국가기준점 위도·암석 밀도 래스터 데이터를 SVR의 Input으로 사용  파이썬 라이브러리를 이용          SVM library, pandas, numpy, matplotlib, etc…      일단 테스트중!      ",
         "url": "/SVM"
-    }
-    ,
-    
-    "network-for-everyone1": {
-        "title": "모두의 네트워크 - (1)",
-            "author": "changuk",
-            "category": "",
-            "content": "제목두 번째 제목세 번째 제목네 번째 제목다섯 번째 제목여섯 번째 제목이 글은 [모두의 네트워크] 책을 읽고 난 후 정리한 내용입니다.  저는 지금 글을 써볼려고 합니다. 근데 마크다운 언어를 잘 몰라서 헤메는 중입니다.          반갑습니다안녕하세요      ",
-        "url": "/network-for-everyone1"
     }
     
     

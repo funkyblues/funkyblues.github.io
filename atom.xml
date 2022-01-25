@@ -8,76 +8,16 @@
     
       
       <item>
-        <title>Starbucks 웹 App Cloning - (13)</title>
+        <title>Wetube 클론코딩 - SET UP (1)</title>
         
-          <description>&lt;h2 id=&quot;페이지-상단으로-이동scrollto&quot;&gt;페이지 상단으로 이동(ScrollTo)&lt;/h2&gt;
+          <description>&lt;p&gt;안녕하세요. 성장하는 것을 사랑하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;changuk&lt;/code&gt;이라고 합니다. 현재 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nomadcoders&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Wetube&lt;/code&gt; 클론코딩을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.&lt;/p&gt;
 
 </description>
         
-        <pubDate>Mon, 24 Jan 2022 09:30:00 +0900</pubDate>
+        <pubDate>Tue, 25 Jan 2022 09:00:00 +0900</pubDate>
         <link>
-        http://localhost:4000/starbucks-cloning5</link>
-        <guid isPermaLink="true">http://localhost:4000/starbucks-cloning5</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Starbucks 웹 App Cloning - (13)</title>
-        
-          <description>&lt;h2 id=&quot;푸터&quot;&gt;푸터&lt;/h2&gt;
-
-</description>
-        
-        <pubDate>Mon, 24 Jan 2022 09:00:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/starbucks-cloning4</link>
-        <guid isPermaLink="true">http://localhost:4000/starbucks-cloning4</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Starbucks 웹 App Cloning - (12)</title>
-        
-          <description>&lt;h2 id=&quot;다중-요소-슬라이드&quot;&gt;다중 요소 슬라이드&lt;/h2&gt;
-
-</description>
-        
-        <pubDate>Sun, 23 Jan 2022 11:00:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/starbucks-cloning3</link>
-        <guid isPermaLink="true">http://localhost:4000/starbucks-cloning3</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Starbucks 웹 App Cloning - (11)</title>
-        
-          <description>&lt;h2 id=&quot;스크롤-위치-계산&quot;&gt;스크롤 위치 계산&lt;/h2&gt;
-
-</description>
-        
-        <pubDate>Sun, 23 Jan 2022 10:00:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/starbucks-cloning2</link>
-        <guid isPermaLink="true">http://localhost:4000/starbucks-cloning2</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>Starbucks 웹 App Cloning - (10)</title>
-        
-          <description>&lt;h2 id=&quot;3d-애니메이션&quot;&gt;3D 애니메이션&lt;/h2&gt;
-
-</description>
-        
-        <pubDate>Sun, 23 Jan 2022 09:00:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/starbucks-cloning</link>
-        <guid isPermaLink="true">http://localhost:4000/starbucks-cloning</guid>
+        http://localhost:4000/wetube-cloning1</link>
+        <guid isPermaLink="true">http://localhost:4000/wetube-cloning1</guid>
       </item>
       
     
@@ -155,33 +95,6 @@
         <link>
         http://localhost:4000/SVM</link>
         <guid isPermaLink="true">http://localhost:4000/SVM</guid>
-      </item>
-      
-    
-      
-      <item>
-        <title>모두의 네트워크 - (1)</title>
-        
-          <description>&lt;h1 id=&quot;제목&quot;&gt;제목&lt;/h1&gt;
-&lt;h2 id=&quot;두-번째-제목&quot;&gt;두 번째 제목&lt;/h2&gt;
-&lt;h3 id=&quot;세-번째-제목&quot;&gt;세 번째 제목&lt;/h3&gt;
-&lt;h4 id=&quot;네-번째-제목&quot;&gt;네 번째 제목&lt;/h4&gt;
-&lt;h5 id=&quot;다섯-번째-제목&quot;&gt;다섯 번째 제목&lt;/h5&gt;
-&lt;h6 id=&quot;여섯-번째-제목&quot;&gt;여섯 번째 제목&lt;/h6&gt;
-&lt;p&gt;이 글은 [모두의 네트워크] 책을 읽고 난 후 정리한 내용입니다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;저는 지금 글을 써볼려고 합니다. 근데 마크다운 언어를 잘 몰라서 헤메는 중입니다.
-    &lt;ul&gt;
-      &lt;li&gt;반갑습니다&lt;strong&gt;안녕하세요&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        
-        <pubDate>Tue, 30 Nov 2021 21:00:00 +0900</pubDate>
-        <link>
-        http://localhost:4000/network-for-everyone1</link>
-        <guid isPermaLink="true">http://localhost:4000/network-for-everyone1</guid>
       </item>
       
     
