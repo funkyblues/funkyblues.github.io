@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/tag/clone/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-01-26T02:23:36+09:00</updated>
+  <updated>2022-01-26T03:03:39+09:00</updated>
   <id>http://localhost:4000/tag/clone/feed.xml</id>
 
   
@@ -32,12 +32,80 @@
 
   
     <entry>
+      <title type="html">Wetube 클론코딩 - INTRODUCTION TO EXPRESS</title>
+      <link href="http://localhost:4000/wetube-cloning2" rel="alternate" type="text/html" title="Wetube 클론코딩 - INTRODUCTION TO EXPRESS" />
+      <published>2022-01-26T03:00:00+09:00</published>
+      <updated>2022-01-26T03:00:00+09:00</updated>
+      <id>http://localhost:4000/wetube-cloning2</id>
+      <content type="html" xml:base="http://localhost:4000/wetube-cloning2">&lt;p&gt;안녕하세요. 성장하는 것을 즐기는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;changuk&lt;/code&gt;이라고 합니다. 현재 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nomadcoders&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Wetube&lt;/code&gt; 클론코딩을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Wetube 클론코딩 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;./wetube-cloning1&quot;&gt;Wetube 클론코딩 - SET UP&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;./wetube-cloning2&quot;&gt;Wetube 클론코딩 - INTRODUCTION TO EXPRESS&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;먼저 우리의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt; 파일을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;server.js&lt;/code&gt; 파일로 변경해줍시다. 그리고 앞으로는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src(source)&lt;/code&gt;파일을 만들어서 우리가 만들 모든 application들을 src에 넣겠습니다. 자 그러면 모든 준비가 끝났습니다. 시작하죠&lt;/p&gt;
+
+&lt;h2 id=&quot;첫-server-만들기&quot;&gt;첫 Server 만들기&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;express&lt;/code&gt;를 import 해줍니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import from&lt;/code&gt;을 사용하면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;express&lt;/code&gt;는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;내에서 검색하게 됩니다. 그 후 express app을 생성해주는 코드도 작성합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;express;
+const app = express();
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이렇게 하면 express app이 만들어지게 됩니다 와우! 이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app&lt;/code&gt;은 사용자의 요청을 listen할 수 있어야 합니다. 자 여기서 생각해야할 문제가 있습니다. app이 listen한다고 했을 때, 과연 &lt;strong&gt;무엇을&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;listen&lt;/code&gt;한다는 것일까요? 이를 위해서는 서버를 알아야 합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;서버server&quot;&gt;서버(Server)&lt;/h2&gt;
+
+&lt;p&gt;서버는 항상 켜져있는 컴퓨터라고 생각할 수 있습니다. 서버는 노트북으로 작동 될 수도 있고, 데스크탑으로 될 수도 있지요. 일반적으로는 우리가 상상하는 키보드, 화면도 없는 커다란 디스크로 이루어진 컴퓨터의 모습이 서버 역할을 하는 컴퓨터라고 할 수 있습니다. 정리하자면 서버는 항상 켜져있고 인터넷에 연결되어 있는 컴퓨터입니다. 하드웨어 적인 부분에서도 공부할 게 정말 많은 서버이지만, 일단 여기서 마무리하고 웹 app의 관점에서 server의 기능을 살펴보도록 합시다.&lt;/p&gt;
+
+&lt;h4 id=&quot;request&quot;&gt;request&lt;/h4&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Clone" />
+      
+
+      
+        <summary type="html">안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 nomadcoders에서 Wetube 클론코딩을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Wetube 클론코딩 - SET UP</title>
       <link href="http://localhost:4000/wetube-cloning1" rel="alternate" type="text/html" title="Wetube 클론코딩 - SET UP" />
       <published>2022-01-25T09:00:00+09:00</published>
       <updated>2022-01-25T09:00:00+09:00</updated>
       <id>http://localhost:4000/wetube-cloning1</id>
       <content type="html" xml:base="http://localhost:4000/wetube-cloning1">&lt;p&gt;안녕하세요. 성장하는 것을 즐기는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;changuk&lt;/code&gt;이라고 합니다. 현재 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nomadcoders&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Wetube&lt;/code&gt; 클론코딩을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Wetube 클론코딩 &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;./wetube-cloning1&quot;&gt;Wetube 클론코딩 - SET UP&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;./wetube-cloning2&quot;&gt;Wetube 클론코딩 - INTRODUCTION TO EXPRESS&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;nodejs란&quot;&gt;NODEJS란?&lt;/h2&gt;
 
