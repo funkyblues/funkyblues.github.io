@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/author/changuk/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-01-26T03:03:39+09:00</updated>
+  <updated>2022-01-29T17:52:51+09:00</updated>
   <id>http://localhost:4000/author/changuk/feed.xml</id>
 
   
@@ -41,9 +41,9 @@
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Wetube 클론코딩 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;./wetube-cloning1&quot;&gt;Wetube 클론코딩 - SET UP&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;./wetube-cloning1&quot;&gt;SET UP&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;
-    &lt;a href=&quot;./wetube-cloning2&quot;&gt;Wetube 클론코딩 - INTRODUCTION TO EXPRESS&lt;/a&gt;
+    &lt;a href=&quot;./wetube-cloning2&quot;&gt;INTRODUCTION TO EXPRESS&lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -57,11 +57,11 @@
 const app = express();
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;이렇게 하면 express app이 만들어지게 됩니다 와우! 이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app&lt;/code&gt;은 사용자의 요청을 listen할 수 있어야 합니다. 자 여기서 생각해야할 문제가 있습니다. app이 listen한다고 했을 때, 과연 &lt;strong&gt;무엇을&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;listen&lt;/code&gt;한다는 것일까요? 이를 위해서는 서버를 알아야 합니다.&lt;/p&gt;
+&lt;p&gt;이렇게 하면 express app이 만들어지게 됩니다 와우! 이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app&lt;/code&gt;은 사용자의 요청을 listen할 수 있어야 합니다. 자 여기서 생각해야할 문제가 있습니다. &lt;strong&gt;app&lt;/strong&gt;이 &lt;strong&gt;listen&lt;/strong&gt;한다고 했을 때, 과연 &lt;strong&gt;무엇을&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;listen&lt;/code&gt;한다는 것일까요? 이를 위해서는 서버를 알아야 합니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;서버server&quot;&gt;서버(Server)&lt;/h2&gt;
 
-&lt;p&gt;서버는 항상 켜져있는 컴퓨터라고 생각할 수 있습니다. 서버는 노트북으로 작동 될 수도 있고, 데스크탑으로 될 수도 있지요. 일반적으로는 우리가 상상하는 키보드, 화면도 없는 커다란 디스크로 이루어진 컴퓨터의 모습이 서버 역할을 하는 컴퓨터라고 할 수 있습니다. 정리하자면 서버는 항상 켜져있고 인터넷에 연결되어 있는 컴퓨터입니다. 하드웨어 적인 부분에서도 공부할 게 정말 많은 서버이지만, 일단 여기서 마무리하고 웹 app의 관점에서 server의 기능을 살펴보도록 합시다.&lt;/p&gt;
+&lt;p&gt;서버는 항상 켜져있는 컴퓨터라고 생각할 수 있습니다. 서버는 노트북으로 작동 될 수도 있고, 데스크탑으로 될 수도 있지요. 일반적으로는 우리가 상상하는 키보드, 화면도 없는 커다란 하드디스크로 이루어진 컴퓨터의 모습이 서버 역할을 하는 컴퓨터라고 할 수 있습니다. 정리하자면 서버는 항상 켜져있고 인터넷에 연결되어 있는 컴퓨터지요. 웹 app의 관점에서 서버의 기능을 살펴보도록 합시다.&lt;/p&gt;
 
 &lt;h4 id=&quot;request&quot;&gt;request&lt;/h4&gt;</content>
 
@@ -101,9 +101,9 @@ const app = express();
 
 &lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Wetube 클론코딩 &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;./wetube-cloning1&quot;&gt;Wetube 클론코딩 - SET UP&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;./wetube-cloning1&quot;&gt;SET UP&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;
-    &lt;a href=&quot;./wetube-cloning2&quot;&gt;Wetube 클론코딩 - INTRODUCTION TO EXPRESS&lt;/a&gt;
+    &lt;a href=&quot;./wetube-cloning2&quot;&gt;INTRODUCTION TO EXPRESS&lt;/a&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
