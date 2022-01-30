@@ -1152,7 +1152,8 @@ body {
   background: #2b2b2b;
   border-radius: 4px;
   color: #e3ff00;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: Menlo, Consolas, "Spoqa Han Sans Neo", Monaco, "Courier New",
+    monospace;
 }
 .post-full-content pre {
   overflow-x: auto;

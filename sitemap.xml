@@ -4,6 +4,70 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>http://localhost:4000/javascript-levelup3.html</loc>
+        
+        <lastmod>2022-01-30T11:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/javascript-levelup2.html</loc>
+        
+        <lastmod>2022-01-30T11:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/javascript-levelup1.html</loc>
+        
+        <lastmod>2022-01-30T10:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/javascript-essential2.html</loc>
+        
+        <lastmod>2022-01-30T10:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/javascript-essential1.html</loc>
         
         <lastmod>2022-01-30T09:00:00+09:00</lastmod>
