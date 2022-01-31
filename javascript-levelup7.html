@@ -11,7 +11,7 @@
 
 
     <title>
-      WebFrontend - JavaScript Object
+      WebFrontend - JavaScript Copy(shallow, deep)
     </title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -94,24 +94,24 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="공부 정리용 블로그" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/built/images/favicon-1.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/javascript-levelup3" />
+    <link rel="canonical" href="http://localhost:4000/javascript-levelup7" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Collection of studies" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="WebFrontend - JavaScript Object" />
-    <meta property="og:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 객체를 다루는 메서드들에 대해 알아보겠습니다. MDN문서를 참조했습니다. prototype이 붙어있지 않은 메서드 들은, 정적(Static) 메서드라고 불립니다. 따라서 이러한 정적 메서드들은" />
-    <meta property="og:url" content="http://localhost:4000/javascript-levelup3" />
+    <meta property="og:title" content="WebFrontend - JavaScript Copy(shallow, deep)" />
+    <meta property="og:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 복사(Copy)에 대해 알아보도록 하겠습니다. 복사(Copy) 코드를 보며 이해해봅시다. const user = { name: "Changuk", age: 26, emails: ["dnr8874@naver.com"], };" />
+    <meta property="og:url" content="http://localhost:4000/javascript-levelup7" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/javascript.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-01-30T11:00:00+09:00" />
-    <meta property="article:modified_time" content="2022-01-30T11:00:00+09:00" />
+    <meta property="article:published_time" content="2022-01-31T09:30:00+09:00" />
+    <meta property="article:modified_time" content="2022-01-31T09:30:00+09:00" />
     <meta property="article:tag" content="Web-frontend" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="WebFrontend - JavaScript Object" />
-    <meta name="twitter:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 객체를 다루는 메서드들에 대해 알아보겠습니다. MDN문서를 참조했습니다. prototype이 붙어있지 않은 메서드 들은, 정적(Static) 메서드라고 불립니다. 따라서 이러한 정적 메서드들은" />
+    <meta name="twitter:title" content="WebFrontend - JavaScript Copy(shallow, deep)" />
+    <meta name="twitter:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 복사(Copy)에 대해 알아보도록 하겠습니다. 복사(Copy) 코드를 보며 이해해봅시다. const user = { name: "Changuk", age: 26, emails: ["dnr8874@naver.com"], };" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/javascript.png" />
     <meta name="twitter:label1" content="Written by" />
@@ -132,7 +132,7 @@
         "name": "Collection of studies",
         "logo": "http://localhost:4000/"
     },
-    "url": "http://localhost:4000/javascript-levelup3",
+    "url": "http://localhost:4000/javascript-levelup7",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:4000/assets/built/images/javascript.png",
@@ -141,9 +141,9 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/javascript-levelup3"
+        "@id": "http://localhost:4000/javascript-levelup7"
     },
-    "description": "안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 객체를 다루는 메서드들에 대해 알아보겠습니다. MDN문서를 참조했습니다. prototype이 붙어있지 않은 메서드 들은, 정적(Static) 메서드라고 불립니다. 따라서 이러한 정적 메서드들은"
+    "description": "안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 복사(Copy)에 대해 알아보도록 하겠습니다. 복사(Copy) 코드를 보며 이해해봅시다. const user = { name: "Changuk", age: 26, emails: ["dnr8874@naver.com"], };"
 }
     </script>
 
@@ -156,7 +156,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="WebFrontend - JavaScript Object" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="WebFrontend - JavaScript Copy(shallow, deep)" href="/feed.xml" />
 
   </head>
   <body
@@ -225,7 +225,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="30 January 2022">30 January 2022</time>
+                    <time class="post-full-meta-date" datetime="31 January 2022">31 January 2022</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -235,7 +235,7 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">WebFrontend - JavaScript Object</h1>
+                <h1 class="post-full-title">WebFrontend - JavaScript Copy(shallow, deep)</h1>
             </header>
 
             <!--
@@ -251,98 +251,185 @@ into the {body} of the default.hbs template -->
 
 <hr />
 
-<p>객체를 다루는 메서드들에 대해 알아보겠습니다. <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank"><code class="language-plaintext highlighter-rouge">MDN문서</code></a>를 참조했습니다.</p>
+<p>복사(Copy)에 대해 알아보도록 하겠습니다.</p>
 
 <hr />
 
-<p>prototype이 붙어있지 않은 메서드 들은, <strong>정적(Static) 메서드</strong>라고 불립니다. 따라서 이러한 정적 메서드들은 객체(Object)에 다음과 같이 직접적으로 사용할 수가 없습니다.
-그러면 객체의 정적 메서드들은 어떻게 활용해야하는 것인지 알아보도록 합시다.</p>
+<h2 id="복사copy">복사(Copy)</h2>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{}.</span><span class="nx">assign</span><span class="p">()</span>
-</code></pre></div></div>
-
-<h2 id="assign">assign</h2>
-
-<p>Object.assign() 메서드는 <strong>출처(Sources) 객체들의 모든 열거 가능한 자체 속성을 복사해 대상(Target) 객체에 붙여넣습니다. 그 후 대상 객체를 반환합니다.</strong> 원본이 변형됩니다. 내용을 이해하기가 좀 난해하네요. 예제를 한번 보겠습니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">target</span> <span class="o">=</span> <span class="p">{</span> <span class="na">a</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">b</span><span class="p">:</span> <span class="mi">2</span> <span class="p">};</span>
-<span class="kd">const</span> <span class="nx">source</span> <span class="o">=</span> <span class="p">{</span> <span class="na">b</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="na">c</span><span class="p">:</span> <span class="mi">5</span> <span class="p">};</span>
-
-<span class="kd">const</span> <span class="nx">returnedTarget</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">source</span><span class="p">);</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>
-<span class="c1">// expected output: Object { a: 1, b: 4, c: 5 }</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">returnedTarget</span><span class="p">);</span>
-<span class="c1">// expected output: Object { a: 1, b: 4, c: 5 }</span>
-</code></pre></div></div>
-
-<p>assign() 메서드는 하나 이상의 출처 객체들로부터 자체 속성을 복사해 대상 객체에 붙여넣는 메서드입니다. 다음 예제도 추가로 보도록 합시다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">userAge</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="c1">// key: value</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Changuk</span><span class="dl">"</span><span class="p">,</span>
-  <span class="na">age</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
-<span class="p">};</span>
-<span class="kd">const</span> <span class="nx">userEmail</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Changuk</span><span class="dl">"</span><span class="p">,</span>
-  <span class="na">email</span><span class="p">:</span> <span class="dl">"</span><span class="s2">dnr8874@naver.com</span><span class="dl">"</span><span class="p">,</span>
-<span class="p">};</span>
-
-<span class="kd">const</span> <span class="nx">target</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">userAge</span><span class="p">,</span> <span class="nx">userEmail</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">target</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">userAge</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">target</span> <span class="o">===</span> <span class="nx">userAge</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">{</span> <span class="na">k</span><span class="p">:</span> <span class="mi">123</span> <span class="p">};</span>
-<span class="kd">const</span> <span class="nx">b</span> <span class="o">=</span> <span class="p">{</span> <span class="na">k</span><span class="p">:</span> <span class="mi">123</span> <span class="p">};</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">===</span> <span class="nx">b</span><span class="p">);</span>
-
-<span class="c1">// 출력 결과 :</span>
-<span class="c1">// {name: 'Changuk', age: 26, email: 'dnr8874@naver.com'}</span>
-<span class="c1">// {name: 'Changuk', age: 26, email: 'dnr8874@naver.com'}</span>
-<span class="c1">// true</span>
-<span class="c1">// false</span>
-</code></pre></div></div>
-
-<p>코드의 맨 마지막을 보면 a, b는 서로 같은 객체처럼 보이지만 결과는 거짓이라고 나타나고 있습니다. 이는 JavaScript 데이터의 불변성으로 인한 결과입니다. 이에 대해서는 다른 포스트에서 다루도록 하겠습니다.<br /> 간략하게 설명드리자면, 하나의 객체 데이터는 특정 메모리 주소에 값이 들어가 있습니다. 그래서 <code class="language-plaintext highlighter-rouge">userAge</code>상수는 사실상 메모리에 있는 특정 객체 데이터의 메모리 주소만 가지고 있는 것이라고 할 수 있습니다. 이러한 데이터형을 <strong>참조형 데이터</strong>이라고 합니다. 참조형 데이터로는 <strong>객체, 배열, 함수</strong>가 있습니다.<br /></p>
-
-<p>따라서 a, b는 같은 값을 나타내지만 서로 다른 주소를 가리키고 있기 때문에, 다른 값이라고 출력된다고 할 수 있겠습니다.</p>
-
-<hr />
-
-<p>만약 위 코드에서, userAge, userEmail을 가지고 새로운 객체를 만들고 싶다면 어떻게 해야 할까요?
-다음 코드와 같이 실행하면 됩니다.
-그럼 <strong>userAge</strong>, <strong>userEmail</strong>은 출처 객체가 되는 것입니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">target</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},</span> <span class="nx">userAge</span><span class="p">,</span> <span class="nx">userEmail</span><span class="p">);</span>
-</code></pre></div></div>
-
-<hr />
-
-<h2 id="keys">keys</h2>
-
-<p>Object.keys() 메소드는 <strong>주어진 객체의 속성 이름들을 일반적인 반복문과 동일한 순서로 순회되는 열거할 수 있는 배열로 반환</strong>합니다.</p>
+<p>코드를 보며 이해해봅시다.</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Changuk</span><span class="dl">"</span><span class="p">,</span>
   <span class="na">age</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
-  <span class="na">email</span><span class="p">:</span> <span class="dl">"</span><span class="s2">dnr8874@naver.com</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">emails</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">dnr8874@naver.com</span><span class="dl">"</span><span class="p">],</span>
 <span class="p">};</span>
 
-<span class="kd">const</span> <span class="nx">keys</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">keys</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">copyUser</span> <span class="o">=</span> <span class="nx">user</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">copyUser</span> <span class="o">===</span> <span class="nx">user</span><span class="p">);</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">user</span><span class="p">[</span><span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">]);</span>
+<span class="nx">user</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">22</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">user</span><span class="dl">"</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">copyUser</span><span class="dl">"</span><span class="p">,</span> <span class="nx">copyUser</span><span class="p">);</span>
 
-<span class="kd">const</span> <span class="nx">values</span> <span class="o">=</span> <span class="nx">keys</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">key</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">user</span><span class="p">[</span><span class="nx">key</span><span class="p">]);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">values</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">------</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">------</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="c1">// 출력 결과 :</span>
-<span class="c1">// (3) ['name', 'age', 'email']</span>
-<span class="c1">// dnr8874@naver.com</span>
-<span class="c1">// (3) ['Changuk', 26, 'dnr8874@naver.com']</span>
+<span class="c1">// true</span>
+<span class="c1">// user {name: 'Changuk', age: 22, emails: Array(1)}</span>
+<span class="c1">// copyUser {name: 'Changuk', age: 22, emails: Array(1)}</span>
+<span class="c1">// ------</span>
+<span class="c1">// ------</span>
 </code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">copyUser</code>에 user 객체를 할당해주었습니다. copyUser는 user와 같은 메모리를 가리키겠군요. 이전 포스트에서 다룬 내용이니 다들 아실거라 생각하고 넘어가겠습니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">1번 메모리</th>
+      <th style="text-align: center">2번 메모리</th>
+      <th style="text-align: center">3번 메모리</th>
+      <th style="text-align: center">4번 메모리</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">user, copyUser = {~~~}</td>
+      <td style="text-align: center">{}</td>
+      <td style="text-align: center">{}</td>
+      <td style="text-align: center">{}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>그러고 user객체의 age를 22로 할당했습니다. 결과를 한번 볼까요?
+copy, copyUser객체 다 같은 값을 나타내고 있네요. 같은 주소를 가리키고 있기 때문입니다. 이를 방지하기 위해 <strong>얕은 복사(shallow copy)</strong>를 사용할 수 있습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Changuk</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">age</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
+  <span class="na">emails</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">dnr8874@naver.com</span><span class="dl">"</span><span class="p">],</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">copyUser</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},</span> <span class="nx">user</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">copyUser</span> <span class="o">===</span> <span class="nx">user</span><span class="p">);</span>
+
+<span class="nx">user</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">22</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">user</span><span class="dl">"</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">copyUser</span><span class="dl">"</span><span class="p">,</span> <span class="nx">copyUser</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">------</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">------</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="c1">// 출력 결과 :</span>
+<span class="c1">// true</span>
+<span class="c1">// user {name: 'Changuk', age: 22, emails: Array(1)}</span>
+<span class="c1">// copyUser {name: 'Changuk', age: 26, emails: Array(1)}</span>
+<span class="c1">// ------</span>
+<span class="c1">// ------</span>
+</code></pre></div></div>
+
+<p>이제 copyUser는 user의 값 변화에 영향을 받지 않습니다.
+개략적인 메모리의 상황도 한번 보도록 합시다. 의도한게 아니라면, 참조형 데이터는 복사개념을 사용하여야 합니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">1번 메모리</th>
+      <th style="text-align: center">2번 메모리</th>
+      <th style="text-align: center">3번 메모리</th>
+      <th style="text-align: center">4번 메모리</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">user = {~~~}</td>
+      <td style="text-align: center">copyUser = {~~~}</td>
+      <td style="text-align: center">{}</td>
+      <td style="text-align: center">{}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>전개 연산자를 통해서도 간단하게 복사를 할 수 있습니다. 아래 결과를 보시죠.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Changuk</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">age</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
+  <span class="na">emails</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">dnr8874@naver.com</span><span class="dl">"</span><span class="p">],</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">copyUser</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">user</span> <span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">copyUser</span> <span class="o">===</span> <span class="nx">user</span><span class="p">);</span>
+
+<span class="nx">user</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">22</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">user</span><span class="dl">"</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">copyUser</span><span class="dl">"</span><span class="p">,</span> <span class="nx">copyUser</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">------</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">------</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="c1">// 출력 결과 :</span>
+<span class="c1">// false</span>
+<span class="c1">// user {name: 'Changuk', age: 22, emails: Array(1)}</span>
+<span class="c1">// copyUser {name: 'Changuk', age: 26, emails: Array(1)}</span>
+<span class="c1">// ------</span>
+<span class="c1">// ------</span>
+</code></pre></div></div>
+
+<p>그럼 얕은 복사와 깊은 복사의 차이가 무엇일까요? 한번 살펴봅시다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">user</span><span class="p">.</span><span class="nx">emails</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello@gmail.com</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">emails</span> <span class="o">===</span> <span class="nx">copyUser</span><span class="p">.</span><span class="nx">emails</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">user</span><span class="dl">"</span><span class="p">,</span> <span class="nx">user</span><span class="p">.</span><span class="nx">emails</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">copyUser</span><span class="dl">"</span><span class="p">,</span> <span class="nx">copyUser</span><span class="p">.</span><span class="nx">emails</span><span class="p">);</span>
+
+<span class="c1">// 출력 결과</span>
+<span class="c1">// true</span>
+<span class="c1">// user (2) ['dnr8874@naver.com', 'hello@gmail.com']</span>
+<span class="c1">// copyUser (2) ['dnr8874@naver.com', 'hello@gmail.com']</span>
+</code></pre></div></div>
+
+<p>push 메서드를 활용해 email 속성에 이메일 데이터를 입력였습니다. 일치연산자를 활용하여 비교를 했는데 <strong>true</strong>가 출력되었군요. 분명 복사를 해서 서로 다른 메모리를 가리키고 있을 텐데, 왜 true가 출력되었을까요.<br />
+user의 emails 데이터는 배열 데이터이고, 배열 데이터도 참조형 데이터입니다. 우리는 user의 emails 데이터를 따로 복사처리를 한 적은 없었습니다. 따라서 현재 emails는 같은 메모리 주소를 가리키고 있다고 생각하시면 되겠습니다. 이 때 필요한 개념이 바로 <strong>깊은 복사(deep copy)</strong> 입니다. 하지만 이 깊은 복사는 JavaScript로 구현하기 힘든 부분이 있어, <a href="https://lodash.com/docs/4.17.15#cloneDeep" target="_blank">lodash패키지</a>의 도움을 받아 구현해보도록 하겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">_</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">lodash</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Changuk</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">age</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
+  <span class="na">emails</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">dnr8874@naver.com</span><span class="dl">"</span><span class="p">],</span>
+<span class="p">};</span>
+
+<span class="kd">const</span> <span class="nx">copyUser</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">cloneDeep</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">copyUser</span> <span class="o">===</span> <span class="nx">user</span><span class="p">);</span>
+
+<span class="nx">user</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">22</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">user</span><span class="dl">"</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">copyUser</span><span class="dl">"</span><span class="p">,</span> <span class="nx">copyUser</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">------</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">------</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">user</span><span class="p">.</span><span class="nx">emails</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello@gmail.com</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">user</span><span class="p">.</span><span class="nx">emails</span> <span class="o">===</span> <span class="nx">copyUser</span><span class="p">.</span><span class="nx">emails</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">user</span><span class="dl">"</span><span class="p">,</span> <span class="nx">user</span><span class="p">.</span><span class="nx">emails</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">copyUser</span><span class="dl">"</span><span class="p">,</span> <span class="nx">copyUser</span><span class="p">.</span><span class="nx">emails</span><span class="p">);</span>
+
+<span class="c1">// 출력 결과 :</span>
+<span class="c1">// false</span>
+<span class="c1">// user {name: 'Changuk', age: 22, emails: Array(1)}</span>
+<span class="c1">// copyUser {name: 'Changuk', age: 26, emails: Array(1)}</span>
+<span class="c1">// ------</span>
+<span class="c1">// ------</span>
+<span class="c1">// false</span>
+<span class="c1">// user (2) ['dnr8874@naver.com', 'hello@gmail.com']</span>
+<span class="c1">// copyUser ['dnr8874@naver.com']</span>
+</code></pre></div></div>
+
+<p>이제 email의 주소를 공유하고 있지 않습니다. 깊은 복사가 잘 작동하는군요.</p>
 
                 </div>
             </section>
@@ -409,9 +496,9 @@ into the {body} of the default.hbs template -->
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'http://localhost:4000/javascript-levelup3';
-                            var this_page_identifier = '/javascript-levelup3';
-                            var this_page_title = 'WebFrontend - JavaScript Object';
+                            var this_page_url = 'http://localhost:4000/javascript-levelup7';
+                            var this_page_identifier = '/javascript-levelup7';
+                            var this_page_title = 'WebFrontend - JavaScript Copy(shallow, deep)';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -474,9 +561,13 @@ into the {body} of the default.hbs template -->
                                 
                                   
                                     
+                                  
+                                
+                                  
+                                    
                                         
                                         
-                                            <li><a href="/javascript-levelup7">WebFrontend - JavaScript Copy(shallow, deep)</a></li>
+                                            <li><a href="/javascript-levelup6">WebFrontend - JavaScript Immutability</a></li>
                                         
                                     
                                   
@@ -499,10 +590,6 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                    
-                                  
-                                
-                                  
                                     
                                   
                                 
@@ -571,7 +658,7 @@ into the {body} of the default.hbs template -->
   
   <a
     class="post-card-image-link"
-    href="/javascript-levelup4"
+    href="/javascript-levelup8"
   >
     <div
       class="post-card-image"
@@ -582,14 +669,14 @@ into the {body} of the default.hbs template -->
   <div class="post-card-content">
     <a
       class="post-card-content-link"
-      href="/javascript-levelup4"
+      href="/javascript-levelup8"
     >
       <header class="post-card-header">
           
         <span class="post-card-tags">Web-frontend</span>
           
 
-        <h2 class="post-card-title">WebFrontend - JavaScript Destructuring Assingment</h2>
+        <h2 class="post-card-title">WebFrontend - JavaScript JSON & Storage</h2>
       </header>
       <section class="post-card-excerpt">
         
@@ -614,7 +701,7 @@ into the {body} of the default.hbs template -->
       </span>
        
       <span class="reading-time">
-          3 min read 
+          7 min read 
       </span>
     </footer>
   </div>
@@ -632,7 +719,7 @@ into the {body} of the default.hbs template -->
   
   <a
     class="post-card-image-link"
-    href="/javascript-levelup2"
+    href="/javascript-levelup6"
   >
     <div
       class="post-card-image"
@@ -643,7 +730,7 @@ into the {body} of the default.hbs template -->
   <div class="post-card-content">
     <a
       class="post-card-content-link"
-      href="/javascript-levelup2"
+      href="/javascript-levelup6"
     >
       <header class="post-card-header">
          
@@ -651,7 +738,7 @@ into the {body} of the default.hbs template -->
         <span class="post-card-tags">Web-frontend</span>
           
 
-        <h2 class="post-card-title">WebFrontend - JavaScript Arrays</h2>
+        <h2 class="post-card-title">WebFrontend - JavaScript Immutability</h2>
       </header>
       <section class="post-card-excerpt">
         
@@ -676,7 +763,7 @@ into the {body} of the default.hbs template -->
       </span>
        
       <span class="reading-time">
-          8 min read 
+          7 min read 
       </span>
     </footer>
   </div>
@@ -697,18 +784,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">WebFrontend - JavaScript Object</div>
+    <div class="floating-header-title">WebFrontend - JavaScript Copy(shallow, deep)</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=WebFrontend+-+JavaScript+Object&amp;url=https://funkyblues.github.io/javascript-levelup3"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=WebFrontend+-+JavaScript+Copy%28shallow%2C+deep%29&amp;url=https://funkyblues.github.io/javascript-levelup7"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://funkyblues.github.io/javascript-levelup3"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://funkyblues.github.io/javascript-levelup7"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
