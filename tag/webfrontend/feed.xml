@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/web-frontend/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/tag/webfrontend/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-02-02T17:25:00+09:00</updated>
-  <id>http://localhost:4000/tag/web-frontend/feed.xml</id>
+  <updated>2022-02-02T18:47:04+09:00</updated>
+  <id>http://localhost:4000/tag/webfrontend/feed.xml</id>
 
   
   
@@ -764,7 +764,7 @@ any가 전파되는 것을 예제를 통해 보도록 하겠습니다.&lt;/p&gt;
       
 
       
-        <category term="web-frontend" />
+        <category term="webfrontend" />
       
 
       
@@ -991,7 +991,7 @@ any가 전파되는 것을 예제를 통해 보도록 하겠습니다.&lt;/p&gt;
       
 
       
-        <category term="web-frontend" />
+        <category term="webfrontend" />
       
 
       
@@ -1149,7 +1149,10 @@ parcel bundler가 배포하는 dist 폴더에 favicon.ico파일이 없어서 생
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;babel&quot;&gt;babel&lt;/h2&gt;</content>
+&lt;h2 id=&quot;babel&quot;&gt;babel&lt;/h2&gt;
+
+&lt;p&gt;babel 관련 내용은 &lt;a href=&quot;&quot;&gt;&lt;/a&gt; 여기서 확인 부탁드립니다.
+babel을 설치하고, 세팅을 하겠습니다.&lt;/p&gt;</content>
 
       
       
@@ -1166,7 +1169,7 @@ parcel bundler가 배포하는 dist 폴더에 favicon.ico파일이 없어서 생
       
 
       
-        <category term="web-frontend" />
+        <category term="webfrontend" />
       
 
       
@@ -1305,7 +1308,7 @@ Tooltips의 경우 많은 부분에서 사용될 수 있기 때문에, 성능이
       
 
       
-        <category term="web-frontend" />
+        <category term="webfrontend" />
       
 
       
@@ -2237,7 +2240,7 @@ SCSS는 이를 &lt;strong&gt;중첩&lt;/strong&gt;이라는 기능으로 해결�
       
 
       
-        <category term="web-frontend" />
+        <category term="webfrontend" />
       
 
       
@@ -3052,7 +3055,7 @@ abbcccdddd
       
 
       
-        <category term="web-frontend" />
+        <category term="webfrontend" />
       
 
       
@@ -3240,7 +3243,7 @@ JSON파일은 사용 용도가 명확하기 때문에, 최대한 경량화시켜
       
 
       
-        <category term="web-frontend" />
+        <category term="webfrontend" />
       
 
       
@@ -3456,7 +3459,7 @@ user의 emails 데이터는 배열 데이터이고, 배열 데이터도 참조�
       
 
       
-        <category term="web-frontend" />
+        <category term="webfrontend" />
       
 
       
@@ -3791,7 +3794,7 @@ user의 emails 데이터는 배열 데이터이고, 배열 데이터도 참조�
       
 
       
-        <category term="web-frontend" />
+        <category term="webfrontend" />
       
 
       
@@ -3911,7 +3914,7 @@ toObject 함수는, a, b, c 인수에 값을 입력받으면 각각 key 값인 a
       
 
       
-        <category term="web-frontend" />
+        <category term="webfrontend" />
       
 
       
