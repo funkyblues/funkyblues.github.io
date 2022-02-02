@@ -11,7 +11,7 @@
 
 
     <title>
-      WebFrontend - NodeJS Setting & JavaScript Function
+      WebFrontend - BUNDLER
     </title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -94,26 +94,26 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="공부 정리용 블로그" />
     <link rel="shortcut icon" href="http://localhost:4000/assets/built/images/favicon-1.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/javascript-essential1" />
+    <link rel="canonical" href="http://localhost:4000/bundler" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Collection of studies" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="WebFrontend - NodeJS Setting & JavaScript Function" />
-    <meta property="og:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 개발 서버 실행과 빌드 Major.Minor.Patch Eg. 14.18.3 Major: 기존 버전과 호환되지 않는 새로운 버전 Minor: 기존 버전과 호환되는 새로운" />
-    <meta property="og:url" content="http://localhost:4000/javascript-essential1" />
-    <meta property="og:image" content="http://localhost:4000/assets/built/images/htmljscss.jpeg" />
+    <meta property="og:title" content="WebFrontend - BUNDLER" />
+    <meta property="og:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번시간에는 bundler가 어떤 것인지, 어떤 역할을 하는지, 어떻게 사용하는지 알아보도록 하겠습니다. bundler 개요 기본적으로 웹에서는 HTML, CSS, JS만이 동작하게" />
+    <meta property="og:url" content="http://localhost:4000/bundler" />
+    <meta property="og:image" content="http://localhost:4000/assets/built/images/bundlerUse.png" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="2022-01-30T09:00:00+09:00" />
-    <meta property="article:modified_time" content="2022-01-30T09:00:00+09:00" />
+    <meta property="article:published_time" content="2022-02-01T10:00:00+09:00" />
+    <meta property="article:modified_time" content="2022-02-01T10:00:00+09:00" />
     <meta property="article:tag" content="Web-frontend" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="WebFrontend - NodeJS Setting & JavaScript Function" />
-    <meta name="twitter:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 개발 서버 실행과 빌드 Major.Minor.Patch Eg. 14.18.3 Major: 기존 버전과 호환되지 않는 새로운 버전 Minor: 기존 버전과 호환되는 새로운" />
+    <meta name="twitter:title" content="WebFrontend - BUNDLER" />
+    <meta name="twitter:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번시간에는 bundler가 어떤 것인지, 어떤 역할을 하는지, 어떻게 사용하는지 알아보도록 하겠습니다. bundler 개요 기본적으로 웹에서는 HTML, CSS, JS만이 동작하게" />
     <meta name="twitter:url" content="http://localhost:4000/" />
-    <meta name="twitter:image" content="http://localhost:4000/assets/built/images/htmljscss.jpeg" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/built/images/bundlerUse.png" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Collection of studies" />
     <meta name="twitter:label2" content="Filed under" />
@@ -132,18 +132,18 @@
         "name": "Collection of studies",
         "logo": "http://localhost:4000/"
     },
-    "url": "http://localhost:4000/javascript-essential1",
+    "url": "http://localhost:4000/bundler",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:4000/assets/built/images/htmljscss.jpeg",
+        "url": "http://localhost:4000/assets/built/images/bundlerUse.png",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/javascript-essential1"
+        "@id": "http://localhost:4000/bundler"
     },
-    "description": "안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 개발 서버 실행과 빌드 Major.Minor.Patch Eg. 14.18.3 Major: 기존 버전과 호환되지 않는 새로운 버전 Minor: 기존 버전과 호환되는 새로운"
+    "description": "안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번시간에는 bundler가 어떤 것인지, 어떤 역할을 하는지, 어떻게 사용하는지 알아보도록 하겠습니다. bundler 개요 기본적으로 웹에서는 HTML, CSS, JS만이 동작하게"
 }
     </script>
 
@@ -156,7 +156,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="WebFrontend - NodeJS Setting & JavaScript Function" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="WebFrontend - BUNDLER" href="/feed.xml" />
 
   </head>
   <body
@@ -225,7 +225,7 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="30 January 2022">30 January 2022</time>
+                    <time class="post-full-meta-date" datetime=" 1 February 2022"> 1 February 2022</time>
                     
                         <span class="date-divider">/</span>
                         
@@ -235,12 +235,12 @@ into the {body} of the default.hbs template -->
                         
                     
                 </section>
-                <h1 class="post-full-title">WebFrontend - NodeJS Setting & JavaScript Function</h1>
+                <h1 class="post-full-title">WebFrontend - BUNDLER</h1>
             </header>
 
             <!--
             
-            <figure class="post-full-image" style="background-image: url(/assets/built/images/htmljscss.jpeg)">
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/bundlerUse.png)">
             </figure>
             
             -->
@@ -249,152 +249,146 @@ into the {body} of the default.hbs template -->
                 <div class="kg-card-markdown">
                     <p>안녕하세요. 성장하는 것을 즐기는 <code class="language-plaintext highlighter-rouge">changuk</code>이라고 합니다. 현재 <code class="language-plaintext highlighter-rouge">fastcampus</code>에서 <code class="language-plaintext highlighter-rouge">frontend</code> 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.</p>
 
-<h2 id="개발-서버-실행과-빌드">개발 서버 실행과 빌드</h2>
+<hr />
 
-<p>Major.Minor.Patch Eg. 14.18.3<br />
-Major: 기존 버전과 호환되지 않는 새로운 버전<br />
-Minor: 기존 버전과 호환되는 새로운 기능이 추가된 버전<br />
-Patch: 기존 버전과 호환되는 버그 및 오타 등이 수정된 버전<br />
-^: Major 버전 안에서 가장 최신 버전으로 업데이트 가능 이 기호를 사용하여 npm 명령어를 통한 update를 이용할 수 있습니다. 없으면 update가 실행되지 않고 바로 종료가 됩니다. npm install로 설치했을 때 ^ 기호가 붙어있을 수 있기 때문에 package.json 파일에서 제거해도 상관 없습니다.</p>
+<p>이번시간에는 <code class="language-plaintext highlighter-rouge">bundler</code>가 어떤 것인지, 어떤 역할을 하는지, 어떻게 사용하는지 알아보도록 하겠습니다.</p>
 
 <hr />
 
-<h2 id="화살표-함수">화살표 함수</h2>
+<h2 id="bundler-개요">bundler 개요</h2>
 
-<p>축약형으로 사용할 수 있습니다. 중괄호 안에 코드가 들어가면 <code class="language-plaintext highlighter-rouge">return</code>을 사용해 주어야 합니다. 객체를 반환하고 싶다면 소괄호()로 한번 감싸주어야 합니다.</p>
+<p>기본적으로 웹에서는 <code class="language-plaintext highlighter-rouge">HTML, CSS, JS</code>만이 동작하게 됩니다. 그러나 순수하게 세 가지 파일만을 가지고 작업하는것은 상당히 비효율적입니다. 그래서 다양한 패키지와 프레임워크들의 기능들을 사용하여 개발을 하게되는데 이러한 것들이 직접적으로 웹에서 동작하지는 않기 때문에, <strong>bundler</strong>를 사용하여 변환하는 과정을 거쳐 <code class="language-plaintext highlighter-rouge">HTML, CSS, JS</code>로 바꾸어서 웹에서 동작할 수 있도록 해줍니다.<br /> 좀 더 자세히 이야기하자면, <strong>bundler</strong> 자체가 모든 것들을 바꾸어줄 수 있는것은 아닙니다. 이전에 SCSS를 CSS로 변환해줄 때, <strong>parcel-bundler</strong>가 직접 sass 패키지를 설치하여 변환을 수행해주었습니다. 이와 같이 bundler 자체가 변환을 해준다기 보다는 외부의 패키지를 통해 변환을 수행할 수 있다는 뜻이지요. 따라서 <strong>변환하기 위해 필요한 여러개의 패키지가 있다</strong>는 것을 파악할 수 있겠습니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">hello</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
-<span class="c1">// 출력 결과 : 14</span>
-</code></pre></div></div>
+<hr />
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">hello</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+<h2 id="parcel--webpack">parcel &amp; webpack</h2>
+
+<p>bundler들 중 유명한 2개를 비교해보도록 하겠습니다. <br />
+<code class="language-plaintext highlighter-rouge">parcel</code>은 대부분의 내용이 자동화되어 동작하기 때문에 구성 없는 단순한 자동 번들링에 유리하고 소/중형 프로젝트에 적합합니다. <br />
+반면 <code class="language-plaintext highlighter-rouge">webpack</code>은 매우 꼼꼼한 구성으로 중/대형 프로젝트에 적합합니다. 정말 자세하게 bundling할 수 있는 option들을 설정해줄 수 있어서 규모있는 프로젝트를 개발자의 입맛에 맞게 구성할 수 있습니다. 단점은 확인해야 할 내용이 많다는 것입니다.</p>
+
+<hr />
+
+<h2 id="프로젝트-생성">프로젝트 생성</h2>
+
+<p>그럼 먼저 <code class="language-plaintext highlighter-rouge">parcel bundler</code>를 사용하여 프로젝트를 구성해보도록 하겠습니다.
+package.json 파일을 생성해줍시다.</p>
+
+<blockquote>
+  <p><strong>npm init -y</strong></p>
+</blockquote>
+
+<p>그 후 <code class="language-plaintext highlighter-rouge">devDependencies</code>로 parcel bundler를 설치하겠습니다.</p>
+
+<blockquote>
+  <p><strong>npm install -D parcel-bundler</strong></p>
+</blockquote>
+
+<p>package.json의 script를 다음과 같이 수정해주겠습니다.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"dev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"parcel index.html"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"parcel build index.html"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>그리고 작업경로 내에 <code class="language-plaintext highlighter-rouge">js, scss</code> 폴더를 만들겠습니다. 앞으로 JavaScript, Scss 파일은 각각 폴더들에서 작성하도록 하겠습니다. <br /><strong>index.html</strong>파일을 만들고, 잘 작동하는지 확인해보죠. localhost로 bundler가 잘 호스팅해주는 것을 확인할 수 있습니다.</p>
+
+<blockquote>
+  <p><strong>npm run dev</strong></p>
+</blockquote>
+
+<hr />
+
+<h2 id="정적-파일-연결">정적 파일 연결</h2>
+
+<p>정적 파일인 img, favicon을 연결해보도록 하겠습니다. 각자 준비한 img파일을 선택하시면 되겠습니다. <br />
+favicon을 위한 ico파일을 생성해야하는데, 다음 링크를 이용해서 변환하시면 되겠습니다. 32pixel이면 충분합니다.
+이제 favicon.ico 파일이 작업경로에 있고,
+<strong>parcel bundler</strong>를 실행시키면 잘 나타날까요? 나타나지 않는군요. 무엇이 문제일까요??
+<br />
+parcel bundler가 배포하는 dist 폴더에 favicon.ico파일이 없어서 생긴 문제였습니다. 직접 옮겨주어도 해결이 되긴 하겠지만, dist폴더는 사라질 수 있는 폴더이기 때문에 원본을 옮기는 건 위험합니다. 또 매번 ico 파일을 복사하는건 더 귀찮은 일이구요. 이때 새로운 패키지를 설치해 주어야 겠습니다.
+<br />
+다음 링크를 확인해보시죠
+<a href="https://www.npmjs.com/package/parcel-plugin-static-files-copy"><strong>parcel-plugin-static-files-copy</strong></a>
+<br />이 패키지를 사용하여 favicon.ico파일을 dist 폴더로 옮겨줄 수 있습니다. 그럼 이 패키지를 개발의존성 패키지로 설치해줍시다.</p>
+
+<blockquote>
+  <p><strong>npm install -D parcel-plugin-static-files-copy</strong></p>
+</blockquote>
+
+<p>그리고 package.json에 다음과 같은 속성을 붙여넣어 줍시다.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"staticFiles"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"staticPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"static"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>다음 속성은, 프로젝트 구조의 <strong>static</strong> 폴더를 dist로 옮겨주는 개념으로 이해해주시면 되겠습니다. 이제 favicon.ico를 static폴더 안으로 옮겨주겠습니다.
+<br />
+이제 잘 작동합니다.</p>
+
+<hr />
+
+<h2 id="autoprefixer">autoprefixer</h2>
+
+<p>chrome과 같이 최신 브라우저에서는 작동하는 기능들이, 구형 브라우저로 가면 동작하지 않게 될 수도 있습니다. 그런 불상사를 방지하기 위해 브라우저 벤더사들에서는 표준은 아니지만, 벤더사의 접두사를 붙인 형태로 시험적인 기능들을 제공하고 있습니다. <br />
+특정 브라우저에서 표준 기능이 동작 가능하면, 접두사가 붙어있는 같은 기능의 다른 속성들은 동작하지 않게 됩니다. 결국 구형의 브라우저에서도 최신의 CSS기능이 동작할 수 있도록 일종의 보험을 두는 방법으로 벤더 접두사(Vender Prefix)를 이용하게 됩니다.
+<br />
+그럼 다음과 같은 패키지를 설치해 줍시다.</p>
+
+<blockquote>
+  <p><strong>npm install -D postcss autoprefixer</strong></p>
+</blockquote>
+
+<p>그리고 package.json 파일에 새로운 옵션을 추가해줍시다. <strong>browserslist</strong>옵션은 현재 npm 프로젝트에서 지원할 브라우저의 범위를 명시하는 용도입니다. 그 명시를 autoprefixer 패키지가 활용하게 됩니다.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"browserslist"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="s2">"&gt; 1%"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last 2 versions"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>browserslist 옵션을 통해서 전세계 점유율이 1% 이상인 모든 브라우저, 그리고 그 브라우저들의 마지막 2개 버전까지는 전부 지원하겠다는 의미를 가진 옵션입니다. 그러면 좀 전에 설치한 패키지들이 이 옵션을 보고 그에 맞게 CSS 속성에 공급업체 접두사를 입력해 줄 것입니다.</p>
+
+<p>그리고 작업경로로 가서, <code class="language-plaintext highlighter-rouge">.postcssrc.js</code>파일을 생성해 주겠습니다. <br />
+일반적으로 NodeJS의 환경에서는 CommonJS라는 방식을 제공합니다. 따라서 ECMAScript의 문법인 import, export를 사용할 수 없기때문에, 다음과 같이 작성해주겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// import</span>
+<span class="kd">const</span> <span class="nx">autoprefixer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">autoprefixer</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="c1">// export</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">autoprefixer</span><span class="p">,</span>
+  <span class="p">},</span>
 <span class="p">};</span>
-
-<span class="c1">// 출력 결과 : 14</span>
 </code></pre></div></div>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">hello</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">({</span>
-  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">changuk</span><span class="dl">"</span><span class="p">,</span>
-<span class="p">});</span>
+<p>또, 위의 코드는 다음과 같이 간소화가 가능합니다.</p>
 
-<span class="c1">// 출력 결과 : {name: "changuk"}</span>
-</code></pre></div></div>
-
-<h2 id="즉시실행함수-iife-immediately-invoked-function-expression">즉시실행함수 (IIFE: Immediately-Invoked Function Expression)</h2>
-
-<p>함수를 만들 때 따로 이름을 짓지 않고 바로 실행할 수 있도록 작성하는 함수입니다. 아래 코드처럼 사용하시면 되겠습니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
-<span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
-<span class="p">})();</span>
-
-<span class="c1">//출력 결과 : 14</span>
-</code></pre></div></div>
-
-<hr />
-
-<h2 id="호이스팅hoisting">호이스팅(Hoisting)</h2>
-
-<p>호이스팅이란 함수 선언부가 유효범위 최상단으로 끌어올려지는 현상이라고 정의할 수 있습니다. 코드를 보며 알아보도록 하죠.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
-
-<span class="kd">const</span> <span class="nx">double</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span><span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">autoprefixer</span><span class="dl">"</span><span class="p">)],</span>
 <span class="p">};</span>
-
-<span class="nx">double</span><span class="p">();</span>
-
-<span class="c1">// 출력 결과 : TypeError: double is not a function</span>
 </code></pre></div></div>
 
-<p>다음과 같이 작성하면 잘 작동하게 됩니다. 그런데 만약 <code class="language-plaintext highlighter-rouge">double()</code>을 함수 선언보다 먼저 호출하게 되면 어떻게 될까요?? 결론부터 말씀드리면 <code class="language-plaintext highlighter-rouge">TypeError</code>가 발생하게 됩니다. 아직 함수가 만들어진 상태가 아니기 때문에 함수가 아니라는 에러가 발생하는 것이지요. 기본적으로 <code class="language-plaintext highlighter-rouge">JavaScript</code>는 위에서부터 순차적으로 코드를 읽어가기 떄문입니다. 하지만 <code class="language-plaintext highlighter-rouge">함수를 선언</code>하는 코드를 <code class="language-plaintext highlighter-rouge">함수를 표현</code>하는 코드로 바꾸게 되면 정상적으로 작동하게 됩니다. 아래 코드를 보시죠.</p>
+<p>이제 <code class="language-plaintext highlighter-rouge">npm run dev</code>를 사용하여 개발 서버를 열어주려 하는데 오류가 발생했습니다. 한번 보죠.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+<blockquote>
+  <p><strong>“PostCSS plugin autoprefixer requires PostCSS 8”</strong></p>
+</blockquote>
 
-<span class="kd">function</span> <span class="nx">double</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
-<span class="p">}</span>
+<p>이 에러를 구글에 검색하면, autoprefixer의 10버전이 postcss 버전과 맞지 않아서 생기는 문제이기 때문에, autoprefixer를 다운그레이드 해주어야 합니다. 9버전으로 낮추도록 하겠습니다.</p>
 
-<span class="nx">double</span><span class="p">();</span>
+<blockquote>
+  <p><strong>npm i -D autoprefixer@9</strong></p>
+</blockquote>
 
-<span class="c1">// 출력 결과 : 14</span>
-</code></pre></div></div>
-
-<p>호이스팅은 그럼 어떤 상황에 유용한 것일까요?? 함수 안에는 복잡한 내용들이 많이 들어가게 되는것이 일반적이기 때문에 특정 함수를 실행하기 위해서 함수를 항상 위쪽에 선언하는 것은 개발자가 코드를 해석하는 입장에서 불편하게 합니다. 따라서 자바스크립트에서는 호이스팅이란 현상을 사용하여 개발자는 함수의 이름을 보고 개략적인 기능을 유추해볼 수 있고, 자바스크립트는 함수를 실행할 수 있기 때문에 함수를 정의한 부분은 전체 코드의 최하단에 두는 경우도 종종 있습니다.</p>
+<p>이제 크롬 웹 브라우저에 접속하여 개발자 도구를 확인해보면, 공급업체 접두사가 취소선으로 표시되어 있는것을 확인할 수 있습니다. 잘 작동하고 있습니다.</p>
 
 <hr />
 
-<p>함수 선언을 작성할 때 되도록 호이스팅을 사용하여 함수를 하단에 정의하라는 의미는 아닙니다. 대신 특정 코드들이 먼저 호출되어 있고 선언이 뒤에 되어있는 경우, 코드 해석에 혼동만 하지 않으면 될 것 같습니다. 결국 <code class="language-plaintext highlighter-rouge">함수의 선언</code>이 호출 부분보다 밑에 작성되어 있어도 호이스팅에 의해 문제없이 작동되게 됩니다.</p>
-
-<hr />
-
-<h2 id="타이머-함수">타이머 함수</h2>
-
-<p>타이머 함수에 대해 간략하게 알아보겠습니다. <br />
-<code class="language-plaintext highlighter-rouge">setTimeout(함수, 시간)</code> : 일정 시간 후 함수 실행<br />
-<code class="language-plaintext highlighter-rouge">setInterval(함수, 시간)</code> : 시간 간격마다 함수 실행<br />
-<code class="language-plaintext highlighter-rouge">clearTimeout()</code> : 설정된 Timeout 함수를 종료<br />
-<code class="language-plaintext highlighter-rouge">clearInterval()</code> : 설정된 Interval 함수를 종료<br /></p>
-
-<p>다음과 같은 함수들이 있습니다. 구글링을 하여 사용해도 상관은 없지만, 한글로 정리해두고자 글을 작성하였습니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">changuk!</span><span class="dl">"</span><span class="p">);</span>
-<span class="p">},</span> <span class="mi">3000</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">setTimeout</code>의 시간 간격은 ms입니다. 따라서 위 코드의 시간 간격은 3초가 되겠네요. 코드실행 후 3초뒤에 입력한 문자열이 출력됩니다. 화살표 함수를 사용해서 작성해줄 수도 있겠습니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">timer</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">changuk!</span><span class="dl">"</span><span class="p">);</span>
-<span class="p">},</span> <span class="mi">3000</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">clearTimeout</code>을 사용하여 <code class="language-plaintext highlighter-rouge">setTimeout</code>으로 정의된 내용을 종료시킬 수 있습니다. <code class="language-plaintext highlighter-rouge">addEventListener</code>를 사용하여 html의 특정 태그를 클릭하면 <code class="language-plaintext highlighter-rouge">cleartimeout</code>이 실행되도록 만들어줄 수 있습니다.<br />
-<code class="language-plaintext highlighter-rouge">setInterval</code>함수는, 특정 시간마다 계속해서 함수가 실행될 수 있도록 합니다. 위와 동일하게 <code class="language-plaintext highlighter-rouge">clearIntterval</code>함수를 사용하면 종료해줄 수 있습니다.</p>
-
-<h2 id="콜백callback">콜백(CallBack)</h2>
-
-<p>콜백에 대해 알아보도록 하겠습니다. 콜백은, 함수의 인수로 사용되는 함수라고 할 수 있습니다. 이전에 타이머 함수에서 알아보았던 여러 함수들이 있습니다. 그 함수들에 입력되는 함수를 <code class="language-plaintext highlighter-rouge">callback</code>이라고 부릅니다. 그럼 이 인수로 입력되는 함수가 왜 <code class="language-plaintext highlighter-rouge">callback</code>이라고 불리게 될까요? 아래 예제를 보며 알아보도록 하겠습니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">timeout</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">setTimteout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">changuk!</span><span class="dl">"</span><span class="p">);</span>
-  <span class="p">},</span> <span class="mi">3000</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">timeout</span><span class="p">();</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Done</span><span class="dl">"</span><span class="p">);</span>
-
-<span class="c1">// 출력 결과 :</span>
-<span class="c1">// Done</span>
-<span class="c1">// changuk!</span>
-</code></pre></div></div>
-
-<p>위에서 볼 수 있듯, <code class="language-plaintext highlighter-rouge">timeout()</code>함수를 먼저 입력하였는데 뒤에 작성한 <code class="language-plaintext highlighter-rouge">console.log("Done")</code>이 먼저 출력이 되었습니다. 3초 뒤에 특정 로직이 수행되도록 함수를 작성하였기 때문에 다음 코드가 먼저 실행되었습니다. 그럼 <code class="language-plaintext highlighter-rouge">timeout()</code>함수가 먼저 출력된 후 그 다음 코드가 실행되도록 하려면 어떻게 해야 할까요? 이때 <code class="language-plaintext highlighter-rouge">callback</code>이라는 개념이 사용됩니다.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">timeout</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">setTimteout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">changuk!</span><span class="dl">"</span><span class="p">);</span>
-    <span class="nx">callback</span><span class="p">();</span>
-  <span class="p">},</span> <span class="mi">3000</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">timeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Done</span><span class="dl">"</span><span class="p">);</span>
-<span class="p">});</span>
-
-<span class="c1">// 출력 결과 :</span>
-<span class="c1">// changuk!</span>
-<span class="c1">// Done</span>
-</code></pre></div></div>
-
-<p>우리는 <code class="language-plaintext highlighter-rouge">callback</code>이라는 인수를 사용하여 <code class="language-plaintext highlighter-rouge">timeout()</code>을 실행하는 코드를 작성하였습니다. 아래 익명함수로 작성되어 있는 부분이 함수 선언부의 인수 callback 부분에 들어가서 <code class="language-plaintext highlighter-rouge">changuk!</code>이 출력된 후에 <code class="language-plaintext highlighter-rouge">Done</code>이 출력되게 됩니다. 처리에 오래 걸리는 함수가 있다면 callback을 사용하여 그 실행 후에 특정 함수가 작성되도록 만들 수 있습니다.</p>
+<h2 id="babel">babel</h2>
 
                 </div>
             </section>
@@ -461,9 +455,9 @@ Patch: 기존 버전과 호환되는 버그 및 오타 등이 수정된 버전<b
                     <div id="disqus_thread"></div>
                     <script>
                         var disqus_config = function () {
-                            var this_page_url = 'http://localhost:4000/javascript-essential1';
-                            var this_page_identifier = '/javascript-essential1';
-                            var this_page_title = 'WebFrontend - NodeJS Setting & JavaScript Function';
+                            var this_page_url = 'http://localhost:4000/bundler';
+                            var this_page_identifier = '/bundler';
+                            var this_page_title = 'WebFrontend - BUNDLER';
                         };
                         (function() {
                             var d = document, s = d.createElement('script');
@@ -526,9 +520,13 @@ Patch: 기존 버전과 호환되는 버그 및 오타 등이 수정된 버전<b
                                 
                                   
                                     
+                                  
+                                
+                                  
+                                    
                                         
                                         
-                                            <li><a href="/bundler">WebFrontend - BUNDLER</a></li>
+                                            <li><a href="/bootstrap">WebFrontend - Bootstrap</a></li>
                                         
                                     
                                   
@@ -614,10 +612,6 @@ Patch: 기존 버전과 호환되는 버그 및 오타 등이 수정된 버전<b
                                     
                                         
                                         
-                                    
-                                  
-                                
-                                  
                                     
                                   
                                 
@@ -658,25 +652,25 @@ Patch: 기존 버전과 호환되는 버그 및 오타 등이 수정된 버전<b
   
   <a
     class="post-card-image-link"
-    href="/javascript-essential2"
+    href="/typescript-essential1"
   >
     <div
       class="post-card-image"
-      style="background-image: url(/assets/built/images/htmljscss.jpeg)"
+      style="background-image: url(/assets/built/images/typescript.jpg)"
     ></div>
   </a>
   
   <div class="post-card-content">
     <a
       class="post-card-content-link"
-      href="/javascript-essential2"
+      href="/typescript-essential1"
     >
       <header class="post-card-header">
           
         <span class="post-card-tags">Web-frontend</span>
           
 
-        <h2 class="post-card-title">WebFrontend - JavaScript Class</h2>
+        <h2 class="post-card-title">WebFrontend - TypeScript Beginning</h2>
       </header>
       <section class="post-card-excerpt">
         
@@ -701,7 +695,7 @@ Patch: 기존 버전과 호환되는 버그 및 오타 등이 수정된 버전<b
       </span>
        
       <span class="reading-time">
-          16 min read 
+          8 min read 
       </span>
     </footer>
   </div>
@@ -719,30 +713,30 @@ Patch: 기존 버전과 호환되는 버그 및 오타 등이 수정된 버전<b
   
   <a
     class="post-card-image-link"
-    href="/wetube-cloning3"
+    href="/bootstrap"
   >
     <div
       class="post-card-image"
-      style="background-image: url(/assets/built/images/wetube-clone.png)"
+      style="background-image: url(/assets/built/images/Bootstrap-logo.png)"
     ></div>
   </a>
   
   <div class="post-card-content">
     <a
       class="post-card-content-link"
-      href="/wetube-cloning3"
+      href="/bootstrap"
     >
       <header class="post-card-header">
          
         
-        <span class="post-card-tags">Clone</span>
+        <span class="post-card-tags">Web-frontend</span>
           
 
-        <h2 class="post-card-title">Wetube 클론코딩 - MIDDLEWARES(EXPRESS)</h2>
+        <h2 class="post-card-title">WebFrontend - Bootstrap</h2>
       </header>
       <section class="post-card-excerpt">
         
-        <p>안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 nomadcoders에서 Wetube 클론코딩을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.
+        <p>안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.
 
 </p>
         
@@ -763,7 +757,7 @@ Patch: 기존 버전과 호환되는 버그 및 오타 등이 수정된 버전<b
       </span>
        
       <span class="reading-time">
-          1 min read 
+          3 min read 
       </span>
     </footer>
   </div>
@@ -784,18 +778,18 @@ Patch: 기존 버전과 호환되는 버그 및 오타 등이 수정된 버전<b
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">WebFrontend - NodeJS Setting & JavaScript Function</div>
+    <div class="floating-header-title">WebFrontend - BUNDLER</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=WebFrontend+-+NodeJS+Setting+%26+JavaScript+Function&amp;url=https://funkyblues.github.io/javascript-essential1"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=WebFrontend+-+BUNDLER&amp;url=https://funkyblues.github.io/bundler"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://funkyblues.github.io/javascript-essential1"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://funkyblues.github.io/bundler"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
