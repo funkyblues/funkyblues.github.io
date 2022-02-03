@@ -101,7 +101,7 @@
     <meta property="og:site_name" content="Collection of studies" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="WebFrontend - TypeScript Beginning" />
-    <meta property="og:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번에는 TypeScript에 대해 알아보겠습니다. TypeScript? TypeScript란 뭘까요? 한번 알아보죠. 링크에서 나오는 TypeScript의 특징들을 정리해 보겠습니다. Typed JavaScript at any" />
+    <meta property="og:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번에는 TypeScript에 대해 알아보겠습니다. Contents TypeScript? Typed JavaScript at Any Scale 설치 및 사용 NodeJS 간단한 컴파일러 사용 예제" />
     <meta property="og:url" content="http://localhost:4000/typescript-essential1" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/typescript.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -111,7 +111,7 @@
     <meta property="article:tag" content="Webfrontend" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="WebFrontend - TypeScript Beginning" />
-    <meta name="twitter:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번에는 TypeScript에 대해 알아보겠습니다. TypeScript? TypeScript란 뭘까요? 한번 알아보죠. 링크에서 나오는 TypeScript의 특징들을 정리해 보겠습니다. Typed JavaScript at any" />
+    <meta name="twitter:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번에는 TypeScript에 대해 알아보겠습니다. Contents TypeScript? Typed JavaScript at Any Scale 설치 및 사용 NodeJS 간단한 컴파일러 사용 예제" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/typescript.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -143,7 +143,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/typescript-essential1"
     },
-    "description": "안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번에는 TypeScript에 대해 알아보겠습니다. TypeScript? TypeScript란 뭘까요? 한번 알아보죠. 링크에서 나오는 TypeScript의 특징들을 정리해 보겠습니다. Typed JavaScript at any"
+    "description": "안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번에는 TypeScript에 대해 알아보겠습니다. Contents TypeScript? Typed JavaScript at Any Scale 설치 및 사용 NodeJS 간단한 컴파일러 사용 예제"
 }
     </script>
 
@@ -253,13 +253,33 @@ into the {body} of the default.hbs template -->
 
 <p>이번에는 <code class="language-plaintext highlighter-rouge">TypeScript</code>에 대해 알아보겠습니다.</p>
 
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li><a href="#typescript"><strong>TypeScript?</strong></a>
+    <ul>
+      <li><a href="#typed-javascript-at-any-scale"><strong>Typed JavaScript at Any Scale</strong></a></li>
+    </ul>
+  </li>
+  <li><a href="#설치-및-사용"><strong>설치 및 사용</strong></a>
+    <ul>
+      <li><a href="#nodejs"><strong>NodeJS</strong></a></li>
+    </ul>
+  </li>
+  <li><a href="#간단한-컴파일러-사용-예제"><strong>간단한 컴파일러 사용 예제</strong></a>
+    <ul>
+      <li><a href="#typescript-전역-설치"><strong>TypeScript 전역 설치</strong></a></li>
+    </ul>
+  </li>
+</ul>
+
 <hr />
 
 <h2 id="typescript">TypeScript?</h2>
 
 <p><a href="https://typescript-v2-497-ortam.vercel.app/" target="_blank"><code class="language-plaintext highlighter-rouge">TypeScript</code></a>란 뭘까요? 한번 알아보죠. 링크에서 나오는 TypeScript의 특징들을 정리해 보겠습니다.</p>
 
-<h4 id="typed-javascript-at-any-scale">Typed JavaScript at any Scale</h4>
+<h4 id="typed-javascript-at-any-scale">Typed JavaScript at Any Scale</h4>
 
 <ul>
   <li>TypeScript extends JavaScript by adding <strong>types.</strong></li>
@@ -267,7 +287,7 @@ into the {body} of the default.hbs template -->
   <li>Any browser, any OS, anywhere JavaScript runs. Entirely Open Source</li>
 </ul>
 
-<p>TypeScript는 JavaScript와 같은 프로그래밍 언어입니다. 일반적으로 TypeScript는 JavaScript의 Typed Superset이라고 부릅니다.</p>
+<p>TypeScript는 JavaScript와 같은 <strong>프로그래밍 언어</strong>입니다. 일반적으로 TypeScript는 JavaScript의 <strong>Typed Superset</strong>이라고 부릅니다.</p>
 
 <blockquote>
   <p><strong>TypeScript는 JavaScript의 Typed Superset</strong></p>
@@ -337,7 +357,7 @@ into the {body} of the default.hbs template -->
   </li>
 </ul>
 
-<h4 id="typescript-컴파일러를--g로-설치">TypeScript 컴파일러를 -g로 설치</h4>
+<h4 id="typescript-전역-설치">TypeScript 전역 설치</h4>
 
 <p>tsc 명령어를 사용하면 모든 TypeScript 파일이 한번에 컴파일 되어야 할텐데, 특정 프로젝트 파일에서는 한번에 수행되지 않을 수 있습니다. 따라서 어떤 방식으로 컴파일 할 것인지에 대한 설정 파일을 추가해주어야 합니다. 보통 설정 파일을 default로 추가해주는 명령어가 있습니다.</p>
 
@@ -487,7 +507,7 @@ into the {body} of the default.hbs template -->
                             <section class="author-card-content">
                                 <h4 class="author-card-name"><a href="/author/changuk">Woo Chang Uk</a></h4>
                                 
-                                    <p>IT에 관심많은 대학원생</p>
+                                    <p>프론트엔드에 관심많은 대학원생</p>
                                 
                             </section>
                         </section>
@@ -556,6 +576,15 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
+                                            <li><a href="/vuejs-start">WebFrontend - VueJS Start</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
                                             <li><a href="/typescript-essential2">WebFrontend - Basic Types</a></li>
                                         
                                     
@@ -577,8 +606,6 @@ into the {body} of the default.hbs template -->
                                   
                                     
                                         
-                                        
-                                            <li><a href="/bootstrap">WebFrontend - Bootstrap</a></li>
                                         
                                     
                                   
@@ -686,7 +713,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/webfrontend/">
                                 
-                                    See all 15 posts  →
+                                    See all 16 posts  →
                                 
                             </a>
                         </footer>
@@ -809,7 +836,7 @@ into the {body} of the default.hbs template -->
       </span>
        
       <span class="reading-time">
-          12 min read 
+          17 min read 
       </span>
     </footer>
   </div>

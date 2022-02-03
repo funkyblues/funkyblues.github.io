@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>
+      WebFrontend - VueJS Start
+    </title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/built/screen.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/built/screen.edited.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/built/syntax.css"
+    />
+
+    <!-- custom.css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/built/custom.css"
+    />
+
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <!-- 웹 폰트 추가 -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/built/gist.css"
+    />
+
+    <!-- syntax.css 추가 -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/built/syntax.css"
+    />
+
+    <!-- highlight.js -->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"
+    />
+    <style>
+      .hljs {
+        background: none;
+      }
+    </style>
+
+    <!--[if IE]>
+      <style>
+        p,
+        ol,
+        ul {
+          width: 100%;
+        }
+        blockquote {
+          width: 100%;
+        }
+      </style>
+    <![endif]-->
+
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="공부 정리용 블로그" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/built/images/favicon-1.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/vuejs-start" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Collection of studies" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="WebFrontend - VueJS Start" />
+    <meta property="og:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번시간부터는 VueJS에 대해 알아보겠습니다. Contents VueJS 시작하기 VueJS 시작하기 VueJS는 한글 가이드를 제공하고 있습니다. VueJS 설치는, CDN으로 가져오는 방식과" />
+    <meta property="og:url" content="http://localhost:4000/vuejs-start" />
+    <meta property="og:image" content="http://localhost:4000/assets/built/images/vuejs.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2022-02-03T09:00:00+09:00" />
+    <meta property="article:modified_time" content="2022-02-03T09:00:00+09:00" />
+    <meta property="article:tag" content="Webfrontend" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WebFrontend - VueJS Start" />
+    <meta name="twitter:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번시간부터는 VueJS에 대해 알아보겠습니다. Contents VueJS 시작하기 VueJS 시작하기 VueJS는 한글 가이드를 제공하고 있습니다. VueJS 설치는, CDN으로 가져오는 방식과" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/built/images/vuejs.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Collection of studies" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Webfrontend" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Collection of studies",
+        "logo": "http://localhost:4000/"
+    },
+    "url": "http://localhost:4000/vuejs-start",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:4000/assets/built/images/vuejs.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/vuejs-start"
+    },
+    "description": "안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번시간부터는 VueJS에 대해 알아보겠습니다. Contents VueJS 시작하기 VueJS 시작하기 VueJS는 한글 가이드를 제공하고 있습니다. VueJS 설치는, CDN으로 가져오는 방식과"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="WebFrontend - VueJS Start" href="/feed.xml" />
+
+  </head>
+  <body
+    class="post-template"
+  >
+    <div class="site-wrapper">
+      <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+      <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+  <div class="site-nav-left">
+     
+    <a class="site-nav-logo" href="/">Collection of studies</a>
+       <ul class="nav" role="menu">
+  <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+  <!-- <li class="nav-C" role="menuitem"><a href="/tag/c/">C</a></li> -->
+  <!-- <li class="nav-Csharp" role="menuitem"><a href="/tag/c-sharp/">C#</a></li> -->
+  <!-- <li class="nav-nodejs" role="menuitem"><a href="/tag/nodejs/">nodejs</a></li> -->
+  <!-- <li class="nav-Network" role="menuitem"><a href="/tag/network/">Network</a></li> -->
+
+  <li class="nav-paper" role="menuitem">
+    <a href="/tag/paper/">Paper</a>
+  </li>
+  <!-- <li class="nav-webprogramming" role="menuitem">
+    <a href="/tag/web-programming/">Web Programming</a>
+  </li> -->
+  <li class="nav-webfrontend" role="menuitem">
+    <a href="/tag/webfrontend/">Frontend</a>
+  </li>
+  <li class="nav-clone" role="menuitem">
+    <a href="/tag/clone/">Clone</a>
+  </li>
+  <li class="nav-archive" role="menuitem">
+    <a href="/archive.html">All Posts</a>
+  </li>
+  <li class="nav-archive" role="menuitem">
+    <a href="/author_archive.html">Tag별 Posts</a>
+  </li>
+</ul>
+ 
+  </div>
+  <div class="site-nav-right">
+    <div class="social-links">
+       
+    </div>
+    
+    <a class="subscribe-button" href="#subscribe">Search</a>
+    
+  </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-webfrontend post tag-webfrontend ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime=" 3 February 2022"> 3 February 2022</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/webfrontend/'>WEBFRONTEND</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">WebFrontend - VueJS Start</h1>
+            </header>
+
+            <!--
+            
+            <figure class="post-full-image" style="background-image: url(/assets/built/images/vuejs.jpg)">
+            </figure>
+            
+            -->
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>안녕하세요. 성장하는 것을 즐기는 <code class="language-plaintext highlighter-rouge">changuk</code>이라고 합니다. 현재 <code class="language-plaintext highlighter-rouge">fastcampus</code>에서 <code class="language-plaintext highlighter-rouge">frontend</code> 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.</p>
+
+<hr />
+
+<p>이번시간부터는 <code class="language-plaintext highlighter-rouge">VueJS</code>에 대해 알아보겠습니다.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li><a href="#vuejs-시작하기">VueJS 시작하기</a></li>
+</ul>
+
+<hr />
+
+<h2 id="vuejs-시작하기">VueJS 시작하기</h2>
+
+<p><a href="https://kr.vuejs.org/v2/guide/" target="_blank"><strong>VueJS</strong></a>는 한글 가이드를 제공하고 있습니다.
+<br />
+VueJS 설치는, CDN으로 가져오는 방식과 npm프로젝트에 설치하는 방식 두가지로 나뉩니다. CDN방식은 한글 가이드를 따라서 해봤는데… 잘 안되더라고요. 그래서 아래 링크를 사용해주시면 되겠습니다. 저는 codepen.io를 사용했습니다.</p>
+
+<p><strong>https://unpkg.com/vue@next</strong></p>
+
+<h4 id="vue-cli">Vue CLI</h4>
+
+<p>VueJS는 CLI로 간단하게 SPA(Single Page Application: 단일 페이지 애플리케이션)를 빠르게 구축할 수 있는 Vue CLI를 지원합니다. 한번 알아보겠습니다.<br />
+먼저, @vue/cli를 전역 설정으로 설치해주겠습니다.</p>
+
+<blockquote>
+  <p><strong>npm i -g @vue/cli</strong></p>
+</blockquote>
+
+<p>그 후 다음 링크로 가서 <a href="https://cli.vuejs.org/guide/creating-a-project.html" target="_blank"><strong>Vue-CLI</strong></a>를 자세히 알아보도록 하겠습니다<br />
+VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를 간단하게 만들 수 있다고 합니다. 저는 다음 이름으로 만들도록 하겠습니다.</p>
+
+<blockquote>
+  <p><strong>vue create vue3-test</strong></p>
+</blockquote>
+
+<p>vue3를 사용할 것이기 때문에, vue3를 선택하겠습니다. 일단 프로젝트로 이동하도록 하죠. <br />프로젝트의 package.json파일을 확인하니, <strong>“scripts”</strong>옵션에 여러가지 속성들이 있는 것을 확인할 수 있습니다.</p>
+
+<ul>
+  <li><strong>“serve”</strong>: 개발 서버를 시작</li>
+  <li><strong>“build”</strong>: 제품화</li>
+  <li><strong>“lint”</strong>: VueJS 코드가 특정 규칙에 맞게 작성이 되었는지</li>
+</ul>
+
+<p>참고로 Vue-CLI는 내부적으로 Webpack을 사용하고 있습니다. <br />
+앞서 말씀드렸던 lint의 설정 관련 내용은 <strong>“eslintConfig”</strong>라는 하위 옵션에서 찾을 수 있습니다. 옵션 하에 있는 <strong>“rules”</strong>속성에 여러가지 코드 규칙들을 추가적으로 입력할 수 있습니다. babel도 설치되어 있군요.</p>
+
+<hr />
+
+<p>디테일한 설치관련 내용들은 Vue-CLI에서 알아서 해주기 때문에 입문자 입장에서는 구성옵션들을 신경쓰지 않고 바로 프로젝트를 만들 수 있는 장점이 있는 반면, 세부적인 옵션들을 정리해가며 나만의 프로젝트를 만들고 싶은 분들은 좀 아쉬울 수 있는 부분입니다.</p>
+
+<hr />
+
+<p>public 폴더의 index.html을 보면 <strong>&lt;body&gt;</strong>안에 <strong>id=”app”</strong>이 만들어진 것을 볼 수 있습니다. 그리고 src 폴더에 가면 <strong>App.vue</strong>파일도 생성된 것을 알 수 있습니다. 다만 파일이 하나도 highlighting이 되어있지 않네요… VSC 플러그인 <strong>Vetur</strong>를 설치해 줍시다.</p>
+
+<hr />
+
+<p><strong>.vue</strong>파일은 크게 <strong>&lt;template&gt;, &lt;script&gt;, &lt;style&gt;</strong>의 세 가지로 나누어져 있는것을 알 수 있습니다. 일단은 정확하게 이해할 수는 없는 문법으로 이루어져 있는 것 같습니다. 차차 이해해 봅시다.</p>
+
+<hr />
+
+<h4 id="vue3-webpack-template">Vue3 Webpack Template</h4>
+
+<p>이전에 만들었던 Webpack Template을 Github에서 가져오도록 하겠습니다. <code class="language-plaintext highlighter-rouge">git clone</code>명령어가 아닌, <code class="language-plaintext highlighter-rouge">npx degit</code>을 이용하여 버전 복사가 아닌 최신 파일만 복사해오겠습니다.</p>
+
+<blockquote>
+  <p><strong>npx degit funkyblues/fastcampus-frontend vue3-webpack-template</strong></p>
+</blockquote>
+
+<p>자 그럼 이 Webpack 프로젝트를 우리의 VueJS 프로젝트에 맞게 수정을 해보겠습니다. 먼저 <strong>src</strong>폴더를 생성하고 폴더 안에 <strong>App.vue</strong>와 <strong>main.js</strong>파일을 만들겠습니다. 이전의 <strong>js</strong>폴더는 제거해주겠습니다. 작성한 파일들이 정상적으로 작동할 수 있도록, VueJS 패키지를 설치하겠습니다. 다음과 같이 작성해야 최신의 3버전이 설치될 겁니다. <br />또 VueJS는 개발에만 사용되는 것이 아니고 <strong>실제 브라우저에서 동작하는 프레임워크</strong>이기 때문에, 일반 의존성으로 설치해주어야 합니다.</p>
+
+<blockquote>
+  <p><strong>npm i vue@next</strong></p>
+</blockquote>
+
+<hr />
+
+<p>VueJS 파일을 프로젝트 내부에서 관리하려면, Webpack과 관련된 추가적인 패키지들을 설치해야 합니다. <strong>@vue/compiler-sfc</strong>패키지가 VueJS 파일을 컴파일해서 브라우저에서 동작할 수 있는 형태로 바꿔준다고 이해하시면 됩니다.</p>
+
+<blockquote>
+  <p><strong>npm i -D vue-loader@next vue-style-loader @vue/compiler-sfc</strong></p>
+</blockquote>
+
+<p>위에서 바꾼 상황들을 반영하여 <strong>webpack.config.js</strong>파일도 수정해주도록 하겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">VueLoaderPlugin</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">vue-loader</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">...</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...</span>
+
+  <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">rules</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">vue$/</span><span class="p">,</span>
+        <span class="na">use</span><span class="p">:</span> <span class="dl">"</span><span class="s2">vue-loader</span><span class="dl">"</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">s</span><span class="se">?</span><span class="sr">css$/</span><span class="p">,</span>
+        <span class="na">use</span><span class="p">:</span> <span class="p">[</span>
+          <span class="dl">"</span><span class="s2">vue-style-loader</span><span class="dl">"</span><span class="p">,</span>
+          <span class="dl">"</span><span class="s2">style-loader</span><span class="dl">"</span><span class="p">,</span>
+          <span class="dl">"</span><span class="s2">css-loader</span><span class="dl">"</span><span class="p">,</span>
+          <span class="dl">"</span><span class="s2">postcss-loader</span><span class="dl">"</span><span class="p">,</span>
+          <span class="dl">"</span><span class="s2">sass-loader</span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">],</span>
+      <span class="p">},</span>
+    <span class="p">],</span>
+  <span class="p">},</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">HtmlPlugin</span><span class="p">({</span>
+      <span class="na">template</span><span class="p">:</span> <span class="dl">"</span><span class="s2">./index.html</span><span class="dl">"</span><span class="p">,</span>
+      <span class="na">favicon</span><span class="p">:</span> <span class="dl">"</span><span class="s2">./static/images/logo.jpg</span><span class="dl">"</span><span class="p">,</span>
+    <span class="p">}),</span>
+    <span class="k">new</span> <span class="nx">CopyPlugin</span><span class="p">({</span>
+      <span class="na">patterns</span><span class="p">:</span> <span class="p">[{</span> <span class="na">from</span><span class="p">:</span> <span class="dl">"</span><span class="s2">static</span><span class="dl">"</span> <span class="p">}],</span>
+    <span class="p">}),</span>
+    <span class="k">new</span> <span class="nx">VueLoaderPlugin</span><span class="p">(),</span>
+  <span class="p">],</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>.vue로 끝나는 파일들을 찾는 정규 표현식을 작성하였고, 찾은 VueJS파일들을 읽는 역할을 하는 <strong>vue-loader</strong>에게 전달해줍니다. 그리고 <strong>vue-style-loader</strong>를 순서를 잘 맞추어서 맨 마지막에 vue-style이 적용되도록 하였습니다. <strong>plugin</strong>에 vue-loader에서 가져온 모듈을 <strong>생성자 함수</strong>로 추가하였습니다.</p>
+
+<hr />
+
+<p>출력이 잘 되는지, App.vue에 테스트로 작성해보겠습니다.</p>
+
+<div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1&gt;&lt;/h1&gt;</span>
+<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">message</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hello Vue!!!</span><span class="dl">"</span><span class="p">,</span>
+    <span class="p">};</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+<span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p><strong>&lt;template&gt;</strong> 태그를 작성하고 안에 <strong>&lt;h1&gt;</strong> 태그를 입력해줍니다. 그리고 아래에 <strong>&lt;script&gt;</strong>태그를 작성하고 안에 <strong>export default</strong>를 설정하여 객체 리터럴을 반환하는 코드를 작성하겠습니다. 먼저 <strong>data()</strong>메소드를 작성하고 이 메소드 안에서 객체 리터럴을 반환하겠습니다. 해당 객체는 <strong>message</strong>라는 속성을 갖습니다. 그리고 <strong>&lt;h1&gt;</strong> 태그에 <strong>{{ message }}</strong>를 작성해줍니다.</p>
+
+<hr />
+
+<p>main.js에서 App.vue라는 파일이 Vue 프로젝트의 시작이 되도록 설정하겠습니다. <strong>App.vue</strong>에서 작성한 내용들은, <code class="language-plaintext highlighter-rouge">export default</code>를 통해 <code class="language-plaintext highlighter-rouge">createApp()</code>함수의 인자로 전달되었습니다. 또한 CSS 선택자를 이용하여 <code class="language-plaintext highlighter-rouge">mount()</code>함수를 사용해줄 수 있습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">createApp</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">vue</span><span class="dl">"</span><span class="p">;</span>
+<span class="c1">// import App from "./App.vue";</span>
+<span class="c1">// 이렇게확장자가 명시되어 있지 않으면 오류남.</span>
+<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./App</span><span class="dl">"</span><span class="p">;</span>
+<span class="c1">// -&gt; webpack을 통해 개선해줄 수 있다</span>
+<span class="nx">createApp</span><span class="p">(</span><span class="nx">App</span><span class="p">).</span><span class="nx">mount</span><span class="p">(</span><span class="dl">"</span><span class="s2">#app</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>편의를 위한 설정을 추가하겠습니다. App.vue, main.js 와 같이, 확장자를 계속 추가해가며 import를 하게되면 여간 귀찮은 일이 아닙니다. 따라서 <strong>webpack.config.js</strong>파일을 다음과 같이 설정해주도록 하겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">.js</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.vue</span><span class="dl">"</span><span class="p">],</span>
+  <span class="p">},</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>이제 App.vue에 연결할 새로운 Vue 파일들, 즉, <strong>컴포넌트(Component)</strong>를 만들어보겠습니다. <strong>src폴더 안에 components폴더</strong>를 만들겠습니다. 그 안에 예시로 <strong>Helloworld.vue</strong>파일을 만들어 보겠습니다.<br />
+그리고 static 폴더 안의 images 폴더를 src 폴더로 옮기고 폴더 이름을 <strong>assets</strong>로 변경하겠습니다. .vue확장자를 갖는 파일 내에서 경로를 명시하기 위해선 또 역시 <strong>Webpack의 세팅</strong>이 필요합니다. 새로운 패키지를 추가해주어야 합니다.</p>
+
+<blockquote>
+  <p><strong>npm i -D file-loader</strong></p>
+</blockquote>
+
+<p>설치가 완료되었으면, <strong>webpack.config.js</strong>파일을 수정하겠습니다. <code class="language-plaintext highlighter-rouge">module.exports</code> 객체 안의 module속성에 다음 내용을 추가해주도록 하겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="p">{</span>
+      <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">png|jpe</span><span class="se">?</span><span class="sr">g|gif|webp</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span>
+      <span class="na">use</span><span class="p">:</span> <span class="dl">"</span><span class="s2">file-loader</span><span class="dl">"</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>그리고 <strong>webpack.config.js</strong>내에 다음과 같이 경로 별칭도 설정해주도록 하겠습니다. <strong>alias</strong> 옵션안에 경로 별칭을 설정할 수 있는데, 예를 들어 <strong>”~”</strong>의 경우, 상수 <strong>path</strong>의 <strong>내장함수 resolve()</strong>를 사용하여 현재 <strong>webpack.config.js</strong>가 있는 경로에 <strong>“src”</strong>를 더한 것을 나타내고 있다고 할 수 있습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="na">alias</span><span class="p">:</span> <span class="p">{</span>
+      <span class="dl">"</span><span class="s2">~</span><span class="dl">"</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">),</span>
+      <span class="na">assets</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="dl">"</span><span class="s2">src/assets</span><span class="dl">"</span><span class="p">),</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>이전과 동일하게, <strong>file-loader</strong>에게 test에서 지정한 파일들이 전달됩니다. <br />
+그럼 이제 그림 파일들이 잘 나타나는지 확인하기 위해 <strong>HelloWorld.vue</strong>파일을 다음과 같이 작성하겠습니다.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">~/assets/logo.jpg</span><span class="dl">"</span> <span class="nx">alt</span><span class="o">=</span><span class="dl">"</span><span class="s2">TY</span><span class="dl">"</span> <span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="sr">/template</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<p>그리고 App.vue파일로 가져오도록 하겠습니다.</p>
+
+<div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1&gt;&lt;/h1&gt;</span>
+  <span class="nt">&lt;HelloWorld</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
+<span class="k">import</span> <span class="nx">HelloWorld</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">~/components/HelloWorld</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">HelloWorld</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">message</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hello Vue!!!</span><span class="dl">"</span><span class="p">,</span>
+    <span class="p">};</span>
+  <span class="p">},</span>
+<span class="p">};</span>
+<span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p><strong>components</strong> 속성을 선언하고 객체 데이터로 생성하였고, 그 안에 가져온 HellowWorld를 입력하였습니다. <strong>&lt;template&gt;</strong> 태그에 <strong>&lt;HelloWorld /&gt;</strong>를 작성해줍시다. 개발 서버를 동작시키면, 그림이 잘 나오는 것을 확인할 수 있습니다.</p>
+
+<h4 id="eslint">ESLint</h4>
+
+<p>개발 의존성 패키지로 ESLint를 설치하겠습니다.</p>
+
+<blockquote>
+  <p><strong>npm i -D eslint eslint-plugin-vue babel-eslint</strong></p>
+</blockquote>
+
+<p>설치가 완료되었다면, 프로젝트 경로에 다음 파일을 하나 생성해주겠습니다. <br />
+<strong>.eslintrc.js</strong></p>
+
+<p>그리고 다음과 같이 작성해주도록 하죠.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">env</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">browser</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">node</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="na">extends</span><span class="p">:</span> <span class="p">[</span>
+    <span class="c1">// "plugin:vue/vue3-essential", // Lv1</span>
+    <span class="dl">"</span><span class="s2">plugin:vue/vue3-strongly-recommended</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// Lv2</span>
+    <span class="c1">// "plugin:vue/vue3-recommended", // Lv3</span>
+    <span class="dl">"</span><span class="s2">eslint:recommended</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">],</span>
+  <span class="na">parserOptions</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">parser</span><span class="p">:</span> <span class="dl">"</span><span class="s2">babel-eslint</span><span class="dl">"</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="na">rules</span><span class="p">:</span> <span class="p">{},</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p><strong>env</strong> 옵션은 브라우저, Node에서 동작하는 모든 전역 개념을 코드검사를 할 것인지 설정하는 부분입니다. 그리고 <strong>extends</strong> 옵션에는 vue 코드 규칙과 js 코드 규칙을 명시해 줍니다. <br />vue의 코드규칙은, 플러그인으로 설치한 eslint-plugin-vue의 코드규칙 3가지 중 2번째 단계의 규칙을 사용하겠습니다. <br />
+<strong>parserOptions</strong> 에는 기본적인 코드를 분석할 수 있는 분석기를 지정해주어야 합니다. <strong>babel</strong>을 사용하여 구문분석을 수행하고 <strong>eslint</strong>를 동작시키기 위해 다음과 같이 <strong>parser</strong>를 지정해 주었습니다. <br />
+<strong>rules</strong>에는 eslint에서 제공하는 규칙을 사용자가 변경해야 할 때, 작성해주면 되겠습니다.</p>
+
+<hr />
+
+<p><a href="https://eslint.vuejs.org/rules/" target="_blank"><strong>vue의 코드규칙</strong></a>에 관한 내용은 이 링크에서 확인해볼 수 있습니다. 이제 우리는 이 규칙에 맞게 <strong>VueJS</strong>의 코드를 작성해야 하는 것입니다. <br />
+이번에는 <a href="https://eslint.org/docs/rules/" target="_blank"><strong>eslint rules</strong></a>를 검색해서 한번 확인해보죠. 그러나 이러한 eslint의 경우 어디까지나 권장사항이기 때문에, 프로젝트 팀의 합의에 맞게 규칙들을 만들어야 할 것입니다.</p>
+
+<hr />
+
+<h2 id="error">Error</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">parser</span><span class="p">:</span> <span class="dl">"</span><span class="s2">babel-eslint</span><span class="dl">"</span>
+</code></pre></div></div>
+<p>위 패키지를 사용하였을 때 다음과 같은 오류가 발생했습니다.</p>
+
+<blockquote>
+  <p><strong>Parsing error: Must use import to load ES Module: require() of ES modules is not supported…</strong></p>
+</blockquote>
+
+<p>이는, babel-eslint가 ES6 module을 지원해주지 못해서 생긴 문제였습니다. 그래서 package.json에서 babel-eslint를 삭제하고 다음 패키지를 추가하여 업데이트를 진행하였습니다.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="nl">"@babel/eslint-parser"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^7.5.4"</span><span class="w">
+  </span><span class="err">...</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>그 후, <strong>.eslintrc.js</strong>파일의 <strong>“parser”</strong>도 
+<strong>“@babel/eslint-parser”</strong>로
+변경하였습니다.</p>
+
+<hr />
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+
+            <!--
+            
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to Collection of studies</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+                </section>
+            
+            -->
+            
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/built/images/author-logo-1.jpg" alt="changuk" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/changuk">Woo Chang Uk</a></h4>
+                                
+                                    <p>프론트엔드에 관심많은 대학원생</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/changuk">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+                <section class="post-full-comments">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        var disqus_config = function () {
+                            var this_page_url = 'http://localhost:4000/vuejs-start';
+                            var this_page_identifier = '/vuejs-start';
+                            var this_page_title = 'WebFrontend - VueJS Start';
+                        };
+                        (function() {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://Changuk.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                </section>
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/california_highway.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Collection of studies &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/webfrontend/">Webfrontend</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/typescript-essential2">WebFrontend - Basic Types</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/typescript-essential1">WebFrontend - TypeScript Beginning</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/bundler">WebFrontend - BUNDLER</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/webfrontend/">
+                                
+                                    See all 16 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+<article
+  class="post-card post-template"
+>
+  
+  <a
+    class="post-card-image-link"
+    href="/typescript-essential2"
+  >
+    <div
+      class="post-card-image"
+      style="background-image: url(/assets/built/images/typescript.jpg)"
+    ></div>
+  </a>
+  
+  <div class="post-card-content">
+    <a
+      class="post-card-content-link"
+      href="/typescript-essential2"
+    >
+      <header class="post-card-header">
+         
+        
+        <span class="post-card-tags">Webfrontend</span>
+          
+
+        <h2 class="post-card-title">WebFrontend - Basic Types</h2>
+      </header>
+      <section class="post-card-excerpt">
+        
+        <p>안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.
+
+</p>
+        
+      </section>
+    </a>
+    <footer class="post-card-meta">
+        
+      <img
+        class="author-profile-image"
+        src="/assets/built/images/author-logo-1.jpg"
+        alt="Woo Chang Uk"
+      />
+      
+      <span class="post-card-author">
+        <a href="/author/changuk/"
+          >Woo Chang Uk</a
+        >
+      </span>
+       
+      <span class="reading-time">
+          25 min read 
+      </span>
+    </footer>
+  </div>
+</article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="http://localhost:4000/">
+            
+            <span>Collection of studies</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">WebFrontend - VueJS Start</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=WebFrontend+-+VueJS+Start&amp;url=https://funkyblues.github.io/vuejs-start"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://funkyblues.github.io/vuejs-start"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+      <!-- Previous/next page links - displayed on every page -->
+      
+
+      <!-- The footer at the very bottom of the screen -->
+      <footer class="site-footer outer">
+        <div class="site-footer-content inner">
+          <section class="copyright">
+            <a href="http://localhost:4000/">Collection of studies</a>
+            &copy; 2022
+          </section>
+          <section class="poweredby">
+            Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+            <a href="https://pages.github.com/" target="_blank" rel="noopener"
+              >GitHub Pages</a
+            >
+            using
+            <a
+              href="https://github.com/jekyllt/jasper2"
+              target="_blank"
+              rel="noopener"
+              >Jasper2</a
+            >
+          </section>
+          <nav class="site-footer-nav">
+            <a href="/">Latest Posts</a>
+             
+            <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+    <div id="subscribe" class="subscribe-overlay">
+      <a class="subscribe-overlay-close" href="#"></a>
+      <div class="subscribe-overlay-content">
+        
+        <h1 class="subscribe-overlay-title">Search Collection of studies</h1>
+        <p class="subscribe-overlay-description">lunr.js를 이용한 posts 검색</p>
+        <span id="searchform" method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  />
+    <input class="location" type="hidden" name="location"  />
+    <input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" onkeyup="myFunc()" 
+               id="searchtext" type="text" name="searchtext"  
+               placeholder="Search..." />
+    </div>
+    <script type="text/javascript">
+        function myFunc() {
+            if(event.keyCode == 13) {
+                var url = encodeURIComponent($("#searchtext").val());
+                location.href = "/search.html?query=" + url;
+            }
+        }
+    </script>
+</span>
+      </div>
+    </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("pre code").each(function (i, block) {
+          hljs.highlightBlock(block);
+        });
+      });
+    </script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/jquery.fitvids.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"
+    ></script>
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-xxxxxxxx-x', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+     <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+ 
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+  </body>
+</html>
