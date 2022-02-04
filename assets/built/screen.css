@@ -1108,11 +1108,10 @@ body {
 .post-full-content img,
 .post-full-content video {
   display: block;
-  margin: 1.5em auto;
+  margin: 0 auto;
   max-width: 1040px;
 }
 @media (max-width: 1040px) {
-  .post-full-content img,
   .post-full-content video {
     width: 100%;
   }

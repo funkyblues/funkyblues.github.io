@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/webfrontend/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/tag/frontend/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-02-04T01:16:17+09:00</updated>
-  <id>http://localhost:4000/tag/webfrontend/feed.xml</id>
+  <updated>2022-02-05T03:15:02+09:00</updated>
+  <id>http://localhost:4000/tag/frontend/feed.xml</id>
 
   
   
@@ -32,8 +32,8 @@
 
   
     <entry>
-      <title type="html">WebFrontend - VueJS Start</title>
-      <link href="http://localhost:4000/vuejs-start" rel="alternate" type="text/html" title="WebFrontend - VueJS Start" />
+      <title type="html">Frontend - VueJS Start</title>
+      <link href="http://localhost:4000/vuejs-start" rel="alternate" type="text/html" title="Frontend - VueJS Start" />
       <published>2022-02-03T09:00:00+09:00</published>
       <updated>2022-02-03T09:00:00+09:00</updated>
       <id>http://localhost:4000/vuejs-start</id>
@@ -320,8 +320,10 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;error&quot;&gt;Error&lt;/h2&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;babel-eslint&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;babel-eslint&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;p&gt;위 패키지를 사용하였을 때 다음과 같은 오류가 발생했습니다.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -339,7 +341,7 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;그 후, &lt;strong&gt;.eslintrc.js&lt;/strong&gt;파일의 &lt;strong&gt;“parser”&lt;/strong&gt;도 
+&lt;p&gt;그 후, &lt;strong&gt;.eslintrc.js&lt;/strong&gt;파일의 &lt;strong&gt;“parser”&lt;/strong&gt;도
 &lt;strong&gt;“@babel/eslint-parser”&lt;/strong&gt;로
 변경하였습니다.&lt;/p&gt;
 
@@ -360,7 +362,7 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
       
 
       
-        <category term="webfrontend" />
+        <category term="frontend" />
       
 
       
@@ -372,8 +374,8 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
     </entry>
   
     <entry>
-      <title type="html">WebFrontend - Basic Types</title>
-      <link href="http://localhost:4000/typescript-essential2" rel="alternate" type="text/html" title="WebFrontend - Basic Types" />
+      <title type="html">Frontend - Basic Types</title>
+      <link href="http://localhost:4000/typescript-essential2" rel="alternate" type="text/html" title="Frontend - Basic Types" />
       <published>2022-02-02T09:00:00+09:00</published>
       <updated>2022-02-02T09:00:00+09:00</updated>
       <id>http://localhost:4000/typescript-essential2</id>
@@ -1104,7 +1106,7 @@ any가 전파되는 것을 예제를 통해 보도록 하겠습니다.&lt;/p&gt;
       
 
       
-        <category term="webfrontend" />
+        <category term="frontend" />
       
 
       
@@ -1116,8 +1118,8 @@ any가 전파되는 것을 예제를 통해 보도록 하겠습니다.&lt;/p&gt;
     </entry>
   
     <entry>
-      <title type="html">WebFrontend - TypeScript Beginning</title>
-      <link href="http://localhost:4000/typescript-essential1" rel="alternate" type="text/html" title="WebFrontend - TypeScript Beginning" />
+      <title type="html">Frontend - TypeScript Beginning</title>
+      <link href="http://localhost:4000/typescript-essential1" rel="alternate" type="text/html" title="Frontend - TypeScript Beginning" />
       <published>2022-02-01T11:00:00+09:00</published>
       <updated>2022-02-01T11:00:00+09:00</updated>
       <id>http://localhost:4000/typescript-essential1</id>
@@ -1351,7 +1353,7 @@ any가 전파되는 것을 예제를 통해 보도록 하겠습니다.&lt;/p&gt;
       
 
       
-        <category term="webfrontend" />
+        <category term="frontend" />
       
 
       
@@ -1363,8 +1365,8 @@ any가 전파되는 것을 예제를 통해 보도록 하겠습니다.&lt;/p&gt;
     </entry>
   
     <entry>
-      <title type="html">WebFrontend - BUNDLER</title>
-      <link href="http://localhost:4000/bundler" rel="alternate" type="text/html" title="WebFrontend - BUNDLER" />
+      <title type="html">Frontend - Bundler</title>
+      <link href="http://localhost:4000/bundler" rel="alternate" type="text/html" title="Frontend - Bundler" />
       <published>2022-02-01T10:00:00+09:00</published>
       <updated>2022-02-01T10:00:00+09:00</updated>
       <id>http://localhost:4000/bundler</id>
@@ -1807,7 +1809,7 @@ parcel bundler에서 한 내용과 동일하게, &lt;strong&gt;package.json&lt;/
       
 
       
-        <category term="webfrontend" />
+        <category term="frontend" />
       
 
       
@@ -1819,8 +1821,8 @@ parcel bundler에서 한 내용과 동일하게, &lt;strong&gt;package.json&lt;/
     </entry>
   
     <entry>
-      <title type="html">WebFrontend - Bootstrap</title>
-      <link href="http://localhost:4000/bootstrap" rel="alternate" type="text/html" title="WebFrontend - Bootstrap" />
+      <title type="html">CSS Framework - Bootstrap</title>
+      <link href="http://localhost:4000/bootstrap" rel="alternate" type="text/html" title="CSS Framework - Bootstrap" />
       <published>2022-02-01T10:00:00+09:00</published>
       <updated>2022-02-01T10:00:00+09:00</updated>
       <id>http://localhost:4000/bootstrap</id>
@@ -1946,7 +1948,7 @@ Tooltips의 경우 많은 부분에서 사용될 수 있기 때문에, 성능이
       
 
       
-        <category term="webfrontend" />
+        <category term="frontend" />
       
 
       
@@ -1958,8 +1960,8 @@ Tooltips의 경우 많은 부분에서 사용될 수 있기 때문에, 성능이
     </entry>
   
     <entry>
-      <title type="html">WebFrontend - SCSS</title>
-      <link href="http://localhost:4000/scss1" rel="alternate" type="text/html" title="WebFrontend - SCSS" />
+      <title type="html">CSS Preprocessor - SCSS</title>
+      <link href="http://localhost:4000/scss1" rel="alternate" type="text/html" title="CSS Preprocessor - SCSS" />
       <published>2022-02-01T09:00:00+09:00</published>
       <updated>2022-02-01T09:00:00+09:00</updated>
       <id>http://localhost:4000/scss1</id>
@@ -2878,7 +2880,7 @@ SCSS는 이를 &lt;strong&gt;중첩&lt;/strong&gt;이라는 기능으로 해결�
       
 
       
-        <category term="webfrontend" />
+        <category term="frontend" />
       
 
       
@@ -2890,8 +2892,8 @@ SCSS는 이를 &lt;strong&gt;중첩&lt;/strong&gt;이라는 기능으로 해결�
     </entry>
   
     <entry>
-      <title type="html">WebFrontend - JavaScript RegExp</title>
-      <link href="http://localhost:4000/javascript-regexp1" rel="alternate" type="text/html" title="WebFrontend - JavaScript RegExp" />
+      <title type="html">Frontend - JavaScript RegExp</title>
+      <link href="http://localhost:4000/javascript-regexp1" rel="alternate" type="text/html" title="Frontend - JavaScript RegExp" />
       <published>2022-01-31T11:00:00+09:00</published>
       <updated>2022-01-31T11:00:00+09:00</updated>
       <id>http://localhost:4000/javascript-regexp1</id>
@@ -3693,7 +3695,7 @@ abbcccdddd
       
 
       
-        <category term="webfrontend" />
+        <category term="frontend" />
       
 
       
@@ -3705,8 +3707,8 @@ abbcccdddd
     </entry>
   
     <entry>
-      <title type="html">WebFrontend - JavaScript JSON &amp;amp; Storage</title>
-      <link href="http://localhost:4000/javascript-levelup8" rel="alternate" type="text/html" title="WebFrontend - JavaScript JSON &amp; Storage" />
+      <title type="html">Frontend - JavaScript JSON &amp;amp; Storage</title>
+      <link href="http://localhost:4000/javascript-levelup8" rel="alternate" type="text/html" title="Frontend - JavaScript JSON &amp; Storage" />
       <published>2022-01-31T10:00:00+09:00</published>
       <updated>2022-01-31T10:00:00+09:00</updated>
       <id>http://localhost:4000/javascript-levelup8</id>
@@ -3881,7 +3883,7 @@ JSON파일은 사용 용도가 명확하기 때문에, 최대한 경량화시켜
       
 
       
-        <category term="webfrontend" />
+        <category term="frontend" />
       
 
       
@@ -3893,8 +3895,8 @@ JSON파일은 사용 용도가 명확하기 때문에, 최대한 경량화시켜
     </entry>
   
     <entry>
-      <title type="html">WebFrontend - JavaScript Copy(shallow, deep)</title>
-      <link href="http://localhost:4000/javascript-levelup7" rel="alternate" type="text/html" title="WebFrontend - JavaScript Copy(shallow, deep)" />
+      <title type="html">Frontend - JavaScript Copy(shallow, deep)</title>
+      <link href="http://localhost:4000/javascript-levelup7" rel="alternate" type="text/html" title="Frontend - JavaScript Copy(shallow, deep)" />
       <published>2022-01-31T09:30:00+09:00</published>
       <updated>2022-01-31T09:30:00+09:00</updated>
       <id>http://localhost:4000/javascript-levelup7</id>
@@ -4097,7 +4099,7 @@ user의 emails 데이터는 배열 데이터이고, 배열 데이터도 참조�
       
 
       
-        <category term="webfrontend" />
+        <category term="frontend" />
       
 
       
@@ -4109,8 +4111,8 @@ user의 emails 데이터는 배열 데이터이고, 배열 데이터도 참조�
     </entry>
   
     <entry>
-      <title type="html">WebFrontend - JavaScript Immutability</title>
-      <link href="http://localhost:4000/javascript-levelup6" rel="alternate" type="text/html" title="WebFrontend - JavaScript Immutability" />
+      <title type="html">Frontend - JavaScript Immutability</title>
+      <link href="http://localhost:4000/javascript-levelup6" rel="alternate" type="text/html" title="Frontend - JavaScript Immutability" />
       <published>2022-01-31T09:00:00+09:00</published>
       <updated>2022-01-31T09:00:00+09:00</updated>
       <id>http://localhost:4000/javascript-levelup6</id>
@@ -4432,7 +4434,7 @@ user의 emails 데이터는 배열 데이터이고, 배열 데이터도 참조�
       
 
       
-        <category term="webfrontend" />
+        <category term="frontend" />
       
 
       
