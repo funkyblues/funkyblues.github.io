@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/tag/frontend/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-02-05T03:15:02+09:00</updated>
+  <updated>2022-02-05T11:34:09+09:00</updated>
   <id>http://localhost:4000/tag/frontend/feed.xml</id>
 
   
@@ -318,6 +318,37 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 이번에는 &lt;a href=&quot;https://eslint.org/docs/rules/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;eslint rules&lt;/strong&gt;&lt;/a&gt;를 검색해서 한번 확인해보죠. 그러나 이러한 eslint의 경우 어디까지나 권장사항이기 때문에, 프로젝트 팀의 합의에 맞게 규칙들을 만들어야 할 것입니다.&lt;/p&gt;
 
 &lt;hr /&gt;
+
+&lt;h6 id=&quot;eslint-rules-settings&quot;&gt;ESlint rules Settings&lt;/h6&gt;
+
+&lt;p&gt;만약, ESlint의 규칙이 맘에 들지 않는다면, 수정해서 사용할 수 있습니다. 어떻게 할 수 있을까요? 이전에 방문했던 &lt;a href=&quot;https://eslint.org/docs/rules/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;eslint rules&lt;/strong&gt;&lt;/a&gt;를 다시 방문해봅시다. &lt;br /&gt;
+예시로 검색에 &lt;strong&gt;html-closing-bracket-newline&lt;/strong&gt;을 입력해보겠습니다. 닫히는 꺽쇠괄호를 붙여줄 것인지, 아닌지에 대한 옵션인 것 같네요. 아래로 보다 보면 &lt;strong&gt;Options&lt;/strong&gt;가 나타나게 됩니다.&lt;br /&gt;
+&lt;strong&gt;.eslintrc.js&lt;/strong&gt;파일의 rules 안쪽에 다음 내용을 입력해주겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;rules:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;vue/html-closing-bracket-newline&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;singleline&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;never&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;multiline&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;never&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음과 같이 본인의 기호에 맞게 설정을 바꿀 수가 있습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h6 id=&quot;eslint-자동수정&quot;&gt;ESlint 자동수정&lt;/h6&gt;
+
+&lt;p&gt;우리가 설정해 준 ESlint문법을 파일이 지키고 있지 않다면, 자동으로 변경해서 저장해주는 설정을 해주겠습니다.
+&lt;br /&gt;
+VSC의 Settings로 들어가서 Open Settings(JSON)을 찾아서 클릭하겠습니다. (변경될 수 있음.) 이곳에 새로운 설정을 추가해주도록 하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;&quot;editor.codeActionsOnSave&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;source.fixAll.eslint&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;이와같이 기본적인 ESLint 코드규칙만 잘 명시해주면 편리하게 JS, VueJS를 이용할 수 있습니다.&lt;/p&gt;
 
 &lt;h2 id=&quot;error&quot;&gt;Error&lt;/h2&gt;
 

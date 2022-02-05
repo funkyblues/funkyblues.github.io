@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/tag/backend/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-02-05T03:15:02+09:00</updated>
+  <updated>2022-02-05T11:34:09+09:00</updated>
   <id>http://localhost:4000/tag/backend/feed.xml</id>
 
   
@@ -148,11 +148,15 @@ Formatter는 띄어쓰기나 들여쓰기가 잘 되어 있는지, 비주얼적�
   &lt;p&gt;&lt;strong&gt;npm i -D eslint-airbnb-base eslint-plugin-import&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;hr /&gt;
+
 &lt;p&gt;prettier와 eslint가 서로 충돌할 수 있기 때문에, 다음 플러그인도 설치해 주어야 합니다.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;npm i -D eslint-config-prettier&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;eslint가 NodeJS환경에서도 잘 동작할 수 있는 플러그인도 설치하겠습니다.&lt;/p&gt;
 
@@ -160,11 +164,15 @@ Formatter는 띄어쓰기나 들여쓰기가 잘 되어 있는지, 비주얼적�
   &lt;p&gt;&lt;strong&gt;npm i -D eslint-plugin-node&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;hr /&gt;
+
 &lt;p&gt;당장 TypeScript를 사용하는 것은 아니지만, TypeScript의 Type Checking을 이용하기 위해, 이 패키지도 설치하도록 하죠.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;npm i -D typescript&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;그리고 Type Checking을 할 수 있도록 다음 라인을 js파일의 처음에 입력해주면 됩니다.&lt;/p&gt;
 
