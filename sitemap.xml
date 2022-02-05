@@ -4,9 +4,25 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
+        <loc>http://localhost:4000/backend-js-basic2.html</loc>
+        
+        <lastmod>2022-02-05T10:00:00+09:00</lastmod>
+        
+
+        
+        <changefreq>weekly</changefreq>
+        
+
+        
+        <priority>0.5</priority>
+        
+
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/backend-js-basic1.html</loc>
         
-        <lastmod>2022-02-04T21:00:00+09:00</lastmod>
+        <lastmod>2022-02-05T09:00:00+09:00</lastmod>
         
 
         
