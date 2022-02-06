@@ -310,16 +310,39 @@ into the {body} of the default.hbs template -->
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">vm</span><span class="p">.</span><span class="nx">count</span><span class="p">)</span> <span class="c1">// =&gt; 4</span>
 </code></pre></div></div>
 
-<h2 id="라이프사이클-훅">라이프사이클 훅</h2>
+<h4 id="라이프사이클-훅">라이프사이클 훅</h4>
 
 <p>각 컴포넌트는 생성될 때 일련의 초기화 단계를 거칩니다. 예를 들어,</p>
 <ul>
   <li><strong>정의한 데이터의 관찰</strong>,</li>
   <li><strong>&lt;template&gt;태그의 여러가지 내용들을 변환하는 과정(Template Compile)</strong>,</li>
   <li><strong>그 내용들을 실제 HTML에 연결하는 과정(DOM Mount)</strong>,</li>
-  <li><strong>데이터 변경</strong> 
-이 발생할 때에 화면을 갱신해주어야 합니다. 이 과정에서 라이프사이클 훅이라 불리는 함수도 실행하여, 사용자가 특정 단계에서</li>
+  <li><strong>데이터 변경</strong></li>
 </ul>
+
+<p>이 발생할 때에 화면을 갱신(Reactiviy, 반응성)해주어야 합니다. 이 과정에서 <strong>라이프사이클 훅</strong>이라 불리는 함수도 실행하여, 사용자가 특정 단계에서 자신의 코드를 추가할 수 있는 기회를 제공합니다. <br />
+예를 들어, <code class="language-plaintext highlighter-rouge">created</code> 훅은 인스턴스가 생성된 후에 코드를 실행하는데에 사용됩니다.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Vue</span><span class="p">.</span><span class="nx">createApp</span><span class="p">({</span>
+  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="na">count</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">created</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// `this` points to the vm instance</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">count is: </span><span class="dl">'</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="p">)</span> <span class="c1">// =&gt; "count is: 1"</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">data()</code> 메서드에 <strong>count</strong>라는 데이터가 1로 초기화되어 있습니다. 그 밑에 <code class="language-plaintext highlighter-rouge">created()</code>라는 라이프사이클 훅이 하나 작성되어 있고 이것은 함수입니다. 이 함수가 바로 인스턴스가 생성된 직후에 실행된다는 의미죠. <br />
+이 함수가 실행될 때, count라는 데이터의 값을 읽을 수 있게 됩니다. 또
+인스턴스 라이프사이클에는 <code class="language-plaintext highlighter-rouge">mounted</code>, <code class="language-plaintext highlighter-rouge">updated</code>, <code class="language-plaintext highlighter-rouge">unmounted</code> 과 같은 다른 훅도 존재합니다.</p>
+
+<h4 id="라이프사이클-다이어그램">라이프사이클 다이어그램</h4>
+
+<p>아래는 인스턴스 라이프사이클에 대한 다이어그램입니다. 지금 당장 모든 것을 완전히 이해할 필요는 없지만 다이어그램은 앞으로 도움이 될 것입니다.</p>
+
+<p><img src="assets/built/images/vue/lifecycle.png" width="600" height="1500" /></p>
 
                 </div>
             </section>
