@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/author/changuk/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-02-06T02:55:37+09:00</updated>
+  <updated>2022-02-07T00:00:03+09:00</updated>
   <id>http://localhost:4000/author/changuk/feed.xml</id>
 
   
@@ -32,8 +32,105 @@
 
   
     <entry>
-      <title type="html">Hoisting, Scope, Closure, Function</title>
-      <link href="http://localhost:4000/backend-js-basic2" rel="alternate" type="text/html" title="Hoisting, Scope, Closure, Function" />
+      <title type="html">Vue-Grammar</title>
+      <link href="http://localhost:4000/vuejs-grammar" rel="alternate" type="text/html" title="Vue-Grammar" />
+      <published>2022-02-06T09:00:00+09:00</published>
+      <updated>2022-02-06T09:00:00+09:00</updated>
+      <id>http://localhost:4000/vuejs-grammar</id>
+      <content type="html" xml:base="http://localhost:4000/vuejs-grammar">&lt;p&gt;안녕하세요. 성장하는 것을 즐기는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;changuk&lt;/code&gt;이라고 합니다. 현재 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fastcampus&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;frontend&lt;/code&gt; 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이번시간부터는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VueJS&lt;/code&gt;의 문법에 대해 구체적으로 알아보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;어플리케이션--컴포넌트-인스턴스&quot;&gt;어플리케이션 &amp;amp; 컴포넌트 인스턴스&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://v3.ko.vuejs.org/guide/instance.html#%E1%84%8B%E1%85%A5%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB-%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5%E1%86%AB%E1%84%89%E1%85%B3-%E1%84%89%E1%85%A2%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5&quot; target=&quot;_blank&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;어플리케이션 &amp;amp; 컴포넌트 인스턴스&lt;/code&gt;&lt;/a&gt;를 참조하시면 되겠습니다.&lt;/p&gt;
+
+&lt;p&gt;모든 Vue 어플리케이션은 createApp 함수를 사용하여 새로운 어플리케이션 인스턴스를 생성하여 시작합니다. 아래 코드로 설명하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* options */&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위의 코드에서 새로운 어플리케이션 인스턴스가 생성이 되는데, 그 인스턴스를 상수 app에 할당하여 시작할 수 있다는 의미입니다. 그 후에 우리는 app에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mount&lt;/code&gt; 메소드를 입력할 수 있겠고, 만약 html에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;div id=&quot;app&quot;&amp;gt;&lt;/code&gt;으로 선언되어 있다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#app&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mount&lt;/code&gt;에 전달하면 됩니다. &lt;br /&gt;
+그리고 어플리케이션 인스턴스에 의해 노출된 대부분의 메소드들은 동일한 인스턴스를 반환하여 연결(Chaining)을 허용합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;SearchInput&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SearchInputComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;directive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;FocusDirective&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;LocalePlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;최상위root-컴포넌트&quot;&gt;최상위(Root) 컴포넌트&lt;/h4&gt;
+&lt;p&gt;최상위(Root) 컴포넌트에 대한 내용도 설명하겠습니다. createApp에 전달된 옵션은 루트 컴포넌트를 구성하는데 사용됩니다. 이 컴포넌트는 한 프로젝트를 시작할 때, 렌더링의 시작점으로 사용됩니다. 최상위 컴포넌트는 이전 포스트에서 만들었던 &lt;strong&gt;App.vue&lt;/strong&gt;라고 이해하시면 되겠습니다. &lt;br /&gt;우리는 &lt;strong&gt;App.vue&lt;/strong&gt;를 시작하는 컴포넌트로서 사용하고, 이 컴포넌트에 여러가지 새로운 컴포넌트들을 추가적으로 연결해서 사용할 수 있습니다.
+예를 들어, &lt;strong&gt;App.vue&lt;/strong&gt;를 &amp;lt;div id=&quot;app&quot;&amp;gt;&amp;lt;/div&amp;gt;에 &lt;strong&gt;mount&lt;/strong&gt;하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#app&lt;/code&gt;을 전달해야 합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;RootComponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* options */&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RootComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;vm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#app&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;컴포넌트-인스턴스-속성들&quot;&gt;컴포넌트 인스턴스 속성들&lt;/h4&gt;
+
+&lt;p&gt;다른 VueJS파일에서 특정 VueJS파일의 데이터를 확인하려면 어떻게 할 수 있을까요? 아래 예시에서 그것을 간략하게 구현한 내용을 확인해보겠습니다. 나중에 필요할 때가 있다면 사용할 수 있을 것입니다.&lt;/p&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;vm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#app&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;vm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// =&amp;gt; 4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;라이프사이클-훅&quot;&gt;라이프사이클 훅&lt;/h2&gt;
+
+&lt;p&gt;각 컴포넌트는 생성될 때 일련의 초기화 단계를 거칩니다. 예를 들어,&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;정의한 데이터의 관찰&lt;/strong&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&amp;lt;template&amp;gt;태그의 여러가지 내용들을 변환하는 과정(Template Compile)&lt;/strong&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;그 내용들을 실제 HTML에 연결하는 과정(DOM Mount)&lt;/strong&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;데이터 변경&lt;/strong&gt; 
+이 발생할 때에 화면을 갱신해주어야 합니다. 이 과정에서 라이프사이클 훅이라 불리는 함수도 실행하여, 사용자가 특정 단계에서&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="frontend" />
+      
+        <category term="vue" />
+      
+
+      
+        <summary type="html">안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">JavaScript - Hoisting, Scope, Closure, Function</title>
+      <link href="http://localhost:4000/backend-js-basic2" rel="alternate" type="text/html" title="JavaScript - Hoisting, Scope, Closure, Function" />
       <published>2022-02-05T10:00:00+09:00</published>
       <updated>2022-02-05T10:00:00+09:00</updated>
       <id>http://localhost:4000/backend-js-basic2</id>
@@ -41,7 +138,7 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;이번시간에는 자주 들어봤지만, 매번 헷갈리는 개념들인 Scope, Hoisting, Closure, Function 등에 대해서 짚고 넘어가고자 합니다.
+&lt;p&gt;이번시간에는 자주 들어봤지만, 매번 헷갈리는 개념들인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Scope, Hoisting, Closure, Function&lt;/code&gt; 등에 대해서 짚고 넘어가고자 합니다.
 JavaScript의 경우 변수간의 참조관계가 굉장히 복잡해지기 쉬우므로, 위의 개념들을 정확하게 숙지하는 것이 필요합니다.&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -177,6 +274,8 @@ JavaScript의 경우 변수간의 참조관계가 굉장히 복잡해지기 쉬�
 
       
         <category term="backend" />
+      
+        <category term="javascript" />
       
 
       
@@ -422,7 +521,7 @@ Formatter는 띄어쓰기나 들여쓰기가 잘 되어 있는지, 비주얼적�
 &lt;p&gt;그리고 Airbnb에서 제공하는 &lt;a href=&quot;https://github.com/airbnb/javascript&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;JavaScript Style Guide&lt;/strong&gt;&lt;/a&gt;를 설치하도록 하겠습니다. JavaScript 개발에 가장 합리적인 접근이라고 하네요. 또 이 플러그인을 연결해줄 수 있도록 새로운 패키지도 설치하겠습니다.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;npm i -D eslint-airbnb-base eslint-plugin-import&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;npm i -D eslint-config-airbnb-base eslint-plugin-import&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;hr /&gt;
@@ -472,8 +571,8 @@ Formatter는 띄어쓰기나 들여쓰기가 잘 되어 있는지, 비주얼적�
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;// 이 순서대로 작성해 주어야 한다.&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;airbnb-base&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;plugin:node/recommended&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;prettier&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;airbnb-base&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;plugin:node/recommended&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;prettier&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;마지막으로 &lt;strong&gt;jsconfig.json&lt;/strong&gt;파일을 생성하고 다음 내용을 기입하여 설정을 마무리 해주도록 하겠습니다. 엄격한 컴파일 옵션을 설정해주고, src 밑의 모든 파일들을 확인해주겠다는 의미로 이해하시면 될 것 같습니다.&lt;/p&gt;
@@ -571,14 +670,27 @@ Formatter는 띄어쓰기나 들여쓰기가 잘 되어 있는지, 비주얼적�
 &lt;h2 id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#vuejs-시작하기&quot;&gt;VueJS 시작하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#vuejs-시작하기&quot;&gt;&lt;strong&gt;VueJS 시작하기&lt;/strong&gt;&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#vue-cli&quot;&gt;&lt;strong&gt;Vue-CLI&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#vue3-webpack-template&quot;&gt;&lt;strong&gt;Vue3 Webpack Template&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#eslint&quot;&gt;&lt;strong&gt;ESLint&lt;/strong&gt;&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#eslint-rules-settings&quot;&gt;&lt;strong&gt;ESLint rules Settings&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#eslint-%EC%9E%90%EB%8F%99%EC%88%98%EC%A0%95&quot;&gt;&lt;strong&gt;ESLint 자동수정&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#프로젝트-버전-맞추기&quot;&gt;&lt;strong&gt;프로젝트 버전 맞추기&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#%EC%A1%B0%EA%B1%B4%EB%AC%B8--%EB%B0%98%EB%B3%B5%EB%AC%B8&quot;&gt;&lt;strong&gt;조건문 &amp;amp; 반복문&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;vuejs-시작하기&quot;&gt;VueJS 시작하기&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://kr.vuejs.org/v2/guide/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;VueJS&lt;/strong&gt;&lt;/a&gt;는 한글 가이드를 제공하고 있습니다.
+&lt;p&gt;&lt;a href=&quot;https://v3.ko.vuejs.org/guide/instance.html&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;VueJS&lt;/strong&gt;&lt;/a&gt;는 한글 가이드를 제공하고 있습니다.
 &lt;br /&gt;
 VueJS 설치는, CDN으로 가져오는 방식과 npm프로젝트에 설치하는 방식 두가지로 나뉩니다. CDN방식은 한글 가이드를 따라서 해봤는데… 잘 안되더라고요. 그래서 아래 링크를 사용해주시면 되겠습니다. 저는 codepen.io를 사용했습니다.&lt;/p&gt;
 
@@ -700,10 +812,10 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hello Vue!!!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Hello Vue!!!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -713,12 +825,12 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 
 &lt;p&gt;main.js에서 App.vue라는 파일이 Vue 프로젝트의 시작이 되도록 설정하겠습니다. &lt;strong&gt;App.vue&lt;/strong&gt;에서 작성한 내용들은, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export default&lt;/code&gt;를 통해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createApp()&lt;/code&gt;함수의 인자로 전달되었습니다. 또한 CSS 선택자를 이용하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mount()&lt;/code&gt;함수를 사용해줄 수 있습니다.&lt;/p&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;vue&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;vue&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// import App from &quot;./App.vue&quot;;&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// 이렇게확장자가 명시되어 있지 않으면 오류남.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./App&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./App&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; webpack을 통해 개선해줄 수 있다&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;#app&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#app&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;편의를 위한 설정을 추가하겠습니다. App.vue, main.js 와 같이, 확장자를 계속 추가해가며 import를 하게되면 여간 귀찮은 일이 아닙니다. 따라서 &lt;strong&gt;webpack.config.js&lt;/strong&gt;파일을 다음과 같이 설정해주도록 하겠습니다.&lt;/p&gt;
@@ -786,17 +898,17 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;~/components/HelloWorld&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;~/components/HelloWorld&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;components&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hello Vue!!!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Hello Vue!!!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -822,15 +934,15 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// &quot;plugin:vue/vue3-essential&quot;, // Lv1&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;plugin:vue/vue3-strongly-recommended&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Lv2&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;plugin:vue/vue3-strongly-recommended&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Lv2&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// &quot;plugin:vue/vue3-recommended&quot;, // Lv3&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;eslint:recommended&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;eslint:recommended&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;parserOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;babel-eslint&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;babel-eslint&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;rules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;env&lt;/strong&gt; 옵션은 브라우저, Node에서 동작하는 모든 전역 개념을 코드검사를 할 것인지 설정하는 부분입니다. 그리고 &lt;strong&gt;extends&lt;/strong&gt; 옵션에는 vue 코드 규칙과 js 코드 규칙을 명시해 줍니다. &lt;br /&gt;vue의 코드규칙은, 플러그인으로 설치한 eslint-plugin-vue의 코드규칙 3가지 중 2번째 단계의 규칙을 사용하겠습니다. &lt;br /&gt;
@@ -844,7 +956,7 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 
 &lt;hr /&gt;
 
-&lt;h6 id=&quot;eslint-rules-settings&quot;&gt;ESlint rules Settings&lt;/h6&gt;
+&lt;h6 id=&quot;eslint-rules-settings&quot;&gt;ESLint rules Settings&lt;/h6&gt;
 
 &lt;p&gt;만약, ESlint의 규칙이 맘에 들지 않는다면, 수정해서 사용할 수 있습니다. 어떻게 할 수 있을까요? 이전에 방문했던 &lt;a href=&quot;https://eslint.org/docs/rules/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;eslint rules&lt;/strong&gt;&lt;/a&gt;를 다시 방문해봅시다. &lt;br /&gt;
 예시로 검색에 &lt;strong&gt;html-closing-bracket-newline&lt;/strong&gt;을 입력해보겠습니다. 닫히는 꺽쇠괄호를 붙여줄 것인지, 아닌지에 대한 옵션인 것 같네요. 아래로 보다 보면 &lt;strong&gt;Options&lt;/strong&gt;가 나타나게 됩니다.&lt;br /&gt;
@@ -862,7 +974,7 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 
 &lt;hr /&gt;
 
-&lt;h6 id=&quot;eslint-자동수정&quot;&gt;ESlint 자동수정&lt;/h6&gt;
+&lt;h6 id=&quot;eslint-자동수정&quot;&gt;ESLint 자동수정&lt;/h6&gt;
 
 &lt;p&gt;우리가 설정해 준 ESlint문법을 파일이 지키고 있지 않다면, 자동으로 변경해서 저장해주는 설정을 해주겠습니다.
 &lt;br /&gt;
@@ -877,7 +989,155 @@ VSC의 Settings로 들어가서 Open Settings(JSON)을 찾아서 클릭하겠습
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;프로젝트-버전-맞추기&quot;&gt;프로젝트 버전 맞추기&lt;/h2&gt;</content>
+&lt;h2 id=&quot;프로젝트-버전-맞추기&quot;&gt;프로젝트 버전 맞추기&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ParkYoungWoong?tab=repositories&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Download from Here&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;조건문--반복문&quot;&gt;조건문 &amp;amp; 반복문&lt;/h2&gt;
+
+&lt;p&gt;본격적인 VueJS의 문법을 배우기 이전에, 기본적인 기능을 한번 살펴보도록 하겠습니다. 클릭해서 숫자가 올라가는 template을 작성해보았습니다. 만약, 4이상이면 &lt;strong&gt;4보다 크다&lt;/strong&gt;라는 문자열이 출력되려면 어떤 방식으로 VueJS 파일을 작성하면 될까요? 다음 코드를 보며 이해하시면 되겠습니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v-if&lt;/code&gt;라는 디렉티브(Directive)를 사용해주면 됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;click=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;increase&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    8
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-if=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;count &amp;gt; 4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;4보다 큽니다!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;반복되는 데이터를 이용하려면 반복문을 처리하는 문법이 필요합니다. VueJS에서 반복문은 어떻게 사용할까요? &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v-for&lt;/code&gt; 디렉티브를 사용합니다.
+새로운 데이터를 배열로 만들어봅시다. 데이터를 반복할 때는 각각의 데이터가 고유한지를 증명하기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:key&lt;/code&gt;를 제공해주어야 합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;click=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;increase&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    8
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-if=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;count &amp;gt; 4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;4보다 큽니다!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-for=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fruit in fruits&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;:key=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fruit&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;fruits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Banana&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Cherry&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;increase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;scss&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;royalblue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음과 같이 스타일 속성은 SCSS로 해석해달라는 내용을 추가하였고,브라우저에는 배열 순서대로 출력되는 것을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이번에는 별개의 Component를 사용해서 배열 데이터를 출력해보도록 하죠. component폴더 안에 &lt;strong&gt;Fruit.vue&lt;/strong&gt;파일을 만들도록 하겠습니다. 그리고 다음과 같이 작성해주겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;props&lt;/strong&gt;라는 옵션을 설정해주겠습니다. props는 객체 데이터이고, 내부에는 name이라는 String 데이터를 받도록 하였습니다. props는 default value를 제공하여야 하기 때문에, 위와 같이 작성하였습니다.
+작성한 파일을 &lt;strong&gt;App.vue&lt;/strong&gt;에서 사용할 수 있게끔, 가져오도록 하죠.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Fruit&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;~/components/Fruit&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;components&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;components라는 옵션부분에 객체 리터럴로 등록을 해주어야 사용이 가능합니다. component의 이름을 Fruit라고 명시해주고, Data도 Fruit라고 하겠습니다. &lt;br /&gt;위의 코드는 다음과 같이 요약할 수 있겠죠? Fruit라는 이름으로 Fruit component를 활용하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Fruit&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;~/components/Fruit&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;components&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;template&amp;gt;&lt;/strong&gt;칸으로 가서 다음과 같이 hello component를 사용하겠다는 의미로, &lt;strong&gt;&amp;lt;hello&amp;gt;&lt;/strong&gt; 태그로 작성하겠습니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:name=&quot;fruit&quot;&lt;/code&gt;속성도 추가하겠습니다. 이 name속성은 &lt;strong&gt;Fruit.vue&lt;/strong&gt;의 props 옵션에 작성되어 있습니다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+...
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;hello&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;v-for=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fruit in fruits&quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;:key=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fruit&quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fruit&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/hello&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;즉, 다음과 같이 정리할 수 있겠습니다. VueJS 파일인 &lt;strong&gt;Component&lt;/strong&gt;를 만들고 &lt;strong&gt;App.vue&lt;/strong&gt;로 가져와서 연결한 후에는 HTML 부분에서 사용할 수 있다는 의미입니다. &lt;br /&gt;설명한 바와 같이, Component를 여러 개 만들어서 그것을 &lt;em&gt;App.vue&lt;/em&gt;또는 &lt;em&gt;Component&lt;/em&gt;끼리 연결하여 웹사이트를 개발할 수 있다는 의미입니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Fruit.vue의 스타일을 지정해주도록 하겠습니다. 여기서 유의해야 할 점이 있습니다. 아래 코드를 보시죠. 다음과 같이 작성하면, &lt;strong&gt;App.vue파일의 h1태그도 변경&lt;/strong&gt;되는 불상사가 일어납니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;scss&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;red&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;important&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그러니, &lt;strong&gt;scoped&lt;/strong&gt;란 속성을 추가해주어야 합니다. 그럼 &lt;strong&gt;Fruit.vue&lt;/strong&gt; 파일내에서만 작동하게 되는거죠. &lt;strong&gt;유효범위&lt;/strong&gt;가 현재 Component이다라고 이해하시면 되겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;scoped&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;scss&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;red&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;important&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
 
       
       
@@ -3395,821 +3655,6 @@ SCSS는 이를 &lt;strong&gt;중첩&lt;/strong&gt;이라는 기능으로 해결�
   &lt;span class=&quot;nl&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Woo Chang Uk</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="frontend" />
-      
-
-      
-        <summary type="html">안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Frontend - JavaScript RegExp</title>
-      <link href="http://localhost:4000/javascript-regexp1" rel="alternate" type="text/html" title="Frontend - JavaScript RegExp" />
-      <published>2022-01-31T11:00:00+09:00</published>
-      <updated>2022-01-31T11:00:00+09:00</updated>
-      <id>http://localhost:4000/javascript-regexp1</id>
-      <content type="html" xml:base="http://localhost:4000/javascript-regexp1">&lt;p&gt;안녕하세요. 성장하는 것을 즐기는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;changuk&lt;/code&gt;이라고 합니다. 현재 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fastcampus&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;frontend&lt;/code&gt; 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;JavaScript 정규표현식에 대해 알아보도록 하겠습니다. &lt;a href=&quot;https://heropy.blog/2018/10/28/regexp/&quot; target=&quot;_blank&quot;&gt;블로그&lt;/a&gt; 내용을 참조했습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;javascript-정규표현식regexp&quot;&gt;JavaScript 정규표현식(RegExp)&lt;/h2&gt;
-
-&lt;p&gt;정규표현식이란 문자열을 검색하고 대체하는 데 사용 가능한 일종의 형식 언어(패턴)입니다. 간단한 문자 검색부터 이메일, 패스워드 검사 등의 복잡한 문자 일치 기능 등을 정규식 패턴으로 빠르게 수행할 수 있습니다.&lt;/p&gt;
-
-&lt;h4 id=&quot;역할&quot;&gt;역할&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;문자 검색 (Search)&lt;/li&gt;
-  &lt;li&gt;문자 대체 (Replace)&lt;/li&gt;
-  &lt;li&gt;문자 추출 (Extract)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;테스트-사이트&quot;&gt;테스트 사이트&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://regex101.com/&quot;&gt;https://regex101.com/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://regexr.com/&quot;&gt;https://regexr.com/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://regexper.com/&quot;&gt;https://regexper.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;정규식-생성-방법&quot;&gt;정규식 생성 방법&lt;/h4&gt;
-
-&lt;p&gt;생성 방법에는 두가지가 있습니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RegExp&lt;/code&gt; 생성자 함수를 호출하여 사용할 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;regexp1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;표현&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// new RegExg(표현식)&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;regexp2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;[a-z]&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;gi&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// new RegExg(표현식, 플래그)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[a-z]&lt;/code&gt;는 a부터 z까지의 영어 소문자를 검색하는 패턴이고, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gi&lt;/code&gt;는 일치하는 모든 내용을 검색하겠다는 g와 대소문자를 구분하지 않겠다는 i를 사용하였습니다.&lt;/p&gt;
-
-&lt;p&gt;정규표현식은 &lt;strong&gt;/&lt;/strong&gt; 로 감싸진 패턴을 리터럴로 사용합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;regexp1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/표현/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// /표현식/&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;regexp2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;a-z&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/gi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// /표현식/플래그&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;그럼 먼저 상수를 만들어서, 정규표현식으로 검색할 문자 데이터를 생성해줍시다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이제 정규표현식을 생성합시다. 먼저 &lt;strong&gt;the&lt;/strong&gt;라는 단어를 한번 찾아보죠. RegExp의 두 번째 인수는 비워두도록 하겠습니다. 결과를 한번 확인해 볼까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// ['the', index: 15, input: '\n010-1234-5678\nthesecon@gmail.com\nhttps://www.omdb…ck brown fox jumps over the lazy dog.\nabbcccdddd\n', groups: undefined]&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 0: &quot;the&quot;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// groups: undefined&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// index: 15&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// input: &quot;\n010-1234-5678\nthesecon@gmail.com\nhttps://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen\nThe quick brown fox jumps over the lazy dog.\nabbcccdddd\n&quot;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// length: 1&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// [[Prototype]]: Array(0)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;출력된 데이터는 배열 데이터 입니다. 인덱스가 0번인 데이터만 확인하면 됩니다. 보면, 정규표현식에 패턴으로 입력한 “the”가 잘 출력되고 있는걸 볼 수 있습니다. 결국 &lt;strong&gt;str&lt;/strong&gt;이라는 input에 입력한 문장에서 the를 찾아 배열 데이터로 만들어주는데, 기본적으로는 제일 처음에 찾은 단어만 배열로 만들어줍니다. 그렇다면 문장 안의 모든 the를 찾아서 배열로 만들려면 어떻게 해야 할까요? 2 번째 인자에 플래그라고도 불리는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;g&lt;/code&gt;값을 넣어주면 됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (2) ['the', 'the']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;하지만 문장을 찾아보면 the 는 3개인데 2개밖에 찾질 못했네요. 이유는 4번째 문장의 The가 대문자이기 때문에 찾지 못한 것인데, 만약 대소문자를 가리지 않고 찾고 싶다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt; 플래그를 추가해주면 됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;gi&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (3) ['the', 'The', 'the']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;리터럴 방식으로 만든 정규표현식도 한번 확인해봅시다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/the/gi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (3) ['the', 'The', 'the']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;javascript-메서드-정규-표현식&quot;&gt;JavaScript 메서드 (정규 표현식)&lt;/h2&gt;
-
-&lt;p&gt;정규표현식을 다루는 다양한 메서드들이 있습니다. 한번 확인해봅시다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;메소드&lt;/th&gt;
-      &lt;th&gt;문법&lt;/th&gt;
-      &lt;th&gt;설명&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;test&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;정규식.test(문자열)&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;일치 여부(Boolean) 확인&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;match&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;문자열.match(정규식)&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;일치하는 문자열의 배열(Array) 반환&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;replace&lt;/td&gt;
-      &lt;td&gt;&lt;strong&gt;문자열.replace(정규식, 대체문자)&lt;/strong&gt;&lt;/td&gt;
-      &lt;td&gt;일치하는 문자열을 대체하고 대체된 문자열(String) 반환&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h4 id=&quot;test&quot;&gt;test&lt;/h4&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/fox/gi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;match&quot;&gt;match&lt;/h4&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/the/gi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (3) ['the', 'The', 'the']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;replace&quot;&gt;replace&lt;/h4&gt;
-
-&lt;p&gt;replace() 메서드에 대해 알아보겠습니다. 원본을 손상시키지는 않습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/fox/gi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;regexp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;AAA&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 010-1234-5678&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// thesecon@gmail.com&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// The quick brown AAA jumps over the lazy dog.&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// abbcccdddd&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 010-1234-5678&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// thesecon@gmail.com&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// The quick brown fox jumps over the lazy dog.&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// abbcccdddd&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;플래그옵션&quot;&gt;플래그(옵션)&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;플래그&lt;/th&gt;
-      &lt;th&gt;설명&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;g&lt;/td&gt;
-      &lt;td&gt;모든 문자 일치(global)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;i&lt;/td&gt;
-      &lt;td&gt;영어 대소문자를 구분 않고 일치 (ignore case)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;m&lt;/td&gt;
-      &lt;td&gt;여러 줄 일치 (multi line)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;만약 표현에 &lt;strong&gt;.&lt;/strong&gt; 값을 입력하고 싶다면 어떻게 해줘야 할까요? 정규표현식에서 &lt;strong&gt;.&lt;/strong&gt;은 특정한 문자를 검색하는 일종의 패턴입니다. 따라서 하나의 명령으로 동작할 수 있다는 것이죠. 명령이 아닌, 일반적인 문자로 해석되게 하려면 어떻게 해줘야 할까요? &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\&lt;/code&gt;&lt;strong&gt;(이스케이프 문자)&lt;/strong&gt;를 사용하면 됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/gi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이번엔 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt;뒤에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$&lt;/code&gt;도 한번 붙여보겠습니다. $는 꼭 . 뒤에 붙여야 합니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;$/gi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// null&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;위 코드의 의미는, $ 앞의 하나의 단어로 해당하는 줄이 끝나는 부분을 찾아서 끝나는 부분을 일치시킨다는 뜻입니다. 그럼 str 상수 내에서 끝나는 부분은 어디일까요? 일단 해당 상수 내에서는 없군요. 그런데 만약 여기에 여려줄에 해당하는 플래그인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;m&lt;/code&gt;을 넣어준다면, 어떻게 될까요? 다음과 같이 찾아서 배열을 생성한 것을 확인할 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\.&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;$/gim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// ['.']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;플래그 &lt;strong&gt;g&lt;/strong&gt;와 &lt;strong&gt;m&lt;/strong&gt;이 헷갈릴 수 있습니다. 전체 영역에서 검색한다는 것은 g
-를 사용하면 되는 것이고, m은 기본적인 문자데이터의 시작, 끝 부분은 하나만 존재하기 때문에 줄마다의 시작 끝 부분을 찾아서 해석하겠다는 의미로 생각해주시면 될 것 같습니다.&lt;/p&gt;
-
-&lt;h2 id=&quot;패턴&quot;&gt;패턴&lt;/h2&gt;
-
-&lt;p&gt;정규표현식 패턴에는 여러가지가 있습니다. 반복해서 살펴보면서 익숙해집시다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;패턴&lt;/th&gt;
-      &lt;th&gt;설명&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;^ab&lt;/td&gt;
-      &lt;td&gt;줄(Line) 시작에 있는 ab와 일치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ab$&lt;/td&gt;
-      &lt;td&gt;줄(Line) 끝에 있는 ab와 일치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;.&lt;/td&gt;
-      &lt;td&gt;임의의 한 문자와 일치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;a|b&lt;/td&gt;
-      &lt;td&gt;a 또는 b와 일치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ab?&lt;/td&gt;
-      &lt;td&gt;b가 없거나 b와 일치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;{3}&lt;/td&gt;
-      &lt;td&gt;3개 연속 일치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;{3, }&lt;/td&gt;
-      &lt;td&gt;3개 이상 연속 일치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;{3, 5}&lt;/td&gt;
-      &lt;td&gt;3개 이상 5개 이하 (3~5개) 연속 일치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;[abc]&lt;/td&gt;
-      &lt;td&gt;a 또는 b 또는 c&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;[a-z]&lt;/td&gt;
-      &lt;td&gt;a부터 z 사이의 문자 구간에 일치 (영어 소문자)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;[A-Z]&lt;/td&gt;
-      &lt;td&gt;A부터 Z 사이의 문자 구간에 일치 (영어 대문자)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;[0-9]&lt;/td&gt;
-      &lt;td&gt;0부터 9 사이의 문자 구간에 일치 (숫자)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;[가-힣]&lt;/td&gt;
-      &lt;td&gt;가부터 힣 사이의 문자 구간에 일치 (한글)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;\w&lt;/td&gt;
-      &lt;td&gt;63개 문자(Word: 대소영문52개 + 숫자10개 + _)에 일치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;\b&lt;/td&gt;
-      &lt;td&gt;63개 문자에 일치하지 않는 문자 경계(Boundary)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;\d&lt;/td&gt;
-      &lt;td&gt;숫자(Digit)에 일치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;\s&lt;/td&gt;
-      &lt;td&gt;공백(Space, Tab 등)에 일치&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;(?=)&lt;/td&gt;
-      &lt;td&gt;앞쪽 일치(Lookahead)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;(?&amp;lt;=)&lt;/td&gt;
-      &lt;td&gt;뒤쪽 일치(Lookbehind)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h4&gt;$&lt;/h4&gt;
-
-&lt;p&gt;코드를 보며 이해해보도록 합시다. 먼저 $를 확인해볼까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/d$/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// null&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;끝 자리가 d와 일치하는 문장을 찾고자 했습니다. 마지막 줄의 d를 인식할 것이라 생각했지만 결과는 null이 나왔네요. 이전의 예제와 같은 맥락으로 이해하면 될 것 같습니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;m&lt;/code&gt; 플래그를 추가해주죠&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/d$/gm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// ['d']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;-1&quot;&gt;^&lt;/h4&gt;
-
-&lt;p&gt;이번에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;^&lt;/code&gt;기호를 한번 확인해봅시다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/^t/gm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// ['t']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;확인되는 문장 맨 앞의 문자 t는 두개나 있는데, 출력은 하나만 되었군요. 대소문자구분 때문에 그런것 같습니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i&lt;/code&gt;플래그를 사용해줍시다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/^t/gim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (2) ['t', 'T']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;-2&quot;&gt;.&lt;/h4&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt;패턴도 한번 알아봅시다.
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;console.log(str.match(/./g))&lt;/code&gt;라는 패턴을 사용하면 str의 모든 문자가 다 출력되는 것을 확인할 수 있습니다.&lt;/p&gt;
-
-&lt;p&gt;만약 http라는 단어를 찾는다고 할 때, .을 포함하여 패턴을 작성하려면 어떻게 해야할까요? 다음과 같이 작성해주면 됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/h..p/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// ['http']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;물론 다음과 같은 패턴을 작성하면 http 말고 h로 시작하고 p로 끝나는 모든 문자들이 다 출력이 되겠군요.&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;-3&quot;&gt;|&lt;/h4&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt;패턴은 찾으려 하는 특정 문자 또는 다른 문자를 찾는 표현입니다. 코드를 보며 알아봅시다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/fox|dog/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (2) ['fox', 'dog']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;-4&quot;&gt;?&lt;/h4&gt;
-
-&lt;p&gt;이번에는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?&lt;/code&gt;패턴에 대해 알아봅시다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/https/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// ['https']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;문자 데이터 마지막 줄을 보면 http…로 시작하는 줄이 있군요. 하지만 정규표현식을 https로 작성해서 출력 결과는 https만 나타나는 것을 볼 수 있습니다. 이때 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?&lt;/code&gt;패턴을 사용하면 효과적입니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/https&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (2) ['https', 'http']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;-5&quot;&gt;{}&lt;/h4&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{}&lt;/code&gt;패턴에 대해 알아봅시다. 예제를 살펴보죠.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;{1}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과:&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// ['d', index: 48, input: '\n010-1234-5678\nthesecon@gmail.com\nhttps://www.omdb…r the lazy dog.\nabbcccdddd\nhttp://localhost:1234\n', groups: undefined]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;{1}을 사용하면 d와 1개가 일치하는 문자 하나가 발견되어 출력된 것을 확인할 수 있습니다. 그럼 2개가 연속하여 일치하는 것을 문자 데이터 전체에서 찾으면 어떻게 될까요? 다음 코드와 같은 결과를 보여줍니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;{2}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과:&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (2) ['dd', 'dd']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;2개 이상 연속된 결과를 찾는다고 한다면 어떻게 될까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;{2,}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과:&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// ['dddd']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;조금 유용한 예제를 한번 살펴봅시다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\w{2,3}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (42) ['010', '123', '567', 'the', 'sec', 'on', 'gma', 'il', 'com', 'htt', 'ps', 'www', 'omd', 'bap', 'com', 'api', 'key', '703', '5c6', '0c', 'fro', 'zen', 'The', 'qui', 'ck', 'bro', 'wn', 'fox', 'jum', 'ps', 'ove', 'the', 'laz', 'dog', 'abb', 'ccc', 'ddd', 'htt', 'loc', 'alh', 'ost', '123']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\w&lt;/code&gt;패턴은 숫자를 포함한 영어 알파벳을 의미합니다. 그러니 그 데이터가 2번 이상, 3번 이하 연속되는 데이터를 전부 다 출력해준다는 의미가 되겠군요.&lt;br /&gt;
-표현식을 좀 더 변형해 보겠습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\b\w{2,3}\b&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// ['010', 'com', 'www', 'com', 'The', 'fox', 'the', 'dog']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\b&lt;/code&gt;는 숫자를 포함한 영어 알파벳이 아닌 특수문자들로 경계를 만들어준다는 의미 입니다.&lt;/p&gt;
-
-&lt;h4 id=&quot;-6&quot;&gt;[]&lt;/h4&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[]&lt;/code&gt;표현은 어떻게 사용할까요?&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;fox&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (14) ['o', 'o', 'o', 'o', 'f', 'o', 'o', 'f', 'o', 'x', 'o', 'o', 'o', 'o']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;f, o, x&lt;/strong&gt;를 모두 찾아 출력된 것을 확인할 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;fox&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (14) ['o', 'o', 'o', 'o', 'f', 'o', 'o', 'f', 'o', 'x', 'o', 'o', 'o', 'o']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;[]에 0-9를 입력하면 숫자가 모두 출력되는 것을 확인할 수 있습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;0-9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (21) ['0', '1', '0', '1', '2', '3', '4', '5', '6', '7', '8', '7', '0', '3', '5', '6', '0', '1', '2', '3', '4']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이전에 배운 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{}&lt;/code&gt;표현과 혼합해서 패턴을 작성해보도록 합시다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;0-9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]{1,}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (6) ['010', '1234', '5678', '7035', '60', '1234']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;문자 데이터 내에 한글도 입력해봅시다. 한글을 찾으려면 []를 다음과 같이 작성해주면 됩니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-동해물과 백두산이 마르고 닳도록
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;가-힣&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;]{1,}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// ['동해물과', '백두산이', '마르고', '닳도록']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;w&quot;&gt;\w&lt;/h4&gt;
-
-&lt;p&gt;63개의 문자를 찾고자 할 때 사용하는 패턴입니다.&lt;/p&gt;
-
-&lt;h4 id=&quot;b&quot;&gt;\b&lt;/h4&gt;
-
-&lt;p&gt;63개 문자가 아닌 경계를 설정하고 할 때 사용하는 패턴입니다. 예제를 보면서 익숙해집시다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\b&lt;/code&gt;로 문자가 아닌 경계를 설정하고 f로 시작하면서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\w&lt;/code&gt;를 사용하여 63개의 문자로 연속되는 단어를 찾아주는 패턴을 작성하였습니다. 출력 결과를 보죠&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-동해물과_백두산이 마르고 닳도록
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\w{1,}\b&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (2) ['frozen', 'fox']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;이번에는 모든 숫자에 일치시키는 패턴을 사용해봅시다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-동해물과_백두산이 마르고 닳도록
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\d&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (21) ['0', '1', '0', '1', '2', '3', '4', '5', '6', '7', '8', '7', '0', '3', '5', '6', '0', '1', '2', '3', '4']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;숫자가 연속해서 일치하는 패턴도 사용해 봅시다. 숫자 덩어리들만 출력되는군요.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-동해물과_백두산이 마르고 닳도록
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\d{1,}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (6) ['010', '1234', '5678', '7035', '60', '1234']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;s&quot;&gt;\s&lt;/h4&gt;
-
-&lt;p&gt;모든 공백문자를 출력해주는 패턴 입니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-http://localhost:1234
-동해물과_백두산이 마르고 닳도록
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\s&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// (18) ['\n', '\n', '\n', '\n', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '\n', '\n', '\n', ' ', ' ', '\n']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;새롭게 문자열을 만들어서 정규표현식을 사용해보고, replace() 메서드를 사용하여 모든 공백문자를 없애주도록 하겠습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`  the hello  world       !
-
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\s&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// thehelloworld!&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;앞쪽-일치lookahead&quot;&gt;앞쪽 일치(Lookahead)&lt;/h4&gt;
-
-&lt;p&gt;앞쪽 일치에 대해 알아보겠습니다. 이메일 주소의 &lt;strong&gt;@&lt;/strong&gt;앞쪽 사용자 ID를 일치시키고자 하는데요, 예제를 한번 살펴보죠.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/.&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;{1,}(?=&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// ['thesecon']&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;뒤쪽-일치lookbehind&quot;&gt;뒤쪽 일치(Lookbehind)&lt;/h4&gt;
-
-&lt;p&gt;뒤쪽 일치에 대해 알아보겠습니다. 뒤쪽 일치이기 떄문에, 패턴도 뒤쪽에 작성해야 합니다. 예제를 봅시다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;`
-010-1234-5678
-thesecon@gmail.com
-https://www.omdbapi.com/?apikey=7035c60c&amp;amp;s=frozen
-The quick brown fox jumps over the lazy dog.
-abbcccdddd
-`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;(?&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;=@&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;{1,}&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// ['gmail.com']&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
 
       

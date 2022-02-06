@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/tag/frontend/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-02-06T02:55:37+09:00</updated>
+  <updated>2022-02-07T00:00:03+09:00</updated>
   <id>http://localhost:4000/tag/frontend/feed.xml</id>
 
   
@@ -32,6 +32,103 @@
 
   
     <entry>
+      <title type="html">Vue-Grammar</title>
+      <link href="http://localhost:4000/vuejs-grammar" rel="alternate" type="text/html" title="Vue-Grammar" />
+      <published>2022-02-06T09:00:00+09:00</published>
+      <updated>2022-02-06T09:00:00+09:00</updated>
+      <id>http://localhost:4000/vuejs-grammar</id>
+      <content type="html" xml:base="http://localhost:4000/vuejs-grammar">&lt;p&gt;안녕하세요. 성장하는 것을 즐기는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;changuk&lt;/code&gt;이라고 합니다. 현재 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fastcampus&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;frontend&lt;/code&gt; 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이번시간부터는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VueJS&lt;/code&gt;의 문법에 대해 구체적으로 알아보겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;어플리케이션--컴포넌트-인스턴스&quot;&gt;어플리케이션 &amp;amp; 컴포넌트 인스턴스&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://v3.ko.vuejs.org/guide/instance.html#%E1%84%8B%E1%85%A5%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8F%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB-%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5%E1%86%AB%E1%84%89%E1%85%B3-%E1%84%89%E1%85%A2%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5&quot; target=&quot;_blank&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;어플리케이션 &amp;amp; 컴포넌트 인스턴스&lt;/code&gt;&lt;/a&gt;를 참조하시면 되겠습니다.&lt;/p&gt;
+
+&lt;p&gt;모든 Vue 어플리케이션은 createApp 함수를 사용하여 새로운 어플리케이션 인스턴스를 생성하여 시작합니다. 아래 코드로 설명하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* options */&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;위의 코드에서 새로운 어플리케이션 인스턴스가 생성이 되는데, 그 인스턴스를 상수 app에 할당하여 시작할 수 있다는 의미입니다. 그 후에 우리는 app에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mount&lt;/code&gt; 메소드를 입력할 수 있겠고, 만약 html에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;div id=&quot;app&quot;&amp;gt;&lt;/code&gt;으로 선언되어 있다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#app&lt;/code&gt;을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mount&lt;/code&gt;에 전달하면 됩니다. &lt;br /&gt;
+그리고 어플리케이션 인스턴스에 의해 노출된 대부분의 메소드들은 동일한 인스턴스를 반환하여 연결(Chaining)을 허용합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({})&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;SearchInput&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SearchInputComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;directive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;FocusDirective&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;LocalePlugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;최상위root-컴포넌트&quot;&gt;최상위(Root) 컴포넌트&lt;/h4&gt;
+&lt;p&gt;최상위(Root) 컴포넌트에 대한 내용도 설명하겠습니다. createApp에 전달된 옵션은 루트 컴포넌트를 구성하는데 사용됩니다. 이 컴포넌트는 한 프로젝트를 시작할 때, 렌더링의 시작점으로 사용됩니다. 최상위 컴포넌트는 이전 포스트에서 만들었던 &lt;strong&gt;App.vue&lt;/strong&gt;라고 이해하시면 되겠습니다. &lt;br /&gt;우리는 &lt;strong&gt;App.vue&lt;/strong&gt;를 시작하는 컴포넌트로서 사용하고, 이 컴포넌트에 여러가지 새로운 컴포넌트들을 추가적으로 연결해서 사용할 수 있습니다.
+예를 들어, &lt;strong&gt;App.vue&lt;/strong&gt;를 &amp;lt;div id=&quot;app&quot;&amp;gt;&amp;lt;/div&amp;gt;에 &lt;strong&gt;mount&lt;/strong&gt;하려면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#app&lt;/code&gt;을 전달해야 합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;RootComponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* options */&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RootComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;vm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#app&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;컴포넌트-인스턴스-속성들&quot;&gt;컴포넌트 인스턴스 속성들&lt;/h4&gt;
+
+&lt;p&gt;다른 VueJS파일에서 특정 VueJS파일의 데이터를 확인하려면 어떻게 할 수 있을까요? 아래 예시에서 그것을 간략하게 구현한 내용을 확인해보겠습니다. 나중에 필요할 때가 있다면 사용할 수 있을 것입니다.&lt;/p&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Vue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;vm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#app&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;vm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// =&amp;gt; 4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;라이프사이클-훅&quot;&gt;라이프사이클 훅&lt;/h2&gt;
+
+&lt;p&gt;각 컴포넌트는 생성될 때 일련의 초기화 단계를 거칩니다. 예를 들어,&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;정의한 데이터의 관찰&lt;/strong&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&amp;lt;template&amp;gt;태그의 여러가지 내용들을 변환하는 과정(Template Compile)&lt;/strong&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;그 내용들을 실제 HTML에 연결하는 과정(DOM Mount)&lt;/strong&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;데이터 변경&lt;/strong&gt; 
+이 발생할 때에 화면을 갱신해주어야 합니다. 이 과정에서 라이프사이클 훅이라 불리는 함수도 실행하여, 사용자가 특정 단계에서&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Woo Chang Uk</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="frontend" />
+      
+        <category term="vue" />
+      
+
+      
+        <summary type="html">안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Frontend - VueJS Start</title>
       <link href="http://localhost:4000/vuejs-start" rel="alternate" type="text/html" title="Frontend - VueJS Start" />
       <published>2022-02-03T09:00:00+09:00</published>
@@ -46,14 +143,27 @@
 &lt;h2 id=&quot;contents&quot;&gt;Contents&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#vuejs-시작하기&quot;&gt;VueJS 시작하기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#vuejs-시작하기&quot;&gt;&lt;strong&gt;VueJS 시작하기&lt;/strong&gt;&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#vue-cli&quot;&gt;&lt;strong&gt;Vue-CLI&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#vue3-webpack-template&quot;&gt;&lt;strong&gt;Vue3 Webpack Template&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#eslint&quot;&gt;&lt;strong&gt;ESLint&lt;/strong&gt;&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#eslint-rules-settings&quot;&gt;&lt;strong&gt;ESLint rules Settings&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#eslint-%EC%9E%90%EB%8F%99%EC%88%98%EC%A0%95&quot;&gt;&lt;strong&gt;ESLint 자동수정&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#프로젝트-버전-맞추기&quot;&gt;&lt;strong&gt;프로젝트 버전 맞추기&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#%EC%A1%B0%EA%B1%B4%EB%AC%B8--%EB%B0%98%EB%B3%B5%EB%AC%B8&quot;&gt;&lt;strong&gt;조건문 &amp;amp; 반복문&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;vuejs-시작하기&quot;&gt;VueJS 시작하기&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://kr.vuejs.org/v2/guide/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;VueJS&lt;/strong&gt;&lt;/a&gt;는 한글 가이드를 제공하고 있습니다.
+&lt;p&gt;&lt;a href=&quot;https://v3.ko.vuejs.org/guide/instance.html&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;VueJS&lt;/strong&gt;&lt;/a&gt;는 한글 가이드를 제공하고 있습니다.
 &lt;br /&gt;
 VueJS 설치는, CDN으로 가져오는 방식과 npm프로젝트에 설치하는 방식 두가지로 나뉩니다. CDN방식은 한글 가이드를 따라서 해봤는데… 잘 안되더라고요. 그래서 아래 링크를 사용해주시면 되겠습니다. 저는 codepen.io를 사용했습니다.&lt;/p&gt;
 
@@ -175,10 +285,10 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hello Vue!!!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Hello Vue!!!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -188,12 +298,12 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 
 &lt;p&gt;main.js에서 App.vue라는 파일이 Vue 프로젝트의 시작이 되도록 설정하겠습니다. &lt;strong&gt;App.vue&lt;/strong&gt;에서 작성한 내용들은, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export default&lt;/code&gt;를 통해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;createApp()&lt;/code&gt;함수의 인자로 전달되었습니다. 또한 CSS 선택자를 이용하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mount()&lt;/code&gt;함수를 사용해줄 수 있습니다.&lt;/p&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;vue&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;vue&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// import App from &quot;./App.vue&quot;;&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// 이렇게확장자가 명시되어 있지 않으면 오류남.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./App&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./App&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// -&amp;gt; webpack을 통해 개선해줄 수 있다&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;#app&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;createApp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;#app&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;편의를 위한 설정을 추가하겠습니다. App.vue, main.js 와 같이, 확장자를 계속 추가해가며 import를 하게되면 여간 귀찮은 일이 아닙니다. 따라서 &lt;strong&gt;webpack.config.js&lt;/strong&gt;파일을 다음과 같이 설정해주도록 하겠습니다.&lt;/p&gt;
@@ -261,17 +371,17 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;~/components/HelloWorld&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;~/components/HelloWorld&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;components&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;HelloWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hello Vue!!!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Hello Vue!!!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -297,15 +407,15 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// &quot;plugin:vue/vue3-essential&quot;, // Lv1&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;plugin:vue/vue3-strongly-recommended&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Lv2&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;plugin:vue/vue3-strongly-recommended&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Lv2&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// &quot;plugin:vue/vue3-recommended&quot;, // Lv3&lt;/span&gt;
-    &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;eslint:recommended&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;eslint:recommended&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;parserOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;babel-eslint&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;babel-eslint&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;rules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;env&lt;/strong&gt; 옵션은 브라우저, Node에서 동작하는 모든 전역 개념을 코드검사를 할 것인지 설정하는 부분입니다. 그리고 &lt;strong&gt;extends&lt;/strong&gt; 옵션에는 vue 코드 규칙과 js 코드 규칙을 명시해 줍니다. &lt;br /&gt;vue의 코드규칙은, 플러그인으로 설치한 eslint-plugin-vue의 코드규칙 3가지 중 2번째 단계의 규칙을 사용하겠습니다. &lt;br /&gt;
@@ -319,7 +429,7 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 
 &lt;hr /&gt;
 
-&lt;h6 id=&quot;eslint-rules-settings&quot;&gt;ESlint rules Settings&lt;/h6&gt;
+&lt;h6 id=&quot;eslint-rules-settings&quot;&gt;ESLint rules Settings&lt;/h6&gt;
 
 &lt;p&gt;만약, ESlint의 규칙이 맘에 들지 않는다면, 수정해서 사용할 수 있습니다. 어떻게 할 수 있을까요? 이전에 방문했던 &lt;a href=&quot;https://eslint.org/docs/rules/&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;eslint rules&lt;/strong&gt;&lt;/a&gt;를 다시 방문해봅시다. &lt;br /&gt;
 예시로 검색에 &lt;strong&gt;html-closing-bracket-newline&lt;/strong&gt;을 입력해보겠습니다. 닫히는 꺽쇠괄호를 붙여줄 것인지, 아닌지에 대한 옵션인 것 같네요. 아래로 보다 보면 &lt;strong&gt;Options&lt;/strong&gt;가 나타나게 됩니다.&lt;br /&gt;
@@ -337,7 +447,7 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 
 &lt;hr /&gt;
 
-&lt;h6 id=&quot;eslint-자동수정&quot;&gt;ESlint 자동수정&lt;/h6&gt;
+&lt;h6 id=&quot;eslint-자동수정&quot;&gt;ESLint 자동수정&lt;/h6&gt;
 
 &lt;p&gt;우리가 설정해 준 ESlint문법을 파일이 지키고 있지 않다면, 자동으로 변경해서 저장해주는 설정을 해주겠습니다.
 &lt;br /&gt;
@@ -352,7 +462,155 @@ VSC의 Settings로 들어가서 Open Settings(JSON)을 찾아서 클릭하겠습
 
 &lt;hr /&gt;
 
-&lt;h2 id=&quot;프로젝트-버전-맞추기&quot;&gt;프로젝트 버전 맞추기&lt;/h2&gt;</content>
+&lt;h2 id=&quot;프로젝트-버전-맞추기&quot;&gt;프로젝트 버전 맞추기&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ParkYoungWoong?tab=repositories&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Download from Here&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;조건문--반복문&quot;&gt;조건문 &amp;amp; 반복문&lt;/h2&gt;
+
+&lt;p&gt;본격적인 VueJS의 문법을 배우기 이전에, 기본적인 기능을 한번 살펴보도록 하겠습니다. 클릭해서 숫자가 올라가는 template을 작성해보았습니다. 만약, 4이상이면 &lt;strong&gt;4보다 크다&lt;/strong&gt;라는 문자열이 출력되려면 어떤 방식으로 VueJS 파일을 작성하면 될까요? 다음 코드를 보며 이해하시면 되겠습니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v-if&lt;/code&gt;라는 디렉티브(Directive)를 사용해주면 됩니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;click=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;increase&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    8
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-if=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;count &amp;gt; 4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;4보다 큽니다!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;반복되는 데이터를 이용하려면 반복문을 처리하는 문법이 필요합니다. VueJS에서 반복문은 어떻게 사용할까요? &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v-for&lt;/code&gt; 디렉티브를 사용합니다.
+새로운 데이터를 배열로 만들어봅시다. 데이터를 반복할 때는 각각의 데이터가 고유한지를 증명하기 위해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:key&lt;/code&gt;를 제공해주어야 합니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;click=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;increase&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    8
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-if=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;count &amp;gt; 4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;4보다 큽니다!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-for=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fruit in fruits&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;:key=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fruit&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;fruits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Apple&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Banana&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Cherry&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;increase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;scss&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;royalblue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;다음과 같이 스타일 속성은 SCSS로 해석해달라는 내용을 추가하였고,브라우저에는 배열 순서대로 출력되는 것을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이번에는 별개의 Component를 사용해서 배열 데이터를 출력해보도록 하죠. component폴더 안에 &lt;strong&gt;Fruit.vue&lt;/strong&gt;파일을 만들도록 하겠습니다. 그리고 다음과 같이 작성해주겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;props&lt;/strong&gt;라는 옵션을 설정해주겠습니다. props는 객체 데이터이고, 내부에는 name이라는 String 데이터를 받도록 하였습니다. props는 default value를 제공하여야 하기 때문에, 위와 같이 작성하였습니다.
+작성한 파일을 &lt;strong&gt;App.vue&lt;/strong&gt;에서 사용할 수 있게끔, 가져오도록 하죠.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Fruit&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;~/components/Fruit&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;components&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;components라는 옵션부분에 객체 리터럴로 등록을 해주어야 사용이 가능합니다. component의 이름을 Fruit라고 명시해주고, Data도 Fruit라고 하겠습니다. &lt;br /&gt;위의 코드는 다음과 같이 요약할 수 있겠죠? Fruit라는 이름으로 Fruit component를 활용하겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Fruit&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;~/components/Fruit&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;components&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;Fruit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;template&amp;gt;&lt;/strong&gt;칸으로 가서 다음과 같이 hello component를 사용하겠다는 의미로, &lt;strong&gt;&amp;lt;hello&amp;gt;&lt;/strong&gt; 태그로 작성하겠습니다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:name=&quot;fruit&quot;&lt;/code&gt;속성도 추가하겠습니다. 이 name속성은 &lt;strong&gt;Fruit.vue&lt;/strong&gt;의 props 옵션에 작성되어 있습니다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+...
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;hello&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;v-for=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fruit in fruits&quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;:key=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fruit&quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fruit&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/hello&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;즉, 다음과 같이 정리할 수 있겠습니다. VueJS 파일인 &lt;strong&gt;Component&lt;/strong&gt;를 만들고 &lt;strong&gt;App.vue&lt;/strong&gt;로 가져와서 연결한 후에는 HTML 부분에서 사용할 수 있다는 의미입니다. &lt;br /&gt;설명한 바와 같이, Component를 여러 개 만들어서 그것을 &lt;em&gt;App.vue&lt;/em&gt;또는 &lt;em&gt;Component&lt;/em&gt;끼리 연결하여 웹사이트를 개발할 수 있다는 의미입니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Fruit.vue의 스타일을 지정해주도록 하겠습니다. 여기서 유의해야 할 점이 있습니다. 아래 코드를 보시죠. 다음과 같이 작성하면, &lt;strong&gt;App.vue파일의 h1태그도 변경&lt;/strong&gt;되는 불상사가 일어납니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;scss&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;red&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;important&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;그러니, &lt;strong&gt;scoped&lt;/strong&gt;란 속성을 추가해주어야 합니다. 그럼 &lt;strong&gt;Fruit.vue&lt;/strong&gt; 파일내에서만 작동하게 되는거죠. &lt;strong&gt;유효범위&lt;/strong&gt;가 현재 Component이다라고 이해하시면 되겠습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-vue highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;style&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;scoped&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;scss&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;h1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;red&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;important&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
 
       
       
@@ -4090,341 +4348,6 @@ user의 emails 데이터는 배열 데이터이고, 배열 데이터도 참조�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;이제 email의 주소를 공유하고 있지 않습니다. 깊은 복사가 잘 작동하는군요.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Woo Chang Uk</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="frontend" />
-      
-
-      
-        <summary type="html">안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Frontend - JavaScript Immutability</title>
-      <link href="http://localhost:4000/javascript-levelup6" rel="alternate" type="text/html" title="Frontend - JavaScript Immutability" />
-      <published>2022-01-31T09:00:00+09:00</published>
-      <updated>2022-01-31T09:00:00+09:00</updated>
-      <id>http://localhost:4000/javascript-levelup6</id>
-      <content type="html" xml:base="http://localhost:4000/javascript-levelup6">&lt;p&gt;안녕하세요. 성장하는 것을 즐기는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;changuk&lt;/code&gt;이라고 합니다. 현재 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fastcampus&lt;/code&gt;에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;frontend&lt;/code&gt; 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;데이터 불변성(Immutability)에 대해 알아보도록 하겠습니다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;데이터-불변성immutability&quot;&gt;데이터 불변성(Immutability)&lt;/h2&gt;
-
-&lt;p&gt;JavaScript 데이터형은 크게 두가지로 나눌 수 있습니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;데이터 Type&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;원시 데이터&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;참조형 데이터&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;String&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Number&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Boolean&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;undefined&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;null&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Object&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Array&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Function&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;O&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;strong&gt;원시 데이터&lt;/strong&gt;는 JavaScript에서 사용할 수 있는 &lt;strong&gt;기본데이터&lt;/strong&gt;를 의미하고 &lt;strong&gt;참조형 데이터&lt;/strong&gt;는 ?&lt;/p&gt;
-
-&lt;p&gt;코드를 보며 이해해보겠습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 1 4 false&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 1 1 true&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 7 1 false&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 1 1 true&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;먼저 a와 b가 각각 변수 1, 4로 할당되었습니다.
-그 후에, a와 b가 일치하는지 비교하고 있습니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;4번 메모리&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1(a)&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4(b)&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;결과는 당연히 &lt;strong&gt;false&lt;/strong&gt;가 나오네요. a, b값이 서로 다르니까요. 하지만 정확하게는 &lt;strong&gt;각각의 변수가 가리키는 주소가 서로 다르기 때문에 일치하지 않는다고 판단&lt;/strong&gt;하는 것입니다.&lt;/p&gt;
-
-&lt;p&gt;이제 변수 b에 a를 할당해줍니다. 이는 a가 가리키고 있던 변수의 주소를 b에게 할당해 준다는 의미가 됩니다. 일치연산자로 비교해보면 &lt;strong&gt;true&lt;/strong&gt;값을 출력해줍니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;4번 메모리&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1(a, b)&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;변수 a에 새로운 값 7을 할당해주었습니다. 새로운 값이기 때문에 새 메모리에 7이 저장이 되겠군요. 이젠 a,b가 바라보는 메모리의 위치가 서로 다르기 때문에 일치연산자로 비교해보면 &lt;strong&gt;false&lt;/strong&gt;값을 출력해줍니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;4번 메모리&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1(b)&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7(a)&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;이번에는 새로운 변수 c를 선언하고 1을 할당해주도록 하겠습니다. 과연 b와 비교하면 어떤 결과가 나타날까요? 일치연산자로 비교해보면 &lt;strong&gt;true&lt;/strong&gt;값을 출력해줍니다. 변수 c에 할당해준 1은 4번째 메모리에 들어가는 것이 아닌, 이미 메모리에 있는 1을 가리키게 됩니다. 이를 JavaScript 데이터의 &lt;strong&gt;불변성&lt;/strong&gt;이라고 이야기 합니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;4번 메모리&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1(b, c)&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;7(a)&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;왜 불변성을 배워야 하는 것일까요?? 이유는 참조형 데이터를 온전히 이해하기 위해서 입니다. 원시데이터들은 기본적으로 불변성을 가지고 있기 때문에 쉽게 사용할 수 있지만 &lt;strong&gt;참조형 데이터는 그렇지 않습니다&lt;/strong&gt;. 참조형 데이터들은 어떻게 메모리를 참조해서 사용하는지에 대한 개념을 알아봅시다.
-먼저 코드를 보죠. 객체 데이터를 통해 참조형 데이터를 이해해 보겠습니다.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 출력 결과 :&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// {k: 1} {k: 1} false&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// {k: 7} {k: 7} true&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// {k: 2} {k: 2} true&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// {k: 2} {k: 2} {k: 2} true&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// {k: 9} {k: 9} {k: 9} true&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;변수 a, b를 동일한 값을 갖는 객체 데이터로 선언했습니다. 그렇지만 비교연산자로 비교해보니 같지 않다고 나오네요. 결국 각각의 변수가 다른 메모리를 가리키고 있다는 내용을 알 수 있습니다. 이와 같이 &lt;strong&gt;참조형 데이터는 원시데이터와는 달리 새로운 값을 만들 때 마다 새로운 메모리 주소에 할당되는 구조&lt;/strong&gt;를 갖고 있습니다. 따라서 참조형 데이터는 불변성이 없습니다. 일치연산자로 비교해본 결과 &lt;strong&gt;false&lt;/strong&gt;가 출력됩니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;4번 메모리&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;a = {k:1}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;b = {k:1}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;이제 a 객체의 k 속성의 값을 7로 할당하고, b 객체가 a객체의 주소를 할당해줍니다. 일치연산자로 비교해본 결과, &lt;strong&gt;true&lt;/strong&gt;가 출력되네요.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;4번 메모리&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;a, b = {k:7}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;여기서 참조형 데이터를 주의해서 사용해야하는 이유가 나옵니다. 객체 a의 k 속성 값을 2로 할당해주었고 다시 일치연산자로 a,b를 비교한 결과 &lt;strong&gt;true&lt;/strong&gt;가 출력되는 것을 알 수 있습니다. 앞서 말씀드린대로, b 객체는 a 객체의 주소를 보고 있어서 a 객체가 바뀐다면 b 객체도 동일하게 바뀌게 됩니다. a만 바꾸길 원했지만 결과적으로 b도 바뀌게 되었군요.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;4번 메모리&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;a, b = {k:2}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;이제 c 변수에 b를 할당하고 있습니다. 일치연산자로 a 와 c를 비교해보니 &lt;strong&gt;true&lt;/strong&gt;가 출력되었습니다. b 객체가 1번 메모리주소를 가지고 있기 때문에 c도 동일하게 1번 메모리주소를 갖게 되고, 이는 a 객체와 같은 값을 갖게 만듭니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;4번 메모리&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;a, b, c = {k:2}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;객체 a의 k 속성값을 9로 바꾸고 일치연산자로 a, c를 비교했습니다. 결과는 이미 다 아시다시피 &lt;strong&gt;false&lt;/strong&gt;가 나왔습니다.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;1번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;3번 메모리&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;4번 메모리&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;a, b, c = {k:9}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;{}&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;따라서 할당연산자를 통해 참조형 데이터를 사용하는 게 아닌, 값을 복사하는 개념으로 사용해야 합니다. 이는 &lt;strong&gt;얕은 복사&lt;/strong&gt;, &lt;strong&gt;깊은 복사&lt;/strong&gt;로 나뉘어지게 되는데 다음 포스트에서 다루겠습니다.&lt;/p&gt;</content>
 
       
       

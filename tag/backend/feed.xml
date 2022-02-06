@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="http://localhost:4000/tag/backend/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-02-06T02:55:37+09:00</updated>
+  <updated>2022-02-07T00:00:03+09:00</updated>
   <id>http://localhost:4000/tag/backend/feed.xml</id>
 
   
@@ -32,8 +32,8 @@
 
   
     <entry>
-      <title type="html">Hoisting, Scope, Closure, Function</title>
-      <link href="http://localhost:4000/backend-js-basic2" rel="alternate" type="text/html" title="Hoisting, Scope, Closure, Function" />
+      <title type="html">JavaScript - Hoisting, Scope, Closure, Function</title>
+      <link href="http://localhost:4000/backend-js-basic2" rel="alternate" type="text/html" title="JavaScript - Hoisting, Scope, Closure, Function" />
       <published>2022-02-05T10:00:00+09:00</published>
       <updated>2022-02-05T10:00:00+09:00</updated>
       <id>http://localhost:4000/backend-js-basic2</id>
@@ -41,7 +41,7 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;이번시간에는 자주 들어봤지만, 매번 헷갈리는 개념들인 Scope, Hoisting, Closure, Function 등에 대해서 짚고 넘어가고자 합니다.
+&lt;p&gt;이번시간에는 자주 들어봤지만, 매번 헷갈리는 개념들인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Scope, Hoisting, Closure, Function&lt;/code&gt; 등에 대해서 짚고 넘어가고자 합니다.
 JavaScript의 경우 변수간의 참조관계가 굉장히 복잡해지기 쉬우므로, 위의 개념들을 정확하게 숙지하는 것이 필요합니다.&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -177,6 +177,8 @@ JavaScript의 경우 변수간의 참조관계가 굉장히 복잡해지기 쉬�
 
       
         <category term="backend" />
+      
+        <category term="javascript" />
       
 
       
@@ -422,7 +424,7 @@ Formatter는 띄어쓰기나 들여쓰기가 잘 되어 있는지, 비주얼적�
 &lt;p&gt;그리고 Airbnb에서 제공하는 &lt;a href=&quot;https://github.com/airbnb/javascript&quot; target=&quot;_blank&quot;&gt;&lt;strong&gt;JavaScript Style Guide&lt;/strong&gt;&lt;/a&gt;를 설치하도록 하겠습니다. JavaScript 개발에 가장 합리적인 접근이라고 하네요. 또 이 플러그인을 연결해줄 수 있도록 새로운 패키지도 설치하겠습니다.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;npm i -D eslint-airbnb-base eslint-plugin-import&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;npm i -D eslint-config-airbnb-base eslint-plugin-import&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;hr /&gt;
@@ -472,8 +474,8 @@ Formatter는 띄어쓰기나 들여쓰기가 잘 되어 있는지, 비주얼적�
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;// 이 순서대로 작성해 주어야 한다.&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;airbnb-base&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;plugin:node/recommended&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;prettier&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;extends&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;airbnb-base&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;plugin:node/recommended&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;prettier&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;마지막으로 &lt;strong&gt;jsconfig.json&lt;/strong&gt;파일을 생성하고 다음 내용을 기입하여 설정을 마무리 해주도록 하겠습니다. 엄격한 컴파일 옵션을 설정해주고, src 밑의 모든 파일들을 확인해주겠다는 의미로 이해하시면 될 것 같습니다.&lt;/p&gt;

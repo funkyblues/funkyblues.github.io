@@ -101,7 +101,7 @@
     <meta property="og:site_name" content="Collection of studies" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Frontend - VueJS Start" />
-    <meta property="og:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번시간부터는 VueJS에 대해 알아보겠습니다. Contents VueJS 시작하기 VueJS 시작하기 VueJS는 한글 가이드를 제공하고 있습니다. VueJS 설치는, CDN으로 가져오는 방식과" />
+    <meta property="og:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번시간부터는 VueJS에 대해 알아보겠습니다. Contents VueJS 시작하기 Vue-CLI Vue3 Webpack Template ESLint ESLint rules Settings ESLint 자동수정 프로젝트 버전" />
     <meta property="og:url" content="http://localhost:4000/vuejs-start" />
     <meta property="og:image" content="http://localhost:4000/assets/built/images/vuejs.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -111,7 +111,7 @@
     <meta property="article:tag" content="Frontend" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Frontend - VueJS Start" />
-    <meta name="twitter:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번시간부터는 VueJS에 대해 알아보겠습니다. Contents VueJS 시작하기 VueJS 시작하기 VueJS는 한글 가이드를 제공하고 있습니다. VueJS 설치는, CDN으로 가져오는 방식과" />
+    <meta name="twitter:description" content="안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번시간부터는 VueJS에 대해 알아보겠습니다. Contents VueJS 시작하기 Vue-CLI Vue3 Webpack Template ESLint ESLint rules Settings ESLint 자동수정 프로젝트 버전" />
     <meta name="twitter:url" content="http://localhost:4000/" />
     <meta name="twitter:image" content="http://localhost:4000/assets/built/images/vuejs.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -143,7 +143,7 @@
         "@type": "WebPage",
         "@id": "http://localhost:4000/vuejs-start"
     },
-    "description": "안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번시간부터는 VueJS에 대해 알아보겠습니다. Contents VueJS 시작하기 VueJS 시작하기 VueJS는 한글 가이드를 제공하고 있습니다. VueJS 설치는, CDN으로 가져오는 방식과"
+    "description": "안녕하세요. 성장하는 것을 즐기는 changuk이라고 합니다. 현재 fastcampus에서 frontend 개발을 공부하고 있습니다. 강의를 들으면서 해온 것들을 작성하여 지식을 공유하고 또 제가 잊었을 때 다시 와서 볼 수 있도록 내용들을 정리하려고 합니다. 이번시간부터는 VueJS에 대해 알아보겠습니다. Contents VueJS 시작하기 Vue-CLI Vue3 Webpack Template ESLint ESLint rules Settings ESLint 자동수정 프로젝트 버전"
 }
     </script>
 
@@ -190,6 +190,10 @@ into the {body} of the default.hbs template -->
   <li class="nav-frontend" role="menuitem">
     <a href="/tag/frontend/">Frontend</a>
   </li>
+  <li class="nav-vue" role="menuitem">
+    <a href="/tag/vue/">Vue</a>
+  </li>
+
   <li class="nav-backend" role="menuitem">
     <a href="/tag/backend/">backend</a>
   </li>
@@ -259,14 +263,27 @@ into the {body} of the default.hbs template -->
 <h2 id="contents">Contents</h2>
 
 <ul>
-  <li><a href="#vuejs-시작하기">VueJS 시작하기</a></li>
+  <li><a href="#vuejs-시작하기"><strong>VueJS 시작하기</strong></a>
+    <ul>
+      <li><a href="#vue-cli"><strong>Vue-CLI</strong></a></li>
+      <li><a href="#vue3-webpack-template"><strong>Vue3 Webpack Template</strong></a></li>
+      <li><a href="#eslint"><strong>ESLint</strong></a>
+        <ul>
+          <li><a href="#eslint-rules-settings"><strong>ESLint rules Settings</strong></a></li>
+          <li><a href="#eslint-%EC%9E%90%EB%8F%99%EC%88%98%EC%A0%95"><strong>ESLint 자동수정</strong></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#프로젝트-버전-맞추기"><strong>프로젝트 버전 맞추기</strong></a></li>
+  <li><a href="#%EC%A1%B0%EA%B1%B4%EB%AC%B8--%EB%B0%98%EB%B3%B5%EB%AC%B8"><strong>조건문 &amp; 반복문</strong></a></li>
 </ul>
 
 <hr />
 
 <h2 id="vuejs-시작하기">VueJS 시작하기</h2>
 
-<p><a href="https://kr.vuejs.org/v2/guide/" target="_blank"><strong>VueJS</strong></a>는 한글 가이드를 제공하고 있습니다.
+<p><a href="https://v3.ko.vuejs.org/guide/instance.html" target="_blank"><strong>VueJS</strong></a>는 한글 가이드를 제공하고 있습니다.
 <br />
 VueJS 설치는, CDN으로 가져오는 방식과 npm프로젝트에 설치하는 방식 두가지로 나뉩니다. CDN방식은 한글 가이드를 따라서 해봤는데… 잘 안되더라고요. 그래서 아래 링크를 사용해주시면 되겠습니다. 저는 codepen.io를 사용했습니다.</p>
 
@@ -388,10 +405,10 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 <span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
   <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">{</span>
-      <span class="na">message</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hello Vue!!!</span><span class="dl">"</span><span class="p">,</span>
-    <span class="p">};</span>
+      <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Hello Vue!!!</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">}</span>
   <span class="p">},</span>
-<span class="p">};</span>
+<span class="p">}</span>
 <span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 
@@ -401,12 +418,12 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 
 <p>main.js에서 App.vue라는 파일이 Vue 프로젝트의 시작이 되도록 설정하겠습니다. <strong>App.vue</strong>에서 작성한 내용들은, <code class="language-plaintext highlighter-rouge">export default</code>를 통해 <code class="language-plaintext highlighter-rouge">createApp()</code>함수의 인자로 전달되었습니다. 또한 CSS 선택자를 이용하여 <code class="language-plaintext highlighter-rouge">mount()</code>함수를 사용해줄 수 있습니다.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">createApp</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">vue</span><span class="dl">"</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">createApp</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">vue</span><span class="dl">'</span>
 <span class="c1">// import App from "./App.vue";</span>
 <span class="c1">// 이렇게확장자가 명시되어 있지 않으면 오류남.</span>
-<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">./App</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./App</span><span class="dl">'</span>
 <span class="c1">// -&gt; webpack을 통해 개선해줄 수 있다</span>
-<span class="nx">createApp</span><span class="p">(</span><span class="nx">App</span><span class="p">).</span><span class="nx">mount</span><span class="p">(</span><span class="dl">"</span><span class="s2">#app</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">createApp</span><span class="p">(</span><span class="nx">App</span><span class="p">).</span><span class="nx">mount</span><span class="p">(</span><span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>편의를 위한 설정을 추가하겠습니다. App.vue, main.js 와 같이, 확장자를 계속 추가해가며 import를 하게되면 여간 귀찮은 일이 아닙니다. 따라서 <strong>webpack.config.js</strong>파일을 다음과 같이 설정해주도록 하겠습니다.</p>
@@ -474,17 +491,17 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 <span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
 
 <span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
-<span class="k">import</span> <span class="nx">HelloWorld</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">~/components/HelloWorld</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">HelloWorld</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">~/components/HelloWorld</span><span class="dl">'</span>
 <span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
   <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
     <span class="nx">HelloWorld</span><span class="p">,</span>
   <span class="p">},</span>
   <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">{</span>
-      <span class="na">message</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Hello Vue!!!</span><span class="dl">"</span><span class="p">,</span>
-    <span class="p">};</span>
+      <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Hello Vue!!!</span><span class="dl">'</span><span class="p">,</span>
+    <span class="p">}</span>
   <span class="p">},</span>
-<span class="p">};</span>
+<span class="p">}</span>
 <span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 
@@ -510,15 +527,15 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
   <span class="p">},</span>
   <span class="na">extends</span><span class="p">:</span> <span class="p">[</span>
     <span class="c1">// "plugin:vue/vue3-essential", // Lv1</span>
-    <span class="dl">"</span><span class="s2">plugin:vue/vue3-strongly-recommended</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// Lv2</span>
+    <span class="dl">'</span><span class="s1">plugin:vue/vue3-strongly-recommended</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// Lv2</span>
     <span class="c1">// "plugin:vue/vue3-recommended", // Lv3</span>
-    <span class="dl">"</span><span class="s2">eslint:recommended</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">eslint:recommended</span><span class="dl">'</span><span class="p">,</span>
   <span class="p">],</span>
   <span class="na">parserOptions</span><span class="p">:</span> <span class="p">{</span>
-    <span class="na">parser</span><span class="p">:</span> <span class="dl">"</span><span class="s2">babel-eslint</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">parser</span><span class="p">:</span> <span class="dl">'</span><span class="s1">babel-eslint</span><span class="dl">'</span><span class="p">,</span>
   <span class="p">},</span>
   <span class="na">rules</span><span class="p">:</span> <span class="p">{},</span>
-<span class="p">};</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p><strong>env</strong> 옵션은 브라우저, Node에서 동작하는 모든 전역 개념을 코드검사를 할 것인지 설정하는 부분입니다. 그리고 <strong>extends</strong> 옵션에는 vue 코드 규칙과 js 코드 규칙을 명시해 줍니다. <br />vue의 코드규칙은, 플러그인으로 설치한 eslint-plugin-vue의 코드규칙 3가지 중 2번째 단계의 규칙을 사용하겠습니다. <br />
@@ -532,7 +549,7 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 
 <hr />
 
-<h6 id="eslint-rules-settings">ESlint rules Settings</h6>
+<h6 id="eslint-rules-settings">ESLint rules Settings</h6>
 
 <p>만약, ESlint의 규칙이 맘에 들지 않는다면, 수정해서 사용할 수 있습니다. 어떻게 할 수 있을까요? 이전에 방문했던 <a href="https://eslint.org/docs/rules/" target="_blank"><strong>eslint rules</strong></a>를 다시 방문해봅시다. <br />
 예시로 검색에 <strong>html-closing-bracket-newline</strong>을 입력해보겠습니다. 닫히는 꺽쇠괄호를 붙여줄 것인지, 아닌지에 대한 옵션인 것 같네요. 아래로 보다 보면 <strong>Options</strong>가 나타나게 됩니다.<br />
@@ -550,7 +567,7 @@ VueJS는 다음 명령어로 사용자가 원하는 이름으로 프로젝트를
 
 <hr />
 
-<h6 id="eslint-자동수정">ESlint 자동수정</h6>
+<h6 id="eslint-자동수정">ESLint 자동수정</h6>
 
 <p>우리가 설정해 준 ESlint문법을 파일이 지키고 있지 않다면, 자동으로 변경해서 저장해주는 설정을 해주겠습니다.
 <br />
@@ -566,6 +583,154 @@ VSC의 Settings로 들어가서 Open Settings(JSON)을 찾아서 클릭하겠습
 <hr />
 
 <h2 id="프로젝트-버전-맞추기">프로젝트 버전 맞추기</h2>
+<p><a href="https://github.com/ParkYoungWoong?tab=repositories"><code class="language-plaintext highlighter-rouge">Download from Here</code></a></p>
+
+<hr />
+
+<h2 id="조건문--반복문">조건문 &amp; 반복문</h2>
+
+<p>본격적인 VueJS의 문법을 배우기 이전에, 기본적인 기능을 한번 살펴보도록 하겠습니다. 클릭해서 숫자가 올라가는 template을 작성해보았습니다. 만약, 4이상이면 <strong>4보다 크다</strong>라는 문자열이 출력되려면 어떤 방식으로 VueJS 파일을 작성하면 될까요? 다음 코드를 보며 이해하시면 되겠습니다. <code class="language-plaintext highlighter-rouge">v-if</code>라는 디렉티브(Directive)를 사용해주면 됩니다.</p>
+
+<div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="err">@</span><span class="na">click=</span><span class="s">"increase"</span><span class="nt">&gt;</span>
+    8
+  <span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">v-if=</span><span class="s">"count &gt; 4"</span><span class="nt">&gt;</span>4보다 큽니다!<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>반복되는 데이터를 이용하려면 반복문을 처리하는 문법이 필요합니다. VueJS에서 반복문은 어떻게 사용할까요? <code class="language-plaintext highlighter-rouge">v-for</code> 디렉티브를 사용합니다.
+새로운 데이터를 배열로 만들어봅시다. 데이터를 반복할 때는 각각의 데이터가 고유한지를 증명하기 위해 <code class="language-plaintext highlighter-rouge">:key</code>를 제공해주어야 합니다.</p>
+
+<div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="err">@</span><span class="na">click=</span><span class="s">"increase"</span><span class="nt">&gt;</span>
+    8
+  <span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">v-if=</span><span class="s">"count &gt; 4"</span><span class="nt">&gt;</span>4보다 큽니다!<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">v-for=</span><span class="s">"fruit in fruits"</span> <span class="na">:key=</span><span class="s">"fruit"</span><span class="nt">&gt;</span>
+      
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">count</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="na">fruits</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">Apple</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Banana</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Cherry</span><span class="dl">'</span><span class="p">],</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="na">methods</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">increase</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+<span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;</span><span class="k">style</span> <span class="na">lang=</span><span class="s">"scss"</span><span class="nt">&gt;</span>
+<span class="nt">h1</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">royalblue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">ul</span> <span class="p">{</span>
+  <span class="nt">li</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nt">&lt;/</span><span class="k">style</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>다음과 같이 스타일 속성은 SCSS로 해석해달라는 내용을 추가하였고,브라우저에는 배열 순서대로 출력되는 것을 확인할 수 있습니다.</p>
+
+<hr />
+
+<p>이번에는 별개의 Component를 사용해서 배열 데이터를 출력해보도록 하죠. component폴더 안에 <strong>Fruit.vue</strong>파일을 만들도록 하겠습니다. 그리고 다음과 같이 작성해주겠습니다.</p>
+
+<div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">props</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">type</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span>
+      <span class="na">default</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+<span class="nt">&lt;/</span><span class="k">script</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p><strong>props</strong>라는 옵션을 설정해주겠습니다. props는 객체 데이터이고, 내부에는 name이라는 String 데이터를 받도록 하였습니다. props는 default value를 제공하여야 하기 때문에, 위와 같이 작성하였습니다.
+작성한 파일을 <strong>App.vue</strong>에서 사용할 수 있게끔, 가져오도록 하죠.</p>
+
+<div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
+<span class="k">import</span> <span class="nx">Fruit</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">~/components/Fruit</span><span class="dl">'</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">Fruit</span><span class="p">:</span> <span class="nx">Fruit</span><span class="p">,</span>
+  <span class="p">},</span>
+
+<span class="p">...</span>
+
+</code></pre></div></div>
+<p>components라는 옵션부분에 객체 리터럴로 등록을 해주어야 사용이 가능합니다. component의 이름을 Fruit라고 명시해주고, Data도 Fruit라고 하겠습니다. <br />위의 코드는 다음과 같이 요약할 수 있겠죠? Fruit라는 이름으로 Fruit component를 활용하겠습니다.</p>
+
+<div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="k">script</span><span class="nt">&gt;</span>
+<span class="k">import</span> <span class="nx">Fruit</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">~/components/Fruit</span><span class="dl">'</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="na">components</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">Fruit</span><span class="p">,</span>
+  <span class="p">},</span>
+
+<span class="p">...</span>
+</code></pre></div></div>
+<p><strong>&lt;template&gt;</strong>칸으로 가서 다음과 같이 hello component를 사용하겠다는 의미로, <strong>&lt;hello&gt;</strong> 태그로 작성하겠습니다. <code class="language-plaintext highlighter-rouge">:name="fruit"</code>속성도 추가하겠습니다. 이 name속성은 <strong>Fruit.vue</strong>의 props 옵션에 작성되어 있습니다. <br /></p>
+
+<div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="k">template</span><span class="nt">&gt;</span>
+
+...
+
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;hello</span>
+      <span class="na">v-for=</span><span class="s">"fruit in fruits"</span>
+      <span class="na">:key=</span><span class="s">"fruit"</span>
+      <span class="na">:name=</span><span class="s">"fruit"</span><span class="nt">&gt;</span>
+      
+    <span class="nt">&lt;/hello&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/</span><span class="k">template</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>즉, 다음과 같이 정리할 수 있겠습니다. VueJS 파일인 <strong>Component</strong>를 만들고 <strong>App.vue</strong>로 가져와서 연결한 후에는 HTML 부분에서 사용할 수 있다는 의미입니다. <br />설명한 바와 같이, Component를 여러 개 만들어서 그것을 <em>App.vue</em>또는 <em>Component</em>끼리 연결하여 웹사이트를 개발할 수 있다는 의미입니다.</p>
+
+<hr />
+
+<p>Fruit.vue의 스타일을 지정해주도록 하겠습니다. 여기서 유의해야 할 점이 있습니다. 아래 코드를 보시죠. 다음과 같이 작성하면, <strong>App.vue파일의 h1태그도 변경</strong>되는 불상사가 일어납니다.</p>
+
+<div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="k">style</span> <span class="na">lang=</span><span class="s">"scss"</span><span class="nt">&gt;</span>
+  <span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/</span><span class="k">style</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>그러니, <strong>scoped</strong>란 속성을 추가해주어야 합니다. 그럼 <strong>Fruit.vue</strong> 파일내에서만 작동하게 되는거죠. <strong>유효범위</strong>가 현재 Component이다라고 이해하시면 되겠습니다.</p>
+
+<div class="language-vue highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="k">style</span> <span class="na">scoped</span> <span class="na">lang=</span><span class="s">"scss"</span><span class="nt">&gt;</span>
+  <span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">red</span> <span class="o">!</span><span class="n">important</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/</span><span class="k">style</span><span class="nt">&gt;</span>
+</code></pre></div></div>
 
                 </div>
             </section>
@@ -678,6 +843,15 @@ VSC의 Settings로 들어가서 Open Settings(JSON)을 찾아서 클릭하겠습
                                 
                                 
                                   
+                                    
+                                        
+                                        
+                                            <li><a href="/vuejs-grammar">Vue-Grammar</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
                                 
                                   
                                 
@@ -708,8 +882,6 @@ VSC의 Settings로 들어가서 Open Settings(JSON)을 찾아서 클릭하겠습
                                   
                                     
                                         
-                                        
-                                            <li><a href="/bundler">Frontend - Bundler</a></li>
                                         
                                     
                                   
@@ -824,7 +996,7 @@ VSC의 Settings로 들어가서 Open Settings(JSON)을 찾아서 클릭하겠습
                         <footer class="read-next-card-footer">
                             <a href="/tag/frontend/">
                                 
-                                    See all 16 posts  →
+                                    See all 17 posts  →
                                 
                             </a>
                         </footer>

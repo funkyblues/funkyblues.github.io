@@ -131,16 +131,16 @@
 .highlight .nx,
 .highlight .py {
   color: #fff;
-  font-weight: 700;
 }
 .highlight .nt,
 .highlight .ow {
-  color: #f92672;
+  color: #89DDFF;
 }
-.highlight .k,
+
+
 .highlight .kn,
 .highlight .kv {
-  color: #f92672;
+  color: #F07178;
   font-weight: 700;
 }
 .highlight .kp {

@@ -190,6 +190,10 @@ into the {body} of the default.hbs template -->
   <li class="nav-frontend" role="menuitem">
     <a href="/tag/frontend/">Frontend</a>
   </li>
+  <li class="nav-vue" role="menuitem">
+    <a href="/tag/vue/">Vue</a>
+  </li>
+
   <li class="nav-backend" role="menuitem">
     <a href="/tag/backend/">backend</a>
   </li>
@@ -283,7 +287,7 @@ Formatter는 띄어쓰기나 들여쓰기가 잘 되어 있는지, 비주얼적�
 <p>그리고 Airbnb에서 제공하는 <a href="https://github.com/airbnb/javascript" target="_blank"><strong>JavaScript Style Guide</strong></a>를 설치하도록 하겠습니다. JavaScript 개발에 가장 합리적인 접근이라고 하네요. 또 이 플러그인을 연결해줄 수 있도록 새로운 패키지도 설치하겠습니다.</p>
 
 <blockquote>
-  <p><strong>npm i -D eslint-airbnb-base eslint-plugin-import</strong></p>
+  <p><strong>npm i -D eslint-config-airbnb-base eslint-plugin-import</strong></p>
 </blockquote>
 
 <hr />
@@ -333,8 +337,8 @@ Formatter는 띄어쓰기나 들여쓰기가 잘 되어 있는지, 비주얼적�
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="c1">// 이 순서대로 작성해 주어야 한다.</span>
-  <span class="na">extends</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">airbnb-base</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">plugin:node/recommended</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">prettier</span><span class="dl">"</span><span class="p">],</span>
-<span class="p">};</span>
+  <span class="na">extends</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">airbnb-base</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">plugin:node/recommended</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">prettier</span><span class="dl">'</span><span class="p">],</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <p>마지막으로 <strong>jsconfig.json</strong>파일을 생성하고 다음 내용을 기입하여 설정을 마무리 해주도록 하겠습니다. 엄격한 컴파일 옵션을 설정해주고, src 밑의 모든 파일들을 확인해주겠다는 의미로 이해하시면 될 것 같습니다.</p>
@@ -502,10 +506,12 @@ Formatter는 띄어쓰기나 들여쓰기가 잘 되어 있는지, 비주얼적�
                                 
                                 
                                   
+                                
+                                  
                                     
                                         
                                         
-                                            <li><a href="/backend-js-basic2">Hoisting, Scope, Closure, Function</a></li>
+                                            <li><a href="/backend-js-basic2">JavaScript - Hoisting, Scope, Closure, Function</a></li>
                                         
                                     
                                   
@@ -699,7 +705,7 @@ Formatter는 띄어쓰기나 들여쓰기가 잘 되어 있는지, 비주얼적�
       </span>
        
       <span class="reading-time">
-          11 min read 
+          15 min read 
       </span>
     </footer>
   </div>
